@@ -1,0 +1,499 @@
+/* 🌟 BookCover Hero Section */
+.bookcover-hero-section {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10%;
+    background: linear-gradient(135deg, #eef5f2, #dfecec);
+    overflow: hidden;
+}
+
+/* 📖 Hero Content - Aligned to the Left */
+.bookcover-hero-content {
+    max-width: 500px;
+    z-index: 2;
+    text-align: left;
+    margin-left: auto;
+}
+
+/* 🏷️ Main Heading */
+.bookcover-hero-content h1 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.bookcover-hero-content h1 span {
+    color: #33cc66;
+    font-weight: 800;
+}
+
+/* 📜 Subtext */
+.bookcover-subtext {
+    font-size: 1rem;
+    color: #444;
+    font-weight: 500;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    justify-content: left;
+}
+
+.bookcover-subtext::before {
+    content: "➤";
+    font-size: 1.3rem;
+    color: #33cc66;
+    font-weight: bold;
+}
+
+/* 🎨 Book Display */
+.bookcover-book-display {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+    max-width: 500px;
+}
+
+/* 📚 Book Wrappers */
+.bookcover-book-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* 📚 Book Images */
+.bookcover-book {
+    width: 180px;
+    height: auto;
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+    margin: 0;
+}
+
+.bookcover-book:hover {
+    transform: translateY(-10px) rotate(-2deg);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.bookcover-book1 {
+    transform: rotate(-10deg) translateY(5px);
+}
+
+.bookcover-book2 {
+    transform: rotate(0deg) translateY(0);
+}
+
+.bookcover-book3 {
+    transform: rotate(10deg) translateY(5px);
+}
+
+/* 📜 Background Elements */
+.bookcover-hero-section::after {
+    position: absolute;
+    bottom: 10%;
+    right: 8%;
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.08);
+    font-family: 'Cursive', sans-serif;
+    z-index: 1;
+}
+
+/* 🌐 Responsive Design */
+@media (max-width: 1024px) {
+    .bookcover-hero-section {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 50px 5%;
+    }
+
+    .bookcover-hero-content {
+        max-width: 90%;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .bookcover-hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .bookcover-subtext {
+        font-size: 0.9rem;
+    }
+
+    .bookcover-book-display {
+        max-width: 100%;
+        margin-top: 25px;
+    }
+
+    .bookcover-book {
+        width: 160px;
+    }
+}
+
+@media (max-width: 768px) {
+    .bookcover-hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .bookcover-subtext {
+        font-size: 0.85rem;
+    }
+
+    .bookcover-book {
+        width: 130px;
+    }
+
+    .bookcover-hero-section::after {
+        font-size: 3rem;
+        right: 5%;
+    }
+}
+
+
+.bookcover-process-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.bookcover-process-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.bookcover-process-title span {
+    color: #33cc66;
+}
+
+/* Tabs */
+.bookcover-process-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.bookcover-tab-link {
+    font-size: 1rem;
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: #777;
+    cursor: pointer;
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.bookcover-tab-link.active {
+    color: #000;
+    border-bottom: 3px solid #33cc66;
+}
+
+/* Content */
+.bookcover-process-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.bookcover-process-step {
+    display: none;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.bookcover-process-step.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Text */
+.bookcover-process-text {
+    max-width: 50%;
+    text-align: left;
+}
+
+.bookcover-process-text h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.bookcover-process-text h3 span {
+    color: #f4b400;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.bookcover-process-text p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Image */
+.bookcover-process-image {
+    max-width: 45%;
+}
+
+.bookcover-process-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .bookcover-process-step {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bookcover-process-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .bookcover-process-image {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .bookcover-tab-link {
+        font-size: 0.9rem;
+        padding-bottom: 3px;
+    }
+
+    .bookcover-process-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .bookcover-process-text h3 span {
+        font-size: 1.8rem;
+    }
+
+    .bookcover-process-text p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* 📦 Bookcover Packages Section */
+.bookcover-packages-section {
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+/* 🎯 Section Title */
+.bookcover-section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 40px;
+}
+
+.bookcover-section-title span {
+    color: #33cc66;
+}
+
+/* 📜 Packages Grid */
+.bookcover-packages-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 📦 Individual Package Card */
+.bookcover-package-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.bookcover-package-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 🖼 Package Image */
+.bookcover-package-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* 📖 Package Name */
+.bookcover-package-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-top: 10px;
+}
+
+/* 💲 Package Price */
+.bookcover-package-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #33cc66;
+    margin-bottom: 10px;
+}
+
+/* ✅ Features List */
+.bookcover-package-features {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.bookcover-package-features li {
+    margin-bottom: 8px;
+}
+
+/* 🎁 Free Inclusions */
+.bookcover-free-inclusions {
+    background: #fff3cd;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.bookcover-free-inclusions p {
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.bookcover-free-inclusions ul {
+    list-style: none;
+    padding: 0;
+    color: #333;
+}
+
+/* ✨ Special Add-ons */
+.bookcover-special-addons {
+    background: #eafaf1;
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: #1a7f41;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 🎯 Concept Selection */
+.bookcover-concept-selection {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.bookcover-concept-selection input {
+    display: none;
+}
+
+.bookcover-concept-selection label {
+    cursor: pointer;
+    padding: 8px 12px;
+    background: #f4f4f4;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.bookcover-concept-selection input:checked + label {
+    background: #33cc66;
+    color: white;
+}
+
+/* 🛒 Order Now Button */
+.bookcover-order-btn {
+    display: block;
+    padding: 12px 25px;
+    background-color: #33cc66;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+.bookcover-order-btn:hover {
+    background-color: #28a745;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .bookcover-packages-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .bookcover-package-card {
+        padding: 15px;
+    }
+
+    .bookcover-package-name {
+        font-size: 1.3rem;
+    }
+
+    .bookcover-package-price {
+        font-size: 1.2rem;
+    }
+
+    .bookcover-concept-selection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bookcover-concept-selection label {
+        width: 100%;
+        text-align: center;
+    }
+
+    .bookcover-order-btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}

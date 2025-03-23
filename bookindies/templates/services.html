@@ -1,0 +1,265 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %} 
+
+<!-- Hero Section -->
+<section class="service-hero-section">
+    <div class="service-animated-bg"></div>
+    <div class="service-decorative-icon service-icon-left"></div>
+    <div class="service-decorative-icon service-icon-right"></div>
+    <div class="service-container">
+        <div class="service-text-content">
+            <h1>We Help Authors Make <span class="service-highlight">Book Cover Design</span> Their Best Marketing Tool</h1>
+            <div class="service-divider">
+                <span></span><span></span><span></span>
+            </div>
+            <a href="{% url 'services' %}" class="service-cta-button">Check Out Our Services</a>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Services Cards Section -->
+<section class="services-cards-section">
+    <div class="services-container">
+        <div class="services-grid">
+            <a href="{% url 'services' %}?type=fiction" class="services-card">
+                <img src="{% static 'img/cover1.webp' %}" alt="Fiction Book Cover Design">
+                <h3>Fiction Book Cover Design</h3>
+            </a>
+            <a href="{% url 'services' %}?type=non-fiction" class="services-card">
+                <img src="{% static 'img/cover22.webp' %}" alt="Non-Fiction Book Cover Design">
+                <h3>Non-Fiction Book Cover Design</h3>
+            </a>
+            <a href="{% url 'services' %}?type=redesign" class="services-card">
+                <img src="{% static 'img/cover3.webp' %}" alt="Book Cover Redesign">
+                <h3>Book Cover Redesign</h3>
+            </a>
+            <a href="{% url 'services' %}?type=premium" class="services-card">
+                <img src="{% static 'img/cover4.webp' %}" alt="Premium Book Cover Design">
+                <h3>Premium Book Cover Design</h3>
+            </a>
+            <a href="{% url 'services' %}?type=illustrated" class="services-card">
+                <img src="{% static 'img/cover5.webp' %}" alt="Illustrated Book Cover Design">
+                <h3>Illustrated Book Cover Design</h3>
+            </a>
+            <a href="{% url 'services' %}?type=kindle-vella" class="services-card">
+                <img src="{% static 'img/cover6.webp' %}" alt="Cover Design for Kindle Vella">
+                <h3>Cover Design for Kindle Vella</h3>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Additional Services Section -->
+<section class="services-additional-services">
+    <div class="services-container">
+        <h2 class="services-section-title">Additional Services</h2>
+        <div class="services-grid">
+            <div class="services-service-card">
+                <h3>Box set</h3>
+                <p class="services-price">$40</p>
+                <a href="#" class="services-btn-order">Order Now</a>
+            </div>
+            <div class="services-service-card">
+                <h3>Audio cover formatting</h3>
+                <p class="services-price">$30</p>
+                <a href="#" class="services-btn-order">Order Now</a>
+            </div>
+            <div class="services-service-card">
+                <h3>Paperback or hardback formatting</h3>
+                <p class="services-price">$30</p>
+                <a href="#" class="services-btn-order">Order Now</a>
+            </div>
+            <div class="services-service-card">
+                <h3>Dust jacket design</h3>
+                <p class="services-price">$40</p>
+                <a href="#" class="services-btn-order">Order Now</a>
+            </div>
+            <div class="services-service-card">
+                <h3>Typography design</h3>
+                <p>(for an existing cover)</p>
+                <p class="services-price">$40</p>
+                <a href="#" class="services-btn-order">Order Now</a>
+            </div>
+            <div class="services-service-card">
+                <h3>Back & Spine cover design</h3>
+                <p>(for an existing cover)</p>
+                <p class="services-price">$50</p>
+                <a href="#" class="services-btn-order">Order Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Home Carousel Section -->
+<section class="home-unique-carousel-section">
+    <h2 class="home-carousel-title">Our <span class="home-highlight">Portfolio</span></h2>
+    <p class="home-carousel-subtitle">Explore our stunning book cover designs</p>
+
+    <div class="home-unique-carousel-container">
+        <button class="home-unique-carousel-control prev"><i class="bi bi-chevron-left"></i></button>
+
+        <div class="home-unique-carousel-wrapper">
+            <div class="home-unique-carousel-track">
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card1.png' %}" alt="Book 1" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card2.png' %}" alt="Book 2" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card3.png' %}" alt="Book 3" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card4.png' %}" alt="Book 4" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card5.png' %}" alt="Book 5" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card6.png' %}" alt="Book 6" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card7.png' %}" alt="Book 7" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card1.png' %}" alt="Book 1" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card2.png' %}" alt="Book 2" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card3.png' %}" alt="Book 3" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card4.png' %}" alt="Book 4" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card5.png' %}" alt="Book 5" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card6.png' %}" alt="Book 6" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card7.png' %}" alt="Book 7" class="home-unique-carousel-item"></a>
+            </div>
+        </div>
+
+        <button class="home-unique-carousel-control next"><i class="bi bi-chevron-right"></i></button>
+    </div>
+
+    <div class="home-unique-pagination-dots"></div>
+
+    <div class="home-portfolio-button-container">
+        <a href="{% url 'portfolio' %}" class="home-see-full-portfolio-btn">See Full Portfolio</a>
+    </div>
+</section>
+
+
+
+
+<!-- Reviews Section -->
+<section class="services-reviews-section">
+    <div class="services-reviews-container">
+        <h2>What Do Our <span>Clients Say?</span></h2>
+        <p class="services-rating"><strong>5.0</strong> rating out of 254 reviews</p>
+        <a href="#" class="services-review-btn">Leave A Review</a>
+    </div>
+</section>
+
+
+<!-- Services Testimonials Section -->
+<section class="services-testimonial-section">
+    <div class="services-testimonial-container">
+        
+        <div class="services-testimonial-slider-container">
+            <div class="services-testimonial-slider" id="testimonialSlider">
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user1.jpg' %}" class="services-profile-pic" alt="User 1">
+                    <h4>Eric Bermúdez Cervantes</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>I can’t be more happy to have worked with them. The first cover was flawless...</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> a month ago
+                    </div>
+                </div>
+
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user2.jpg' %}" class="services-profile-pic" alt="User 2">
+                    <h4>Author Marie Howalt</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>I have just received my first cover from them and I am super impressed!</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> a month ago
+                    </div>
+                </div>
+
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user3.jpg' %}" class="services-profile-pic" alt="User 3">
+                    <h4>Aspen & Berrywood Books</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>Working with them to create the cover was an incredible experience!</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> 2 weeks ago
+                    </div>
+                </div>
+
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user4.jpg' %}" class="services-profile-pic" alt="User 4">
+                    <h4>John Smith</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>Absolutely love the design process, and they listened to every detail.</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> 3 weeks ago
+                    </div>
+                </div>
+
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user5.jpg' %}" class="services-profile-pic" alt="User 5">
+                    <h4>Samantha Clark</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>Their work is simply outstanding, I will definitely recommend them.</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> 1 week ago
+                    </div>
+                </div>
+
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user6.jpg' %}" class="services-profile-pic" alt="User 6">
+                    <h4>David Lee</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>The best experience I've had so far, professional and creative!</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> 2 weeks ago
+                    </div>
+                </div>
+
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user7.jpg' %}" class="services-profile-pic" alt="User 7">
+                    <h4>Michael Johnson</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>They delivered exactly what I was looking for in a timely manner.</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> 4 days ago
+                    </div>
+                </div>
+
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user8.jpg' %}" class="services-profile-pic" alt="User 8">
+                    <h4>Lisa Adams</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>Amazing work, truly exceeded my expectations!</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> 5 days ago
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="free-cover-idea">
+    <div class="container">
+        <h2>Get a free cover <span>design idea</span></h2>
+        <div class="indicator">
+            <span></span><span></span><span></span>
+        </div>
+        <p>We'll help you come up with ideas that work</p>
+        <a href="#" class="cta-button">Get a Free Cover Design Idea</a>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+{% endblock %}

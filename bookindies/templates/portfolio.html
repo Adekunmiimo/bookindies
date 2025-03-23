@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %} 
+
+ <!-- 📌 Portfolio Hero Section -->
+ <section class="portfolio-hero">
+    <div class="portfolio-animated-bg"></div> 
+    <div class="portfolio-floating-shapes">
+        <div class="portfolio-shape portfolio-shape-one"></div>
+        <div class="portfolio-shape portfolio-shape-two"></div>
+        <div class="portfolio-shape portfolio-shape-three"></div>
+        <div class="portfolio-shape portfolio-shape-four"></div>
+        <div class="portfolio-shape portfolio-shape-five"></div>
+    </div>
+    <div class="portfolio-hero-content">
+        <h1 class="portfolio-zoom-in">
+            <span class="portfolio-highlight">Premium Book</span> 
+            Cover Design Portfolio
+        </h1>
+        <p class="portfolio-slide-up">Explore our carefully crafted book covers across various genres.</p>
+        <a href="#portfolio" class="portfolio-cta-button">Explore Portfolio</a>
+    </div>
+    <div class="portfolio-nav">
+        <a href="#">Custom Covers</a>
+        <a href="#">Luxury Covers <i class="fa-solid fa-gem"></i></a>
+        <a href="#">Illustrated Covers</a>
+        <a href="#">Hardcover & eBook</a>
+        <a href="#">Logo & Branding</a>
+    </div>
+</section>
+
+
+
+
+<section class="portfolio-genre-section">
+    <div class="portfolio-genre-container">
+        <ul class="portfolio-genre-list">
+            <li><a href="#" class="portfolio-genre-item">Fantasy</a></li>
+            <li><a href="#" class="portfolio-genre-item active">Romantasy</a></li>
+            <li><a href="#" class="portfolio-genre-item">Urban Fantasy</a></li>
+            <li><a href="#" class="portfolio-genre-item">Young Adult</a></li>
+            <li><a href="#" class="portfolio-genre-item">Romance</a></li>
+            <li><a href="#" class="portfolio-genre-item">Cozy Mystery</a></li>
+            <li class="portfolio-hidden-genres"><a href="#" class="portfolio-genre-item">Paranormal</a></li>
+            <li class="portfolio-hidden-genres"><a href="#" class="portfolio-genre-item">Mystery, Thriller & Suspense</a></li>
+            <li class="portfolio-hidden-genres"><a href="#" class="portfolio-genre-item">Horror</a></li>
+            <li class="portfolio-hidden-genres"><a href="#" class="portfolio-genre-item">Sci-fi</a></li>
+            <li class="portfolio-hidden-genres"><a href="#" class="portfolio-genre-item">Non-fiction</a></li>
+            <li class="portfolio-hidden-genres"><a href="#" class="portfolio-genre-item">Fiction</a></li>
+        </ul>
+        <button class="portfolio-more-button">More</button>
+    </div>
+</section>
+
+<section class="portfolio-gallery-section">
+    <div class="portfolio-gallery-container">
+        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery1.jpg' %}" alt="Gallery Image 1"></a>
+        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery2.jpg' %}" alt="Gallery Image 2"></a>
+        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery3.jpg' %}" alt="Gallery Image 3"></a>
+        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery4.jpg' %}" alt="Gallery Image 4"></a>
+        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery5.jpg' %}" alt="Gallery Image 5"></a>
+        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery6.jpg' %}" alt="Gallery Image 6"></a>
+        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery7.jpg' %}" alt="Gallery Image 7"></a>
+        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery8.jpg' %}" alt="Gallery Image 8"></a>
+        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery9.jpg' %}" alt="Gallery Image 9"></a>
+        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery10.jpg' %}" alt="Gallery Image 10"></a>
+        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery11.jpg' %}" alt="Gallery Image 11"></a>
+        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery12.jpg' %}" alt="Gallery Image 12"></a>
+    </div>
+    <button class="portfolio-more-button">More</button>
+</section>
+
+
+
+<section class="free-cover-idea">
+    <div class="container">
+        <h2>Get a free cover <span>design idea</span></h2>
+        <div class="indicator">
+            <span></span><span></span><span></span>
+        </div>
+        <p>We'll help you come up with ideas that work</p>
+        <a href="#" class="cta-button">Get a Free Cover Design Idea</a>
+    </div>
+</section>
+
+
+
+
+
+
+{% endblock %}

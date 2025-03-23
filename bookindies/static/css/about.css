@@ -1,0 +1,376 @@
+/* =================== About Us Hero Section =================== */
+.aboutus-hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #86d19e5e, #82b8b9);
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Floating Background Shapes */
+.aboutus-background-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+/* Left Rectangle (Rolling Across Screen) */
+.aboutus-shape-one {
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    width: 120px;
+    height: 80px;
+    background: rgba(51, 204, 102, 0.2);
+    clip-path: polygon(0 0, 100% 10%, 90% 100%, 10% 90%);
+    animation: aboutus-rollLeft 10s linear infinite;
+}
+
+/* Right Rectangle (Rolling Across Screen) */
+.aboutus-shape-two {
+    position: absolute;
+    bottom: 20%;
+    right: -10%;
+    width: 140px;
+    height: 90px;
+    background: rgba(51, 204, 102, 0.2);
+    clip-path: polygon(10% 0, 90% 10%, 100% 100%, 0 90%);
+    animation: aboutus-rollRight 12s linear infinite;
+}
+
+/* Middle Rectangle (Floating Up and Down) */
+.aboutus-shape-three {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: rgba(51, 204, 102, 0.3);
+    clip-path: polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%);
+    animation: aboutus-floatUpDown 4s ease-in-out infinite alternate;
+}
+
+/* Header Text */
+.aboutus-hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #222;
+    position: relative;
+    z-index: 2;
+    animation: aboutus-fadeIn 2s ease-in-out;
+}
+
+.aboutus-highlight {
+    color: #33cc66;
+}
+
+/* Fade-in Text */
+.aboutus-fade-in-text {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: aboutus-fadeUp 1.5s ease-in-out forwards;
+}
+
+/* CTA Button */
+.aboutus-cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #33cc66, #28a745);
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(51, 204, 102, 0.2);
+}
+
+.aboutus-cta-button:hover {
+    background: linear-gradient(45deg, #28a745, #1e7e34);
+    transform: scale(1.05);
+}
+
+/* =================== Keyframe Animations =================== */
+
+/* Rolling Left to Right */
+@keyframes aboutus-rollLeft {
+    0% { transform: translateX(-10%) rotate(0deg); }
+    50% { transform: translateX(90vw) rotate(180deg); }
+    100% { transform: translateX(-10%) rotate(360deg); }
+}
+
+/* Rolling Right to Left */
+@keyframes aboutus-rollRight {
+    0% { transform: translateX(100%) rotate(0deg); }
+    50% { transform: translateX(-90vw) rotate(-180deg); }
+    100% { transform: translateX(100%) rotate(-360deg); }
+}
+
+/* Floating Up and Down */
+@keyframes aboutus-floatUpDown {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-30px); }
+}
+
+/* Fade In */
+@keyframes aboutus-fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Fade Up */
+@keyframes aboutus-fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =================== Responsive Design =================== */
+@media (max-width: 768px) {
+    .aboutus-hero {
+        height: 350px;
+    }
+
+    .aboutus-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .aboutus-cta-button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    .aboutus-shape-one, 
+    .aboutus-shape-two, 
+    .aboutus-shape-three {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+
+/* =================== About Us - Our Story Section =================== */
+.aboutus-our-story {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #ffffff;
+}
+
+.aboutus-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Section Header */
+.aboutus-our-story h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #222;
+}
+
+
+
+/* =================== About Us - Our Team Section =================== */
+.aboutus-team-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #ffffff;
+}
+
+.aboutus-team-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 40px;
+}
+
+.aboutus-highlight {
+    color: #33cc66;
+}
+
+/* Team Grid - Ensures 4 per row */
+.aboutus-team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Team Member Card */
+.aboutus-team-member {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.aboutus-team-member:hover {
+    transform: scale(1.05);
+}
+
+/* Team Member Image */
+.aboutus-team-member img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.4s ease-in-out;
+}
+
+.aboutus-team-member:hover img {
+    filter: grayscale(0%);
+}
+
+/* Team Member Info */
+.aboutus-team-info {
+    background: #fff;
+    padding: 15px;
+    border-top: 3px solid #33cc66;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.aboutus-team-info h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #222;
+}
+
+.aboutus-team-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .aboutus-team-grid {
+        grid-template-columns: repeat(3, 1fr); /* Show 3 per row */
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutus-team-grid {
+        grid-template-columns: repeat(2, 1fr); /* Show 2 per row */
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .aboutus-team-grid {
+        grid-template-columns: repeat(1, 1fr); /* Stack on small screens */
+        gap: 15px;
+    }
+}
+
+
+/* =================== About Us - Newsletter Section =================== */
+.aboutus-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.aboutus-newsletter-section {
+    background: linear-gradient(to bottom, #f4fef4, #ffffff);
+    padding: 80px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.aboutus-newsletter-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.aboutus-newsletter-section .aboutus-highlight {
+    color: #33cc66;
+}
+
+.aboutus-newsletter-section p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Newsletter Form */
+.aboutus-newsletter-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.aboutus-newsletter-form input {
+    flex: 1;
+    min-width: 250px;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+}
+
+.aboutus-newsletter-form button {
+    background-color: #33cc66;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.aboutus-newsletter-form button:hover {
+    background-color: #28a745;
+}
+
+/* Privacy Text */
+.aboutus-privacy-text {
+    font-size: 14px;
+    color: #6b7280;
+    margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .aboutus-newsletter-section h2 {
+        font-size: 2rem;
+    }
+    .aboutus-newsletter-form {
+        flex-direction: column;
+    }
+    .aboutus-newsletter-form input {
+        width: 100%;
+    }
+}

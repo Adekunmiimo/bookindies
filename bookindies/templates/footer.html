@@ -1,0 +1,90 @@
+{% load static%}
+<footer class="home-footer-section">
+    <div class="home-container">
+        <!-- Upper Footer Section -->
+        <div class="home-footer-top">
+            <!-- Left Section: Logo -->
+            <div class="home-footer-info">
+                <img src="{% static 'img/logo.png' %}" alt="Logo" class="home-footer-logo">
+            </div>
+
+            <!-- Center: Navigation Links -->
+            <div class="home-footer-links">
+                <div class="home-footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="home-footer-column">
+                    <h4>Learn</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Academy</a></li>
+                        <li><a href="#">Our Community</a></li>
+                    </ul>
+                </div>
+                <div class="home-footer-column">
+                    <h4>Partners</h4>
+                    <ul>
+                        <li><a href="#">Useful Resources</a></li>
+                        <li><a href="#">Partner With Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Side: Newsletter Subscription Box -->
+            <div class="home-newsletter-box">
+                <h4>Subscribe to Newsletter</h4>
+                <form id="home-newsletter-form" method="POST" action="#">
+                    {% csrf_token %}
+                    <input type="email" name="email" placeholder="Enter email" required>
+                    <div class="home-checkbox-group">
+                        <label>
+                            <input type="checkbox" required> I agree to receive promotional updates.
+                        </label>
+                        <label>
+                            <input type="checkbox" required> I agree to <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.
+                        </label>
+                    </div>
+                    <button type="submit" class="home-subscribe-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Divider Line -->
+        <hr class="home-footer-divider">
+
+        <!-- Lower Footer Section -->
+        <div class="home-footer-bottom">
+            <div class="home-footer-left">
+                <!-- Fiverr Icon -->
+                <a href="https://www.fiverr.com" target="_blank" class="home-footer-icon home-fiverr">
+                    <i class="bi bi-lightning-fill"></i> <!-- Fiverr Icon Placeholder -->
+                </a>
+                <p class="home-copyright-text">© 2024. All rights reserved.</p>
+            </div>
+
+            <!-- Social Media & Settings -->
+            <div class="home-footer-right">
+                <div class="home-footer-icons">
+                    <a href="#" title="TikTok" class="home-footer-icon"><i class="bi bi-tiktok"></i></a>
+                    <a href="#" title="Instagram" class="home-footer-icon"><i class="bi bi-instagram"></i></a>
+                    <a href="#" title="LinkedIn" class="home-footer-icon"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" title="Facebook" class="home-footer-icon"><i class="bi bi-facebook"></i></a>
+                    <a href="#" title="Pinterest" class="home-footer-icon"><i class="bi bi-pinterest"></i></a>
+                </div>
+
+                <div class="home-footer-settings">
+                    <a href="#">🌐 English</a>
+                    <a href="#">💲 USD</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+

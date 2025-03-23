@@ -1,0 +1,315 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %} 
+
+
+ <!-- BookCover Hero Section -->
+ <section class="bookcover-hero-section">
+    <div class="bookcover-hero-content">
+        <h1>Book Cover Design For <br><span>Indie Authors</span></h1>
+        <p class="bookcover-subtext">&#x27A1; PAY ONLY WHEN YOU'RE SATISFIED WITH THE FINAL RESULT</p>
+    </div>
+
+    <div class="bookcover-book-display">
+        <div class="bookcover-book-wrapper">
+            <img src="{% static 'img/bookcover1.png' %}" alt="Book Cover 1" class="bookcover-book bookcover-book1">
+        </div>
+        <div class="bookcover-book-wrapper">
+            <img src="{% static 'img/bookcover1.png' %}" alt="Book Cover 2" class="bookcover-book bookcover-book2">
+        </div>
+        <div class="bookcover-book-wrapper">
+            <img src="{% static 'img/bookcover1.png' %}" alt="Book Cover 3" class="bookcover-book bookcover-book3">
+        </div>
+    </div>
+</section>
+
+
+<!-- Home Genre Section Bottom -->
+<div class="home-genre-section-bottom">
+    <div class="home-features-container">
+        <!-- Header -->
+        <div class="home-features-header">
+            <h2>Self-Publishing Authors Love Working <span class="home-highlight">with Us</span></h2>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="home-features-grid">
+            <!-- First Large Feature (Not Clickable) -->
+            <div class="home-feature-card home-large-card home-non-clickable">
+                <div class="home-icon-container">
+                    <i class="bi bi-pencil-square home-icon"></i>
+                </div>
+                <div class="home-feature-text">
+                    <h4>Unlimited number of revisions</h4>
+                    <p>We bring all your ideas to life until you say, “Wow, that’s what I was looking for!”</p>
+                </div>
+            </div>
+
+            <!-- Professional Book Formatting -->
+            <a href="{% url 'services' %}?type=formatting" class="home-feature-card">
+                <div class="home-icon-container">
+                    <i class="bi bi-file-earmark-text home-icon"></i>
+                </div>
+                <div class="home-feature-text">
+                    <h4>Professional Book Formatting</h4>
+                    <p>Ensure your book is formatted professionally for all publishing platforms.</p>
+                </div>
+            </a>
+
+            <!-- Quick Turnaround -->
+            <a href="{% url 'services' %}?type=quick-turnaround" class="home-feature-card">
+                <div class="home-icon-container">
+                    <i class="bi bi-clock-history home-icon"></i>
+                </div>
+                <div class="home-feature-text">
+                    <h4>Quick turnaround</h4>
+                    <p>Get your first concept within 9 business days.</p>
+                </div>
+            </a>
+
+            <!-- Earn Points from Orders -->
+            <a href="{% url 'services' %}?type=points" class="home-feature-card">
+                <div class="home-icon-container">
+                    <i class="bi bi-star home-icon"></i>
+                </div>
+                <div class="home-feature-text">
+                    <h4>Get points from each order</h4>
+                    <p>Each time you order a cover design, you get points which you can spend on additional services.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Services Testimonials Section -->
+<section class="services-testimonial-section">
+    <div class="services-testimonial-container">
+        
+        <div class="services-testimonial-slider-container">
+            <div class="services-testimonial-slider" id="testimonialSlider">
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user1.jpg' %}" class="services-profile-pic" alt="User 1">
+                    <h4>Eric Bermúdez Cervantes</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>I can’t be more happy to have worked with them. The first cover was flawless...</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> a month ago
+                    </div>
+                </div>
+
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user2.jpg' %}" class="services-profile-pic" alt="User 2">
+                    <h4>Author Marie Howalt</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>I have just received my first cover from them and I am super impressed!</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> a month ago
+                    </div>
+                </div>
+
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user3.jpg' %}" class="services-profile-pic" alt="User 3">
+                    <h4>Aspen & Berrywood Books</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>Working with them to create the cover was an incredible experience!</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> 2 weeks ago
+                    </div>
+                </div>
+
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user4.jpg' %}" class="services-profile-pic" alt="User 4">
+                    <h4>John Smith</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>Absolutely love the design process, and they listened to every detail.</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> 3 weeks ago
+                    </div>
+                </div>
+
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user5.jpg' %}" class="services-profile-pic" alt="User 5">
+                    <h4>Samantha Clark</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>Their work is simply outstanding, I will definitely recommend them.</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> 1 week ago
+                    </div>
+                </div>
+
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user6.jpg' %}" class="services-profile-pic" alt="User 6">
+                    <h4>David Lee</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>The best experience I've had so far, professional and creative!</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> 2 weeks ago
+                    </div>
+                </div>
+
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user7.jpg' %}" class="services-profile-pic" alt="User 7">
+                    <h4>Michael Johnson</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>They delivered exactly what I was looking for in a timely manner.</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> 4 days ago
+                    </div>
+                </div>
+
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user8.jpg' %}" class="services-profile-pic" alt="User 8">
+                    <h4>Lisa Adams</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>Amazing work, truly exceeded my expectations!</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> 5 days ago
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- BookCover Process Section -->
+<section class="bookcover-process-section">
+    <h2 class="bookcover-process-title">Our Book Cover Design <span>Process</span></h2>
+    <div class="bookcover-process-tabs">
+        <button class="bookcover-tab-link active" data-step="bookcover-step1">01. Place an order</button>
+        <button class="bookcover-tab-link" data-step="bookcover-step2">02. Fill out a brief</button>
+        <button class="bookcover-tab-link" data-step="bookcover-step3">03. Get the first draft</button>
+        <button class="bookcover-tab-link" data-step="bookcover-step4">04. Make a payment</button>
+    </div>
+
+    <div class="bookcover-process-content">
+        <div class="bookcover-process-step active" id="bookcover-step1">
+            <div class="bookcover-process-text">
+                <h3><span>01</span> Place an order</h3>
+                <p>After choosing a package, you'll be <strong>redirected to our client portal.</strong></p>
+            </div>
+            <div class="bookcover-process-image">
+                <img src="{% static 'img/bookcover2.png' %}" alt="Place an order">
+            </div>
+        </div>
+
+        <div class="bookcover-process-step" id="bookcover-step2">
+            <div class="bookcover-process-text">
+                <h3><span>02</span> Fill out a brief</h3>
+                <p>Fill out the brief in your <strong>client portal</strong> to confirm your order.</p>
+            </div>
+            <div class="bookcover-process-image">
+                <img src="{% static 'img/bookcover3.png' %}" alt="Fill out a brief">
+            </div>
+        </div>
+
+        <div class="bookcover-process-step" id="bookcover-step3">
+            <div class="bookcover-process-text">
+                <h3><span>03</span> Get the first draft</h3>
+                <p>After getting the first draft, feel free to add your suggestions.</p>
+            </div>
+            <div class="bookcover-process-image">
+                <img src="{% static 'img/bookcover4.png' %}" alt="Get the first draft">
+            </div>
+        </div>
+
+        <div class="bookcover-process-step" id="bookcover-step4">
+            <div class="bookcover-process-text">
+                <h3><span>04</span> Make a payment</h3>
+                <p>Once you are <strong>satisfied with the design</strong>, we will send you a payment link.</p>
+            </div>
+            <div class="bookcover-process-image">
+                <img src="{% static 'img/bookcover5.png' %}" alt="Make a payment">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="bookcover-packages-section">
+    <div class="bookcover-container">
+        <h2 class="bookcover-section-title">Our <span>Packages</span></h2>
+
+        <div class="bookcover-packages-grid">
+            <!-- Ebook Package -->
+            <div class="bookcover-package-card">
+                <div class="bookcover-package-image">
+                    <img src="{% static 'img/bookco1.png' %}" alt="Ebook Package">
+                </div>
+                <div class="bookcover-package-details">
+                    <h3 class="bookcover-package-name">Ebook</h3>
+                    <p class="bookcover-package-price">$220</p>
+                    <ul class="bookcover-package-features">
+                        <li>✅ Custom ebook cover design</li>
+                        <li>✅ Concept delivered within 7 b/d</li>
+                        <li>✅ Unlimited revisions / no upfront payment</li>
+                        <li>✅ You can pay by installments</li>
+                        <li>✅ Layered source file</li>
+                    </ul>
+                    <div class="bookcover-free-inclusions">
+                        <p>FREE OF CHARGE</p>
+                        <ul>
+                            <li>✔ 3D book image</li>
+                            <li>✔ Title page</li>
+                            <li>✔ Bonus image for marketing</li>
+                        </ul>
+                    </div>
+                    <div class="bookcover-concept-selection">
+                        <input type="radio" name="ebook-concept" id="ebook-one" checked>
+                        <label for="ebook-one">1 concept</label>
+                        <input type="radio" name="ebook-concept" id="ebook-two">
+                        <label for="ebook-two">2 concepts (+$150)</label>
+                    </div>
+                    <a href="#" class="bookcover-order-btn">Order Now</a>
+                </div>
+            </div>
+
+            <!-- Ebook + Print Package -->
+            <div class="bookcover-package-card">
+                <div class="bookcover-package-image">
+                    <img src="{% static 'img/bookco2.png' %}" alt="Ebook + Print Package">
+                </div>
+                <div class="bookcover-package-details">
+                    <h3 class="bookcover-package-name">Ebook + Print</h3>
+                    <p class="bookcover-package-price">$270</p>
+                    <ul class="bookcover-package-features">
+                        <li>✅ Everything in the ebook package</li>
+                        <li>✅ High resolution JPG and print-ready PDF</li>
+                        <li>✅ Barcode generated from your ISBN</li>
+                        <li>✅ Print cover formatting</li>
+                    </ul>
+                    <div class="bookcover-free-inclusions">
+                        <p>FREE OF CHARGE</p>
+                        <ul>
+                            <li>✔ 3D book image</li>
+                            <li>✔ Title page</li>
+                            <li>✔ Bonus image for marketing</li>
+                        </ul>
+                    </div>
+                    <p class="bookcover-special-addons">*Special edition add-ons available</p>
+                    <div class="bookcover-concept-selection">
+                        <input type="radio" name="print-concept" id="print-one" checked>
+                        <label for="print-one">1 concept</label>
+                        <input type="radio" name="print-concept" id="print-two">
+                        <label for="print-two">2 concepts (+$150)</label>
+                    </div>
+                    <a href="#" class="bookcover-order-btn">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %} 
+
+<section class="blog-section blog">
+    <div class="newsletter-container">
+        <h2>Subscribe to our newsletter and get a detailed checklist on <br>
+            <span class="highlight">“How to Grow an Audience as a Newer Author”</span>
+        </h2>
+        <p>And that’s not all! Twice a week, you’ll receive useful tips on book cover design, self-publishing, and marketing to help increase your book sales.</p>
+        <form method="POST" action="#">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="recaptcha-container">
+                <div class="g-recaptcha" data-sitekey="{{ RECAPTCHA_SITE_KEY }}"></div>
+            </div>
+            <button class="subscribe-button" type="submit">Join Our Community</button>
+        </form>
+        <p class="privacy-text">*We respect your privacy. Unsubscribe anytime.</p>
+    </div>
+</section>
+
+
+<section class="blog-search-section blog">
+    <h2>Looking for something particular on <span class="blog-highlight">our blog?</span></h2>
+    <p>Most likely, we’ve got it covered</p>
+
+    <!-- Blog Search Form -->
+    <form method="GET" action="#" class="blog-search-bar">
+        <i class="fas fa-search blog-search-icon"></i>
+        <input type="text" name="query" placeholder="Search for something special..." value="{{ request.GET.query }}">
+        <button type="submit" hidden></button>
+    </form>
+
+    <!-- Blog Filter Buttons -->
+    <div class="blog-filter-buttons">
+        <a href="{% url 'blog' %}" class="blog-filter-button {% if not request.GET.category %}blog-active{% endif %}">All</a>
+        <a href="{% url 'blog' %}?category=book-cover-design" class="blog-filter-button {% if request.GET.category == 'book-cover-design' %}blog-active{% endif %}">Book cover design</a>
+        <a href="{% url 'blog' %}?category=case-studies" class="blog-filter-button {% if request.GET.category == 'case-studies' %}blog-active{% endif %}">Case studies</a>
+        <a href="{% url 'blog' %}?category=author-stories" class="blog-filter-button {% if request.GET.category == 'author-stories' %}blog-active{% endif %}">Author stories</a>
+        <a href="{% url 'blog' %}?category=freebies" class="blog-filter-button {% if request.GET.category == 'freebies' %}blog-active{% endif %}">Freebies</a>
+        <a href="{% url 'blog' %}?category=opinion-hub" class="blog-filter-button {% if request.GET.category == 'opinion-hub' %}blog-active{% endif %}">Opinion hub</a>
+        <a href="{% url 'blog' %}?category=self-publishing" class="blog-filter-button {% if request.GET.category == 'self-publishing' %}blog-active{% endif %}">Self-publishing</a>
+        <a href="{% url 'blog' %}?category=our-designers" class="blog-filter-button {% if request.GET.category == 'our-designers' %}blog-active{% endif %}">Our designers</a>
+    </div>
+</section>
+
+<section class="blog-list blog">
+    <div class="blog-item blog">
+        <a href="#">
+            <img src="{% static 'img/blog1.png' %}" alt="Blog 1">
+            <span class="blog-category blog">SELF-PUBLISHING</span>
+            <h3>How to Self-Publish a Book in 2025: Step-by-Step Guide</h3>
+            <p>If you plan to release a new novel this year, then the question of how...</p>
+            <div class="blog-meta blog">
+                <span>26.01.2025</span>
+                <span>6 min</span>
+            </div>
+        </a>
+    </div>
+    <div class="blog-item blog">
+        <a href="#">
+            <img src="{% static 'img/blog2.png' %}" alt="Blog 2">
+            <span class="blog-category blog">BOOK COVER DESIGN</span>
+            <h3>10 Book Cover Design Trends that Await Us in 2025</h3>
+            <p>A book cover grabs the audience’s attention, creates the first impression...</p>
+            <div class="blog-meta blog">
+                <span>22.12.2024</span>
+                <span>7 min</span>
+            </div>
+        </a>
+    </div>
+    <div class="blog-item blog">
+        <a href="#">
+            <img src="{% static 'img/blog3.png' %}" alt="Blog 3">
+            <span class="blog-category blog">SELF-PUBLISHING</span>
+            <h3>10 Self-publishing Trends in 2025 You Can’t Miss</h3>
+            <p>If you want to develop a successful strategy for 2025, you can’t do so without...</p>
+            <div class="blog-meta blog">
+                <span>09.12.2024</span>
+                <span>7 min</span>
+            </div>
+        </a>
+    </div>
+    
+    <!-- More Blog Items -->
+    <div class="see-more blog">
+        <a href="{% url 'blog' %}">See More</a>
+    </div>
+</section>
+
+
+
+
+
+
+{% endblock %}

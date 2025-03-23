@@ -1,0 +1,574 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %} 
+
+
+
+<!-- Hero Section -->
+<section class="home-hero-section">
+    <div id="homeHeroCarousel" class="home-carousel">
+        <div class="home-carousel-track">
+            <!-- Carousel Items -->
+            <div class="home-carousel-item">
+                <img src="{% static 'img/heroImg1.jpg' %}" class="home-slide-image" alt="Books and Knowledge">
+                <div class="home-carousel-caption">
+                    <h1>Explore <span>Endless Stories</span></h1>
+                    <p>Dive into a world of imagination and discovery.</p>
+                    <a href="{% url 'portfolio' %}" class="home-cta-button">Start Reading</a>
+                </div>
+            </div>
+            <div class="home-carousel-item">
+                <img src="{% static 'img/heroImg2.jpg' %}" class="home-slide-image" alt="Adventure Awaits">
+                <div class="home-carousel-caption">
+                    <h1>Find Your Next <span>Adventure</span></h1>
+                    <p>From fantasy to thrillers, there’s something for everyone.</p>
+                    <a href="{% url 'portfolio' %}" class="home-cta-button">Discover Now</a>
+                </div>
+            </div>
+            <div class="home-carousel-item">
+                <img src="{% static 'img/heroImg3.jpg' %}" class="home-slide-image" alt="Knowledge is Power">
+                <div class="home-carousel-caption">
+                    <h1>Expand Your <span>Horizon</span></h1>
+                    <p>Explore books that inspire and educate.</p>
+                    <a href="{% url 'portfolio' %}" class="home-cta-button">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="home-carousel-control prev" aria-label="Previous Slide">
+            <span>&larr;</span>
+        </button>
+        <button class="home-carousel-control next" aria-label="Next Slide">
+            <span>&rarr;</span>
+        </button>
+    </div>
+</section>
+
+
+<!-- Genre Section -->
+<section class="home-genre-section">
+    <!-- Top Section -->
+    <div class="home-genre-section-top d-flex align-items-center justify-content-between">
+        <!-- Left Side -->
+        <div class="home-genre-section-top-left">
+            <h2>Design for All Genres</h2>
+            <a href="{% url 'portfolio' %}" class="home-cta-button">Explore All <span>&rarr;</span></a>
+        </div>
+
+        <!-- Right Side with Pagination -->
+        <div class="home-genre-section-top-right">
+            <div class="home-book-carousel">
+                <a href="{% url 'portfolio' %}" class="home-book-cover">
+                    <img src="{% static 'img/card1.png' %}" alt="Book Cover 1">
+                </a>
+                <a href="{% url 'portfolio' %}" class="home-book-cover">
+                    <img src="{% static 'img/card2.png' %}" alt="Book Cover 2">
+                </a>
+                <a href="{% url 'portfolio' %}" class="home-book-cover">
+                    <img src="{% static 'img/card3.png' %}" alt="Book Cover 3">
+                </a>
+                <a href="{% url 'portfolio' %}" class="home-book-cover">
+                    <img src="{% static 'img/card4.png' %}" alt="Book Cover 4">
+                </a>
+                <a href="{% url 'portfolio' %}" class="home-book-cover">
+                    <img src="{% static 'img/newgern1.webp' %}" alt="Book Cover 5">
+                </a>
+                <a href="{% url 'portfolio' %}" class="home-book-cover">
+                    <img src="{% static 'img/newgern2.webp' %}" alt="Book Cover 6">
+                </a>
+                <a href="{% url 'portfolio' %}" class="home-book-cover">
+                    <img src="{% static 'img/newgern3.webp' %}" alt="Book Cover 7">
+                </a>
+                <a href="{% url 'portfolio' %}" class="home-book-cover">
+                    <img src="{% static 'img/newgern4.webp' %}" alt="Book Cover 8">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Services Section -->
+<section class="home-services-section">
+    <div class="home-container">
+        <h2 class="home-section-title">Our Services</h2>
+        <div class="home-services-grid">
+            <!-- Book Cover Design -->
+            <div class="home-service-card">
+                <div class="home-card-inner" id="home-card1">
+                    <div class="home-card-front">
+                        <i class="bi bi-palette"></i>
+                        <h3>Book Cover Design</h3>
+                        <p>Get stunning book covers that capture attention and fit your genre.</p>
+                        <button class="home-learn-more" onclick="flipCard('home-card1')">Learn More</button>
+                    </div>
+                    <div class="home-card-back">
+                        <a href="{% url 'services' %}?type=book-cover">
+                            <img src="{% static 'img/book1.webp' %}" alt="Book Cover">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book Editing and Formatting -->
+            <div class="home-service-card">
+                <div class="home-card-inner" id="home-card2">
+                    <div class="home-card-front">
+                        <i class="bi bi-file-earmark-text"></i>
+                        <h3>Book Editing & Formatting</h3>
+                        <p>Ensure your book is well-structured, error-free, and ready for publishing.</p>
+                        <button class="home-learn-more" onclick="flipCard('home-card2')">Learn More</button>
+                    </div>
+                    <div class="home-card-back">
+                        <a href="{% url 'services' %}?type=editing">
+                            <img src="{% static 'img/book2.webp' %}" alt="Editing">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book Marketing and Promotion -->
+            <div class="home-service-card">
+                <div class="home-card-inner" id="home-card3">
+                    <div class="home-card-front">
+                        <i class="bi bi-megaphone"></i>
+                        <h3>Book Marketing & Promotion</h3>
+                        <p>Boost your book sales with expert marketing strategies and campaigns.</p>
+                        <button class="home-learn-more" onclick="flipCard('home-card3')">Learn More</button>
+                    </div>
+                    <div class="home-card-back">
+                        <a href="{% url 'services' %}?type=marketing">
+                            <img src="{% static 'img/book3.webp' %}" alt="Marketing">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Author Branding Service -->
+            <div class="home-service-card">
+                <div class="home-card-inner" id="home-card4">
+                    <div class="home-card-front">
+                        <i class="bi bi-person-bounding-box"></i>
+                        <h3>Author Branding Service</h3>
+                        <p>Build a strong author brand and grow your audience effectively.</p>
+                        <button class="home-learn-more" onclick="flipCard('home-card4')">Learn More</button>
+                    </div>
+                    <div class="home-card-back">
+                        <a href="{% url 'services' %}?type=branding">
+                            <img src="{% static 'img/book4.webp' %}" alt="Branding">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Home Genre Section Bottom -->
+<div class="home-genre-section-bottom">
+    <div class="home-features-container">
+        <!-- Header -->
+        <div class="home-features-header">
+            <h2>Self-Publishing Authors Love Working <span class="home-highlight">with Us</span></h2>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="home-features-grid">
+            <!-- First Large Feature (Not Clickable) -->
+            <div class="home-feature-card home-large-card home-non-clickable">
+                <div class="home-icon-container">
+                    <i class="bi bi-pencil-square home-icon"></i>
+                </div>
+                <div class="home-feature-text">
+                    <h4>Unlimited number of revisions</h4>
+                    <p>We bring all your ideas to life until you say, “Wow, that’s what I was looking for!”</p>
+                </div>
+            </div>
+
+            <!-- Professional Book Formatting -->
+            <a href="{% url 'services' %}?type=formatting" class="home-feature-card">
+                <div class="home-icon-container">
+                    <i class="bi bi-file-earmark-text home-icon"></i>
+                </div>
+                <div class="home-feature-text">
+                    <h4>Professional Book Formatting</h4>
+                    <p>Ensure your book is formatted professionally for all publishing platforms.</p>
+                </div>
+            </a>
+
+            <!-- Quick Turnaround -->
+            <a href="{% url 'services' %}?type=quick-turnaround" class="home-feature-card">
+                <div class="home-icon-container">
+                    <i class="bi bi-clock-history home-icon"></i>
+                </div>
+                <div class="home-feature-text">
+                    <h4>Quick turnaround</h4>
+                    <p>Get your first concept within 9 business days.</p>
+                </div>
+            </a>
+
+            <!-- Earn Points from Orders -->
+            <a href="{% url 'services' %}?type=points" class="home-feature-card">
+                <div class="home-icon-container">
+                    <i class="bi bi-star home-icon"></i>
+                </div>
+                <div class="home-feature-text">
+                    <h4>Get points from each order</h4>
+                    <p>Each time you order a cover design, you get points which you can spend on additional services.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Home Carousel Section -->
+<section class="home-unique-carousel-section">
+    <h2 class="home-carousel-title">Our <span class="home-highlight">Portfolio</span></h2>
+    <p class="home-carousel-subtitle">Explore our stunning book cover designs</p>
+
+    <div class="home-unique-carousel-container">
+        <button class="home-unique-carousel-control prev"><i class="bi bi-chevron-left"></i></button>
+
+        <div class="home-unique-carousel-wrapper">
+            <div class="home-unique-carousel-track">
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card1.png' %}" alt="Book 1" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card2.png' %}" alt="Book 2" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card3.png' %}" alt="Book 3" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card4.png' %}" alt="Book 4" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card5.png' %}" alt="Book 5" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card6.png' %}" alt="Book 6" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card7.png' %}" alt="Book 7" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card1.png' %}" alt="Book 1" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card2.png' %}" alt="Book 2" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card3.png' %}" alt="Book 3" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card4.png' %}" alt="Book 4" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card5.png' %}" alt="Book 5" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card6.png' %}" alt="Book 6" class="home-unique-carousel-item"></a>
+                <a href="{% url 'portfolio' %}"><img src="{% static 'img/card7.png' %}" alt="Book 7" class="home-unique-carousel-item"></a>
+            </div>
+        </div>
+
+        <button class="home-unique-carousel-control next"><i class="bi bi-chevron-right"></i></button>
+    </div>
+
+    <div class="home-unique-pagination-dots"></div>
+
+    <div class="home-portfolio-button-container">
+        <a href="{% url 'portfolio' %}" class="home-see-full-portfolio-btn">See Full Portfolio</a>
+    </div>
+</section>
+
+
+
+
+
+<!-- Home Design Process Section -->
+<section class="home-design-process">
+    <div class="home-design-bg-animation"></div> <!-- Moving Background -->
+    <div class="home-container">
+        <h2 class="home-section-title">How We <span class="home-highlight">Design Your Book Cover</span></h2>
+        <p class="home-section-subtitle">Here’s how we bring your book cover to life step by step.</p>
+
+        <div class="home-steps-container">
+            <div class="home-step-card">
+                <div class="home-step-header">
+                    <span class="home-step-number">Step 1</span>
+                    <h4>Dig Deeper Into Your Book Concept</h4>
+                </div>
+                <p>We ask you to fill in a <strong>creative brief</strong> to understand your vision, catch the hook of your <strong>story</strong>, and <strong>reflect</strong> it in the cover design.</p>
+            </div>
+
+            <div class="home-step-card">
+                <div class="home-step-header">
+                    <span class="home-step-number">Step 2</span>
+                    <h4>Analyze Your Genre</h4>
+                </div>
+                <p>We research <strong>typography, layouts, and color themes</strong> common to your genre to ensure the cover design will <strong>fit the market</strong>.</p>
+            </div>
+
+            <div class="home-step-card">
+                <div class="home-step-header">
+                    <span class="home-step-number">Step 3</span>
+                    <h4>First Sketch & Refinements</h4>
+                </div>
+                <p>We deliver the first concept in <strong>9 business days</strong> for a photo-based cover and <strong>14 days</strong> for an illustrated one.</p>
+            </div>
+
+            <div class="home-step-card">
+                <div class="home-step-header">
+                    <span class="home-step-number">Step 4</span>
+                    <h4>Implement Your Revisions</h4>
+                </div>
+                <p>We offer <strong>unlimited revisions</strong> to ensure your book cover is exactly what you envisioned.</p>
+            </div>
+        </div>
+
+        <div class="home-order-button-container">
+            <a href="{% url 'services' %}?type=book-cover" class="home-place-order-btn">Place Your Order</a>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Customer Testimonials Section -->
+<section class="home-customer-testimonials">
+    <!-- Background Floating Shapes -->
+    <div class="home-animated-bg-container">
+        <div class="home-animated-bg-shape home-shape1"></div>
+        <div class="home-animated-bg-shape home-shape2"></div>
+        <div class="home-animated-bg-shape home-shape3"></div>
+        <div class="home-animated-bg-shape home-shape4"></div>
+        <div class="home-animated-bg-shape home-shape5"></div>
+        <div class="home-animated-bg-shape home-shape6"></div>
+        <div class="home-animated-bg-shape home-shape7"></div>
+        <div class="home-animated-bg-shape home-shape8"></div>
+        <div class="home-animated-bg-shape home-shape9"></div>
+        <div class="home-animated-bg-shape home-shape10"></div>
+        <div class="home-animated-bg-shape home-shape11"></div>
+    </div>
+
+    <div class="container">
+        <!-- Section Title -->
+        <h2 class="home-section-title">Meet Our <span class="highlight">Customers</span></h2>
+        <p class="home-section-subtitle">
+            Indie authors share their stories about how we helped them get the cover of their dreams.
+        </p>
+
+        <!-- Testimonials -->
+        <div class="home-testimonials">
+            <div class="home-testimonial-card">
+                <iframe
+                    src="https://www.youtube.com/embed/VIDEO_ID_1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+                <div class="home-review-card">
+                    <h4>David Lyons</h4>
+                    <p>"The team is patient, approachable, and their book cover designs always exceed expectations."</p>
+                    <div class="home-social-links">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-twitter"></i>
+                        <i class="bi bi-instagram"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home-testimonial-card">
+                <iframe
+                    src="https://www.youtube.com/embed/VIDEO_ID_2"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+                <div class="home-review-card">
+                    <h4>Kate Myers</h4>
+                    <p>"The entire team is incredibly friendly, and they ensure that every client gets exactly what they want."</p>
+                    <div class="home-social-links">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home-testimonial-card">
+                <iframe
+                    src="https://www.youtube.com/embed/VIDEO_ID_3"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+                <div class="home-review-card">
+                    <h4>Kate Jones</h4>
+                    <p>"Their professionalism and attention to detail make them my go-to for book covers every time."</p>
+                    <div class="home-social-links">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-twitter"></i>
+                        <i class="bi bi-instagram"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- View All Reviews Button -->
+        <div class="home-view-all">
+            <a href="#" class="btn btn-success">View All Reviews</a>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="home-stats-section">
+    <div class="container">
+        <div class="home-stats">
+            <div class="home-stat">
+                <h2 class="home-count" data-target="5000">0</h2>
+                <span class="home-plus">+</span>
+                <p>Beautiful Covers</p>
+            </div>
+            <div class="home-stat">
+                <h2 class="home-count" data-target="8">0</h2>
+                <p>Years in the Market</p>
+            </div>
+            <div class="home-stat">
+                <h2 class="home-count" data-target="1500">0</h2>
+                <span class="home-plus">+</span>
+                <p>Satisfied Customers</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Featured Section -->
+<section class="home-featured-section">
+    <div class="container">
+        <!-- Featured Title -->
+        <h2 class="home-featured-title">
+            As featured <span class="highlight">in</span>
+        </h2>
+
+        <div class="home-featured-logos">
+            <a href="https://selfpublishingwithdale.com" target="_blank">
+                <img src="{% static 'img/fet1.png' %}" alt="SelfPublishingWithDale.com">
+            </a>
+            <a href="https://jennamoreci.com" target="_blank">
+                <img src="{% static 'img/fet2.png' %}" alt="Jenna Moreci">
+            </a>
+            <a href="https://thecreativepenn.com" target="_blank">
+                <img src="{% static 'img/fet3.png' %}" alt="The Creative Penn">
+            </a>
+            <a href="https://buildbookbuzz.com" target="_blank">
+                <img src="{% static 'img/fet4.png' %}" alt="Build Book Buzz">
+            </a>
+            <a href="https://writersandartists.com" target="_blank">
+                <img src="{% static 'img/fet5.png' %}" alt="Writers & Artists">
+            </a>
+            <a href="https://allianceindependentauthors.org" target="_blank">
+                <img src="{% static 'img/fet6.png' %}" alt="Alliance of Independent Authors">
+            </a>
+            <a href="https://writershelpingwriters.net" target="_blank">
+                <img src="{% static 'img/fet7.png' %}" alt="Writers Helping Writers">
+            </a>
+            <a href="https://kindlepreneur.com" target="_blank">
+                <img src="{% static 'img/fet8.png' %}" alt="Kindlepreneur">
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Awards Section -->
+<section class="home-awards-section">
+    <div class="container">
+        <!-- Awards Title -->
+        <h2 class="home-awards-title">
+            Our <span class="highlight">Awards</span>
+        </h2>
+        <p class="home-awards-subtitle">
+            Proud to be connected with and recognized by the best in business.
+        </p>
+
+        <!-- Awards Carousel -->
+        <div class="home-carousel-wrapper">
+            <button class="home-carousel-control prev">&larr;</button>
+            <div class="home-carousel">
+                <a href="https://example.com/award1" target="_blank" class="home-award">
+                    <img src="{% static 'img/aw1.webp' %}" alt="Award 1">
+                    <p>Award winner in <br> paranormal / fantasy</p>
+                    <span>The Girl Who Belonged to the Sea</span>
+                </a>
+                <a href="https://example.com/award2" target="_blank" class="home-award">
+                    <img src="{% static 'img/aw2.webp' %}" alt="Award 2">
+                    <p>Award winner in fiction</p>
+                    <span>Cynetic Wolf</span>
+                </a>
+                <a href="https://example.com/award3" target="_blank" class="home-award">
+                    <img src="{% static 'img/aw3.webp' %}" alt="Award 3">
+                    <p>Award winner in non-fiction</p>
+                    <span>Red Tea</span>
+                </a>
+                <a href="https://example.com/award4" target="_blank" class="home-award">
+                    <img src="{% static 'img/aw4.webp' %}" alt="Award 4">
+                    <p>Gold star in fiction</p>
+                    <span>Garbage In Demon Out</span>
+                </a>
+                <a href="https://example.com/award5" target="_blank" class="home-award">
+                    <img src="{% static 'img/aw5.webp' %}" alt="Award 5">
+                    <p>Gold star in non-fiction</p>
+                    <span>Amazon Werbung für Autoren</span>
+                </a>
+                <a href="https://example.com/award6" target="_blank" class="home-award">
+                    <img src="{% static 'img/aw6.webp' %}" alt="Award 6">
+                    <p>Gold star in fiction</p>
+                    <span>Striker</span>
+                </a>
+                <a href="https://example.com/award1" target="_blank" class="home-award">
+                    <img src="{% static 'img/aw1.webp' %}" alt="Award 1">
+                    <p>Award winner in <br> paranormal / fantasy</p>
+                    <span>The Girl Who Belonged to the Sea</span>
+                </a>
+                <a href="https://example.com/award2" target="_blank" class="home-award">
+                    <img src="{% static 'img/aw2.webp' %}" alt="Award 2">
+                    <p>Award winner in fiction</p>
+                    <span>Cynetic Wolf</span>
+                </a>
+                <a href="https://example.com/award3" target="_blank" class="home-award">
+                    <img src="{% static 'img/aw3.webp' %}" alt="Award 3">
+                    <p>Award winner in non-fiction</p>
+                    <span>Red Tea</span>
+                </a>
+                <a href="https://example.com/award4" target="_blank" class="home-award">
+                    <img src="{% static 'img/aw4.webp' %}" alt="Award 4">
+                    <p>Gold star in fiction</p>
+                    <span>Garbage In Demon Out</span>
+                </a>
+                <a href="https://example.com/award5" target="_blank" class="home-award">
+                    <img src="{% static 'img/aw5.webp' %}" alt="Award 5">
+                    <p>Gold star in non-fiction</p>
+                    <span>Amazon Werbung für Autoren</span>
+                </a>
+                <a href="https://example.com/award6" target="_blank" class="home-award">
+                    <img src="{% static 'img/aw6.webp' %}" alt="Award 6">
+                    <p>Gold star in fiction</p>
+                    <span>Striker</span>
+                </a>
+            </div>
+            <button class="home-carousel-control next">&rarr;</button>
+        </div>
+    </div>
+</section>
+
+<!-- Free Cover Idea Section -->
+<section class="home-free-cover-idea-section">
+    <div class="home-animated-bg"></div> <!-- Animated Background Layer -->
+    <div class="home-">
+        <div class="home-shape home-shape-one"></div>
+        <div class="home-shape home-shape-two"></div>
+        <div class="home-shape home-shape-three"></div>
+        <div class="home-shape home-shape-four"></div>
+        <div class="home-shape home-shape-five"></div>
+    </div>
+
+    <div class="container">
+        <!-- Centered Main Content -->
+        <div class="home-text-content">
+            <h2>Get a Free Cover <span>Design Idea</span></h2>
+            <p>We'll help you come up with ideas that work.</p>
+            <a href="{% url 'contact' %}" class="home-cta-button">Get a Free Cover Design Idea</a>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}

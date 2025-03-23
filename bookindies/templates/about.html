@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %} 
+
+
+
+<!-- Meet Our Team Section -->
+<section class="aboutus-hero aboutus">
+    <div class="aboutus-background-shapes">
+        <div class="aboutus-shape-one"></div>
+        <div class="aboutus-shape-two"></div>
+        <div class="aboutus-shape-three"></div>
+    </div>
+    <div class="container">
+        <h1>Meet <span class="aboutus-highlight">Our Team</span></h1>
+        <p class="aboutus-fade-in-text">We are a team of passionate creators, designers, and innovators.</p>
+        <a href="#" class="aboutus-cta-button">Become a Part of Our Team</a>
+    </div>
+</section>
+
+
+
+<!-- Our Story Section -->
+<section class="aboutus-our-story">
+    <div class="aboutus-container">
+        <h2>
+            <span class="aboutus-highlight">There are so many stories</span> in 
+            <span class="aboutus-green-text">this world worth telling...</span>
+        </h2>
+        <p class="aboutus-fade-in-text">
+            Our story is no exception. It started with three young people sharing the same passion for creating unique design. 
+            Through hard work and an infinite amount of hours mastering their craft, the team ended up founding a place for 
+            people who shared their values.  
+            <br><br>
+            Our team believes that book cover design can look professional without costing you a fortune. There are so many 
+            stories in this world worth telling. Let us make sure yours gets the attention it deserves.
+        </p>
+    </div>
+</section>
+
+
+
+<!-- About Us - Our Team Section -->
+<section class="aboutus-team-section">
+    <div class="aboutus-container">
+        <h2>Our <span class="aboutus-highlight">Team</span></h2>
+        <div class="aboutus-team-grid">
+            <div class="aboutus-team-member">
+                <img src="{% static 'img/team11.jpg' %}" alt="Nadia">
+                <div class="aboutus-team-info">
+                    <h3>Nadia</h3>
+                    <p>Head of Customer Success</p>
+                </div>
+            </div>
+
+            <div class="aboutus-team-member">
+                <img src="{% static 'img/team2.jpg' %}" alt="Ihor">
+                <div class="aboutus-team-info">
+                    <h3>Ihor</h3>
+                    <p>CEO, Co-founder</p>
+                </div>
+            </div>
+
+            <div class="aboutus-team-member">
+                <img src="{% static 'img/team33.jpg' %}" alt="Julia">
+                <div class="aboutus-team-info">
+                    <h3>Julia</h3>
+                    <p>Creative Director</p>
+                </div>
+            </div>
+
+            <div class="aboutus-team-member">
+                <img src="{% static 'img/team4.jpg' %}" alt="Julie">
+                <div class="aboutus-team-info">
+                    <h3>Julie</h3>
+                    <p>Senior Graphic Designer</p>
+                </div>
+            </div>
+
+            <div class="aboutus-team-member">
+                <img src="{% static 'img/team5.jpg' %}" alt="Julie">
+                <div class="aboutus-team-info">
+                    <h3>Julie</h3>
+                    <p>Senior Graphic Designer</p>
+                </div>
+            </div>
+
+            <div class="aboutus-team-member">
+                <img src="{% static 'img/team6.jpg' %}" alt="Julie">
+                <div class="aboutus-team-info">
+                    <h3>Julie</h3>
+                    <p>Senior Graphic Designer</p>
+                </div>
+            </div>
+
+            <div class="aboutus-team-member">
+                <img src="{% static 'img/team7.jpg' %}" alt="Julie">
+                <div class="aboutus-team-info">
+                    <h3>Julie</h3>
+                    <p>Senior Graphic Designer</p>
+                </div>
+            </div>
+
+            <div class="aboutus-team-member">
+                <img src="{% static 'img/team8.jpg' %}" alt="Julie">
+                <div class="aboutus-team-info">
+                    <h3>Julie</h3>
+                    <p>Senior Graphic Designer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- About Us - Newsletter Section -->
+<section class="aboutus-newsletter-section">
+    <div class="aboutus-container">
+        <h2>Stay Tuned with Our <span class="aboutus-highlight">Latest News & Updates</span></h2>
+        <p>Subscribe to our newsletter and get valuable insights, tips, and strategies for growing your audience as an author!</p>
+        <form class="aboutus-newsletter-form">
+            <input type="text" id="name" placeholder="Enter your full name" required>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe Now</button>
+        </form>
+        <p class="aboutus-privacy-text">We respect your privacy. You can unsubscribe at any time.</p>
+    </div>
+</section>
+
+
+
+
+
+
+{% endblock %}

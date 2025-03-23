@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %} 
+
+
+
+
+
+
+<!-- Contact Us - Hero Section -->
+<section class="contactus-hero">
+    <div class="contactus-animated-bg"></div> 
+    <div class="contactus-floating-shapes">
+        <div class="contactus-shape contactus-shape-one"></div>
+        <div class="contactus-shape contactus-shape-two"></div>
+        <div class="contactus-shape contactus-shape-three"></div>
+        <div class="contactus-shape contactus-shape-four"></div>
+        <div class="contactus-shape contactus-shape-five"></div>
+        <div class="contactus-shape contactus-shape-six"></div>
+    </div>
+    <div class="contactus-container">
+        <h2>Contact <span class="contactus-highlight">Us</span></h2>
+        <p>
+            If you have any questions or just want to say “Hi,” feel free to reach out!  
+            You can fill out the form below or send an email to  
+            <a href="mailto:team@miblart.com">ouremail@gmail.com</a>.  
+            We’ll get back to you within <strong>24 hours</strong>.
+        </p>
+        <a href="#contact-form" class="contactus-button">Get in Touch</a>
+    </div>
+</section>
+
+
+
+<!-- Contact Us - Form Section -->
+<section class="contactus-form">
+    <form method="post">
+        {% csrf_token %}
+        
+        <div class="contactus-form-group">
+            <div>
+                <label for="first-name">First Name *</label>
+                <input type="text" id="first-name" name="first_name" required>
+            </div>
+            <div>
+                <label for="last-name">Last Name *</label>
+                <input type="text" id="last-name" name="last_name" required>
+            </div>
+        </div>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="referral">How did you find us or who referred you?</label>
+        <input type="text" id="referral" name="referral">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message"></textarea>
+
+        <div class="contactus-checkbox-group">
+            <input type="checkbox" id="data-processing" name="data_processing" required>
+            <label for="data-processing">Agree with personal data processing. For more info, consult our <a href="#">privacy policy</a>.</label>
+        </div>
+
+        <div class="contactus-recaptcha-container">
+            <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+        </div>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+
+
+
+
+
+
+
+{% endblock %}

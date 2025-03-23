@@ -1,0 +1,2611 @@
+/* =================== General Reset =================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    
+
+}
+/* 
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+} */
+
+/* =================== Home Header Styling =================== */
+.home-header {
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 12px 25px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo */
+.home-BookStorLogo img {
+    height: 35px;
+    width: auto;
+    margin-left: 100px;
+    margin-right: 80px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.home-BookStorLogo img:hover {
+    transform: scale(1.08);
+}
+
+/* Navigation */
+.home-nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.home-nav li {
+    position: relative;
+    padding: 0;
+}
+
+/* Navbar Text Style */
+.home-nav li a {
+    color: #222;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 6px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.home-nav li a:hover {
+    color: #28a745;
+}
+
+/* Apply effects only to the first <ul> in the nav */
+.home-nav > li {
+    position: relative;
+    padding: 0 10px;
+}
+
+/* Navigation Icons */
+.text-dark {
+    font-size: 1.2rem;
+    color: #333;
+    margin-right: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.text-dark:hover {
+    color: #28a745;
+    transform: scale(1.1);
+}
+
+/* =================== Home Dropdown Menu =================== */
+.home-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    min-width: 220px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Show Dropdown on Hover */
+.home-dropdown:hover .home-dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Dropdown Items */
+.home-dropdown-menu li {
+    list-style: none;
+    padding: 3px 0;
+}
+
+.home-dropdown-menu li a {
+    display: block;
+    text-decoration: none;
+    color: #222;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.home-dropdown-menu li a:hover {
+    color: #28a745;
+}
+
+/* =================== Home Nested Dropdown Menu =================== */
+.home-nested-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    min-width: 500px;
+    white-space: nowrap;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    
+    /* Grid Layout */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    align-items: center;
+}
+
+/* Show Nested Dropdown on Hover */
+.home-nested-dropdown:hover .home-nested-dropdown-menu {
+    display: grid;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Nested Dropdown Items */
+.home-nested-dropdown-menu li {
+    list-style: none;
+}
+
+.home-nested-dropdown-menu li a {
+    display: block;
+    text-decoration: none;
+    color: #222;
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.home-nested-dropdown-menu li a:hover {
+    color: #28a745;
+}
+
+/* =================== Responsive Adjustments =================== */
+@media (max-width: 768px) {
+    .home-nested-dropdown-menu {
+        grid-template-columns: repeat(2, 1fr);
+        min-width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-nested-dropdown-menu {
+        grid-template-columns: repeat(1, 1fr);
+        min-width: 250px;
+    }
+}
+
+
+/* =================== Hero Section =================== */
+.home-hero-section {
+    height: 90vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-carousel {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 1; /* Ensure proper stacking */
+}
+
+.home-carousel-track {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    height: 100%; /* Ensures slides take full height */
+}
+
+.home-carousel-item {
+    flex: 0 0 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* =================== Slide Images =================== */
+.home-slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =================== Caption Styling =================== */
+.home-carousel-caption {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 50%; /* Adjusted for better readability */
+    z-index: 10; /* Ensure it's above images */
+    animation: home-fadeInUp 1s ease-in-out;
+    text-align: left;
+}
+
+.home-carousel-caption h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.home-carousel-caption h1 span {
+    color: #33cc66;
+}
+
+.home-carousel-caption p {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.home-cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #33cc66;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.home-cta-button:hover {
+    background-color: #28a745;
+}
+
+/* =================== Controls Styling =================== */
+.home-carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent for better visibility */
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.home-carousel-control:hover {
+    background: rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+}
+
+.home-carousel-control.prev {
+    left: 20px;
+}
+
+.home-carousel-control.next {
+    right: 20px;
+}
+
+/* =================== Keyframes Animation =================== */
+@keyframes home-fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =================== Indicators Styling =================== */
+.home-custom-carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.home-custom-indicator {
+    width: 30px;
+    height: 5px;
+    background: white;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.home-custom-indicator.active {
+    background-color: #33cc66;
+    opacity: 1;
+}
+
+/* =================== Fade-in Animation for Captions =================== */
+@keyframes home-fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =================== Responsive Adjustments =================== */
+@media (max-width: 1024px) {
+    .home-custom-carousel-caption {
+        max-width: 70%;
+        bottom: 10%;
+        padding: 20px;
+    }
+
+    .home-custom-carousel-caption h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-custom-carousel-caption p {
+        font-size: 1.3rem;
+    }
+
+    .home-custom-carousel-caption a {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .home-custom-carousel-control {
+        font-size: 1.8rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-custom-carousel-caption {
+        max-width: 90%;
+        bottom: 5%;
+        padding: 15px;
+    }
+
+    .home-custom-carousel-caption h1 {
+        font-size: 2rem;
+    }
+
+    .home-custom-carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .home-custom-carousel-caption a {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .home-custom-carousel-control {
+        font-size: 1.5rem;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-custom-carousel-caption {
+        max-width: 95%;
+        text-align: center;
+        bottom: 3%;
+    }
+
+    .home-custom-carousel-caption h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-custom-carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    .home-custom-carousel-caption a {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+
+    .home-custom-carousel-control {
+        font-size: 1.2rem;
+        padding: 4px;
+    }
+}
+
+
+/***** Genre Section *****/
+.home-genre-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.home-genre-section-top {
+    margin-bottom: 30px;
+}
+
+.home-genre-section-top-left h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.home-genre-section-top-left .home-cta-button {
+    font-size: 1rem;
+    color: #33cc66;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.home-genre-section-top-left .home-cta-button:hover {
+    color: #28a745;
+}
+
+
+/***** Home Services Section *****/
+.home-services-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+/* Section Title */
+.home-section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Grid Layout */
+.home-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Flip Card */
+.home-service-card {
+    background: transparent;
+    perspective: 1000px;
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+/* Inner Flip Card */
+.home-card-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Flip Effect on Hover */
+.home-service-card:hover .home-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Flip Back When Cursor Leaves */
+.home-service-card .home-card-inner {
+    transform: rotateY(0deg);
+}
+
+/* Card Front & Back */
+.home-card-front,
+.home-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Front Card Styling */
+.home-card-front {
+    background: white;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Back Card Styling */
+.home-card-back {
+    background: #33cc66;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Back Card Image */
+.home-card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Card Icons */
+.home-card-front i {
+    font-size: 2.5rem;
+    color: #33cc66;
+    margin-bottom: 15px;
+}
+
+/* Card Title */
+.home-card-front h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Card Description */
+.home-card-front p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Learn More Button */
+.home-learn-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: #33cc66;
+    border: 2px solid #33cc66;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.home-learn-more:hover {
+    background-color: #33cc66;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* =================== Responsive Design =================== */
+@media (max-width: 768px) {
+    .home-services-grid {
+        grid-template-columns: repeat(1, minmax(250px, 1fr));
+    }
+
+    .home-service-card {
+        height: 280px;
+    }
+}
+
+
+
+/* =================== Bottom Section =================== */
+.home-genre-section-bottom {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* =================== Features Container =================== */
+.home-features-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* =================== Header Styling =================== */
+.home-features-header {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.home-features-header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+}
+
+.home-highlight {
+    color: #33cc66;
+}
+
+/* =================== Features Grid =================== */
+.home-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    align-items: stretch;
+}
+
+/* =================== Feature Cards =================== */
+.home-feature-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 18px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+}
+
+/* First Large Card (Not Clickable) */
+.home-large-card {
+    grid-column: span 3;
+    border: 2px solid #33cc66;
+    cursor: default;
+}
+
+/* Non-clickable card */
+.home-non-clickable {
+    pointer-events: none;
+}
+
+/* =================== Icon Styling =================== */
+.home-icon-container {
+    background: rgba(51, 204, 102, 0.1);
+    border-radius: 50%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.home-feature-card .home-icon {
+    font-size: 1.8rem;
+    color: #33cc66;
+}
+
+/* =================== Text Styling =================== */
+.home-feature-text h4 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.home-feature-text p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* =================== Hover Effects =================== */
+.home-feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    border-color: #33cc66;
+}
+
+/* Disable hover effect for non-clickable */
+.home-non-clickable:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: #33cc66;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .home-features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+/***** Book Carousel *****/
+.home-book-carousel {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    max-width: 100%;
+    position: relative;
+    margin-top: -100px; /* Adjust this value to control the overlap */
+    z-index: 5; /* Ensures it appears above the hero section */
+}
+
+.home-book-cover {
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.home-book-cover img {
+    height: 150px;
+    width: 100px;
+    border-radius: 2px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.home-book-cover img:hover {
+    transform: scale(1.05);
+}
+
+
+/***** Home Carousel Section *****/
+.home-unique-carousel-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Titles */
+.home-carousel-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.home-highlight {
+    color: #33cc66;
+}
+
+.home-carousel-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Carousel Container */
+.home-unique-carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 90%;
+    margin: auto;
+}
+
+/* Wrapper */
+.home-unique-carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+/***** Infinite Scrolling Animation *****/
+@keyframes home-infiniteScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Track */
+.home-unique-carousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.7s ease-in-out;
+    animation: home-infiniteScroll 20s linear infinite;
+}
+
+
+
+/***** Pause Animation on Hover *****/
+.home-unique-carousel-track:hover {
+    animation-play-state: paused;
+}
+
+/***** Book Covers *****/
+.home-unique-carousel-item {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/***** Hover Effect *****/
+.home-unique-carousel-item:hover {
+    transform: scale(1.08);
+}
+
+/***** Carousel Controls *****/
+.home-unique-carousel-control {
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.home-unique-carousel-control:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.home-unique-carousel-control.prev {
+    left: 15px;
+}
+
+.home-unique-carousel-control.next {
+    right: 15px;
+}
+
+/***** Pagination Dots *****/
+.home-unique-pagination-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 8px;
+}
+
+.home-unique-pagination-dots .home-dot {
+    width: 10px;
+    height: 10px;
+    background: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.home-unique-pagination-dots .home-dot.active {
+    background: #33cc66;
+}
+
+/***** Portfolio Button *****/
+.home-portfolio-button-container {
+    margin-top: 20px;
+}
+
+.home-see-full-portfolio-btn {
+    padding: 10px 20px;
+    background-color: #33cc66;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.home-see-full-portfolio-btn:hover {
+    background-color: #28a745;
+}
+
+/***** Full Portfolio Button Styling *****/
+.home-portfolio-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.home-see-full-portfolio-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #33cc66;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.home-see-full-portfolio-btn:hover {
+    background-color: #28a745;
+}
+/* =================== Home Design Process Section =================== */
+.home-design-process {
+    position: relative;
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Background Animation */
+.home-design-bg-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #e6f7ee, #ffffff, #e6f7ee);
+    background-size: 300% 300%;
+    animation: home-backgroundMove 12s infinite alternate;
+    z-index: 0;
+}
+
+@keyframes home-backgroundMove {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Ensure Content is Above Animation */
+.home-design-process .home-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* =================== Titles =================== */
+.home-section-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.home-highlight {
+    color: #33cc66;
+}
+
+.home-section-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* =================== Steps Grid (Ensures Even Cards) =================== */
+.home-steps-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-content: center;
+    align-items: start;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* =================== Step Cards =================== */
+.home-step-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 200px;
+    height: 100%;
+}
+
+/* Step Hover Effect */
+.home-step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Step Header */
+.home-step-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+/* Step Number */
+.home-step-number {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ffcc00;
+    background: rgba(255, 204, 0, 0.15);
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+
+/* Step Title */
+.home-step-card h4 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #222;
+    margin: 0;
+}
+
+/* Step Description */
+.home-step-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Highlighted Text */
+.home-step-card strong {
+    color: #33cc66;
+    font-weight: bold;
+}
+
+/* =================== Order Button =================== */
+.home-order-button-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.home-place-order-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: #33cc66;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.home-place-order-btn:hover {
+    background-color: #28a745;
+}
+
+/* =================== Responsive Adjustments =================== */
+@media (max-width: 768px) {
+    .home-steps-container {
+        grid-template-columns: 1fr;
+        max-width: 90%;
+    }
+
+    .home-step-card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .home-section-title {
+        font-size: 2.4rem;
+    }
+
+    .home-section-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+/* =================== Customer Testimonials Section =================== */
+.home-customer-testimonials {
+    background-color: #e1fcf3;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating Background Container */
+.home-animated-bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* Floating Circles */
+.home-animated-bg-shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.2;
+    animation: home-floatingEffect 12s infinite alternate ease-in-out;
+}
+
+/* Individual Shape Properties */
+.home-shape1 { width: 180px; height: 180px; background: rgba(255, 255, 255, 0.616); top: 10%; left: 15%; animation-delay: 0s; }
+.home-shape2 { width: 120px; height: 120px; background: rgba(255, 255, 255, 0.616); bottom: 15%; right: 20%; animation-delay: 1.5s; }
+.home-shape3 { width: 200px; height: 200px; background: rgba(255, 255, 255, 0.616); top: 50%; left: 50%; animation-delay: 2.5s; }
+.home-shape4 { width: 150px; height: 150px; background: rgba(255, 255, 255, 0.616); bottom: 30%; left: 25%; animation-delay: 3s; }
+.home-shape5 { width: 180px; height: 180px; background: rgba(255, 255, 255, 0.616); top: 65%; right: 15%; animation-delay: 4s; }
+
+/* Floating Animation */
+@keyframes home-floatingEffect {
+    0% { transform: translateY(0px) scale(1); }
+    100% { transform: translateY(30px) scale(1.1); }
+}
+
+/* Testimonials */
+.home-testimonials {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.home-testimonial-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+/* Iframe Styling - Consistent Sizes */
+.home-testimonial-card iframe {
+    width: 100%;
+    height: 220px;
+    border: none;
+}
+
+/* Review Card */
+.home-review-card {
+    padding: 20px;
+}
+
+.home-review-card h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.home-review-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Social Links */
+.home-review-card .home-social-links i {
+    font-size: 1.2rem;
+    color: #33cc66;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.home-review-card .home-social-links i:hover {
+    color: #28a745;
+}
+
+/* View All Button */
+.home-view-all {
+    text-align: center;
+}
+
+.home-view-all .home-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-testimonials {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-testimonial-card {
+        width: 100%;
+    }
+
+    .home-testimonial-card iframe {
+        height: 180px;
+    }
+
+    .home-review-card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* =================== Stats Section =================== */
+.home-stats-section {
+    background-color: #e1fcf3;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.home-stats {
+    display: flex;
+    justify-content: space-evenly; /* Ensures even spacing between items */
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.home-stat {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    flex: 1 1 200px; /* Ensures even distribution of space */
+}
+
+.home-stat h2 {
+    font-size: 4rem; /* Larger font for numbers */
+    font-weight: bold;
+    color: #33cc66;
+    margin: 0;
+    line-height: 1;
+    display: inline-block; /* Ensures "+" appears beside the number */
+}
+
+.home-stat .home-plus {
+    font-size: 2rem; /* Larger "+" sign */
+    font-weight: bold;
+    color: #ffcc00;
+    margin-left: 5px; /* Adds space between number and "+" */
+    vertical-align: top; /* Aligns "+" with the top of the number */
+}
+
+.home-stat p {
+    font-size: 1.5rem; /* Larger text for the labels */
+    color: #666;
+    margin: 10px 0 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .home-stats {
+        flex-direction: column;
+        gap: 30px; /* Reduced gap for smaller screens */
+    }
+}
+
+
+/* ============================= General Section Styling ============================= */
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.home-highlight {
+    color: #33cc66; /* Light green highlight */
+}
+
+/* ============================= Featured Section Styling ============================= */
+.home-featured-section {
+    padding: 50px 20px;
+}
+
+.home-featured-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.home-featured-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.home-featured-logos a {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+}
+
+.home-featured-logos img {
+    max-width: 150px;
+    height: auto;
+    filter: grayscale(100%); /* Makes logos grayscale by default */
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.home-featured-logos a:hover img {
+    filter: grayscale(0); /* Restores color on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* ============================= Awards Section Styling ============================= */
+.home-awards-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* ============================= Awards Title Styling ============================= */
+.home-awards-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.home-awards-title .home-highlight {
+    color: #33cc66;
+}
+
+.home-awards-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* ============================= Awards Carousel Wrapper ============================= */
+.home-carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 90%;
+    margin: auto;
+}
+
+/* ============================= Scrolling Carousel ============================= */
+.home-carousel {
+    display: flex;
+    gap: 30px;
+    animation: home-scrollAwards 100s linear infinite; /* Slow scrolling speed */
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* ============================= Award Items ============================= */
+.home-award {
+    flex: 0 0 auto;
+    width: 180px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.home-award img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.home-award:hover img {
+    transform: scale(1.1);
+}
+
+.home-award p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.home-award span {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ============================= Netflix-Style Infinite Scrolling Animation ============================= */
+@keyframes home-scrollAwards {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Moves halfway to prevent blank space */
+}
+
+/* ============================= Carousel Navigation Controls ============================= */
+.home-carousel-control {
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out;
+}
+
+.home-carousel-control:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.home-carousel-control.home-prev {
+    left: 10px;
+}
+
+.home-carousel-control.home-next {
+    right: 10px;
+}
+
+/* ============================= Responsive Adjustments for Smaller Screens ============================= */
+@media (max-width: 1024px) {
+    .home-featured-logos {
+        gap: 15px;
+    }
+
+    .home-featured-logos img {
+        max-width: 120px;
+    }
+
+    .home-award {
+        width: 150px;
+    }
+
+    .home-carousel {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-carousel-wrapper {
+        width: 100%;
+    }
+
+    .home-featured-title {
+        font-size: 2rem;
+    }
+
+    .home-featured-logos img {
+        max-width: 100px;
+    }
+
+    .home-award {
+        width: 140px;
+    }
+
+    .home-awards-title {
+        font-size: 2rem;
+    }
+
+    .home-awards-subtitle {
+        font-size: 1rem;
+    }
+
+    .home-carousel {
+        gap: 15px;
+    }
+
+    .home-carousel-control {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+
+    .home-carousel-control.home-prev {
+        left: 5px;
+    }
+
+    .home-carousel-control.home-next {
+        right: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-featured-title {
+        font-size: 1.8rem;
+    }
+
+    .home-featured-logos {
+        gap: 10px;
+    }
+
+    .home-featured-logos img {
+        max-width: 80px;
+    }
+
+    .home-awards-title {
+        font-size: 1.6rem;
+    }
+
+    .home-awards-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .home-award {
+        width: 120px;
+    }
+
+    .home-carousel {
+        gap: 10px;
+    }
+
+    .home-carousel-control {
+        font-size: 1.3rem;
+        padding: 6px;
+    }
+
+    .home-carousel-control.home-prev {
+        left: 3px;
+    }
+
+    .home-carousel-control.home-next {
+        right: 3px;
+    }
+}
+
+
+/* ============================= Full-Screen Hero Section ============================= */
+.home-free-cover-idea-section {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* Full screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #d4f4e846, #a8dfc536, #7bcfa52a);
+    animation: home-fadeIn 1.5s ease-in-out;
+}
+
+/* ============================= Background Animation ============================= */
+.home-animated-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #1a794054, #2ab55d42, #34d98f44);
+    background-size: 300% 300%;
+    animation: home-moveGradient 10s infinite alternate ease-in-out;
+    z-index: -2;
+}
+
+/* ============================= Floating Background Shapes ============================= */
+.home-floating-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* ============================= Glowing Triangle ============================= */
+.home-shape-one {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.616);
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    animation: home-moveDiagonal 6s infinite alternate ease-in-out;
+}
+
+/* ============================= Floating Square ============================= */
+.home-shape-two {
+    position: absolute;
+    bottom: 12%;
+    left: 15%;
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.616);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    animation: home-rotateAndFloat 5s infinite alternate ease-in-out;
+}
+
+/* ============================= Floating Diamond ============================= */
+.home-shape-three {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.616);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    animation: home-floatUpDown 4s infinite alternate ease-in-out;
+}
+
+/* ============================= Moving Circle ============================= */
+.home-shape-four {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.616);
+    border-radius: 50%;
+    animation: home-bounceUpDown 5s infinite alternate ease-in-out;
+}
+
+/* ============================= Hero Content ============================= */
+.home-text-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* ============================= Hero Title Styling ============================= */
+.home-text-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-transform: capitalize;
+    animation: home-zoomIn 1.2s ease-in-out forwards;
+    color: #ffffff;
+}
+
+.home-text-content .home-highlight {
+    color: #ffcc00;
+}
+
+/* ============================= Hero Description Styling ============================= */
+.home-text-content p {
+    font-size: 1.3rem;
+    margin-top: 15px;
+    font-weight: 400;
+    opacity: 0;
+    animation: home-fadeUp 1s ease-in-out forwards 0.5s;
+    color: #ffffff;
+}
+
+/* ============================= Call-To-Action (CTA) Button ============================= */
+.home-cta-button {
+    display: inline-block;
+    padding: 14px 32px;
+    background: linear-gradient(45deg, #33cc66, #1e7e34);
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 16px rgba(51, 204, 102, 0.25);
+}
+
+.home-cta-button:hover {
+    background: linear-gradient(45deg, #1e7e34, #145c2e);
+    transform: scale(1.1);
+}
+
+/* ============================= Animations ============================= */
+@keyframes home-moveGradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@keyframes home-floatUpDown {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-30px); }
+}
+
+@keyframes home-moveDiagonal {
+    0% { transform: translateX(-20px) translateY(-20px); opacity: 0.7; }
+    100% { transform: translateX(40px) translateY(40px); opacity: 1; }
+}
+
+@keyframes home-rotateAndFloat {
+    0% { transform: rotate(0deg) translateY(0); opacity: 0.6; }
+    100% { transform: rotate(45deg) translateY(-20px); opacity: 1; }
+}
+
+@keyframes home-bounceUpDown {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+
+@keyframes home-zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes home-fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================= Responsive Design ============================= */
+@media (max-width: 768px) {
+    .home-text-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .home-text-content p {
+        font-size: 1rem;
+    }
+
+    .home-cta-button {
+        padding: 12px 28px;
+        font-size: 1rem;
+    }
+
+    .home-shape-one {
+        width: 60px;
+        height: 60px;
+    }
+
+    .home-shape-two {
+        width: 55px;
+        height: 55px;
+    }
+
+    .home-shape-three {
+        width: 50px;
+        height: 50px;
+    }
+
+    .home-shape-four {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-text-content h2 {
+        font-size: 2rem;
+    }
+
+    .home-text-content p {
+        font-size: 0.9rem;
+    }
+
+    .home-cta-button {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+
+    .home-shape-one,
+    .home-shape-two,
+    .home-shape-three,
+    .home-shape-four {
+        display: none; /* Hide floating shapes on small screens */
+    }
+}
+
+/* ============================= FOOTER SECTION ============================= */
+.home-footer-section {
+    background: linear-gradient(135deg, #1c3e30, #295f47, #3ba776); /* Blended green shades */
+    color: #ffffff; /* White text for contrast */
+    font-family: 'Arial', sans-serif;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    border-top: 2px solid #33cc66;
+}
+
+/* ============================= FOOTER CONTAINER ============================= */
+.home-footer-section .home-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================= FOOTER TOP SECTION ============================= */
+.home-footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* ============================= FOOTER LOGO ============================= */
+.home-footer-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.home-footer-logo {
+    width: 120px;
+    height: auto;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.home-footer-logo:hover {
+    opacity: 1;
+}
+
+/* ============================= FOOTER LINKS ============================= */
+.home-footer-links {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.home-footer-column {
+    text-align: left;
+}
+
+.home-footer-column h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.home-footer-column ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.home-footer-column ul li {
+    margin-bottom: 6px;
+}
+
+.home-footer-column ul li a {
+    color: #cfcfcf;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+}
+
+.home-footer-column ul li a:hover {
+    color: #1dbf73;
+}
+
+/* ============================= FOOTER DIVIDER ============================= */
+.home-footer-divider {
+    border: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 20px 0;
+}
+
+/* ============================= NEWSLETTER SUBSCRIPTION BOX ============================= */
+.home-newsletter-box {
+    background: rgba(0, 0, 0, 0.2); /* Subtle transparent black */
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    width: 320px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.home-newsletter-box h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.home-newsletter-box input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.home-newsletter-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ============================= CHECKBOX GROUP ============================= */
+.home-checkbox-group {
+    text-align: left;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+}
+
+.home-checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.home-checkbox-group input {
+    width: 14px;
+    height: 14px;
+}
+
+/* ============================= SUBSCRIBE BUTTON ============================= */
+.home-subscribe-btn {
+    width: 100%;
+    padding: 12px;
+    background: #1dbf73;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.home-subscribe-btn:hover {
+    background: #159b5f;
+    transform: scale(1.05);
+}
+
+/* ============================= FOOTER BOTTOM SECTION ============================= */
+.home-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+
+/* ============================= FIVERR ICON ============================= */
+.home-fiverr {
+    font-size: 1.5rem;
+    color: #cfcfcf;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.home-fiverr:hover {
+    color: #1dbf73;
+    text-shadow: 0 0 8px rgba(29, 191, 115, 0.8);
+}
+
+/* ============================= FOOTER LEFT SECTION ============================= */
+.home-footer-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ============================= FOOTER RIGHT SECTION ============================= */
+.home-footer-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ============================= SOCIAL MEDIA ICONS ============================= */
+.home-footer-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.home-footer-icons a {
+    font-size: 1.2rem;
+    color: #cfcfcf;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* ============================= GREEN GLOWING HOVER EFFECT ============================= */
+.home-footer-icons a:hover {
+    color: #1dbf73;
+    text-shadow: 0 0 8px rgba(29, 191, 115, 0.8);
+}
+
+/* ============================= LANGUAGE & CURRENCY ============================= */
+.home-footer-settings a {
+    text-decoration: none;
+    color: #cfcfcf;
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+}
+
+.home-footer-settings a:hover {
+    color: #1dbf73;
+}
+
+/* ============================= RESPONSIVE DESIGN ============================= */
+@media (max-width: 768px) {
+    .home-footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-footer-info {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .home-footer-links {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .home-footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .home-footer-left {
+        justify-content: center;
+    }
+
+    .home-footer-right {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .home-newsletter-box {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* ============================= SOCIAL ICONS ============================= */
+.home-social-icons {
+    margin-top: 10px;
+}
+
+.home-social-icons a {
+    font-size: 1.2rem;
+    margin-right: 12px;
+    color: #cfcfcf;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.home-social-icons a:hover {
+    color: #33cc66;
+    transform: scale(1.1);
+}
+
+/* ============================= COPYRIGHT TEXT ============================= */
+.home-copyright-text {
+    font-size: 0.85rem;
+    color: #cfcfcf;
+    margin-top: 8px;
+}
+
+/* ============================= Responsive Design Adjustments ============================= */
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-info {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footer-left {
+        justify-content: center;
+    }
+
+    .footer-right {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .newsletter-box {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* ============================= Social Icons ============================= */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    font-size: 1.2rem;
+    margin-right: 12px;
+    color: #cfcfcf;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: #33cc66;
+    transform: scale(1.1);
+}
+
+/* ============================= Copyright Text ============================= */
+.copyright-text {
+    font-size: 0.85rem;
+    color: #cfcfcf;
+    margin-top: 8px;
+}
+
+/* ============================= General Responsive Reset ============================= */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem; /* Adjust base font size for small screens */
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+}
+
+
+/* ============================= NEWSLETTER SUBSCRIPTION BOX ============================= */
+.newsletter-box {
+    background: rgba(0, 0, 0, 0.2); /* Subtle transparent black */
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    width: 320px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================= Newsletter Title ============================= */
+.newsletter-box h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* ============================= Newsletter Input Field ============================= */
+.newsletter-box input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* ============================= Input Placeholder ============================= */
+.newsletter-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ============================= Checkbox Group ============================= */
+.checkbox-group {
+    text-align: left;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+}
+
+/* ============================= Checkbox Label ============================= */
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* ============================= Checkbox Input ============================= */
+.checkbox-group input {
+    width: 14px;
+    height: 14px;
+}
+
+/* ============================= Subscribe Button ============================= */
+.subscribe-btn {
+    width: 100%;
+    padding: 12px;
+    background: #1dbf73;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* ============================= Subscribe Button Hover Effect ============================= */
+.subscribe-btn:hover {
+    background: #159b5f;
+    transform: scale(1.05);
+}
+
+/* ============================= FOOTER BOTTOM SECTION ============================= */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+
+/* ============================= Fiverr Icon ============================= */
+.fiverr {
+    font-size: 1.5rem;
+    color: #cfcfcf;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* ============================= Fiverr Icon Hover Effect ============================= */
+.fiverr:hover {
+    color: #1dbf73;
+    text-shadow: 0 0 8px rgba(29, 191, 115, 0.8);
+}
+
+/* ============================= Footer Left Section ============================= */
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ============================= Footer Right Section ============================= */
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ============================= Social Media Icons ============================= */
+.footer-icons {
+    display: flex;
+    gap: 10px;
+}
+
+/* ============================= Social Icons Styling ============================= */
+.footer-icons a {
+    font-size: 1.2rem;
+    color: #cfcfcf;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* ============================= Green Glowing Hover Effect on Social Icons ============================= */
+.footer-icons a:hover {
+    color: #1dbf73;
+    text-shadow: 0 0 8px rgba(29, 191, 115, 0.8);
+}
+
+/* ============================= Language & Currency Links ============================= */
+.footer-settings a {
+    text-decoration: none;
+    color: #cfcfcf;
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+}
+
+/* ============================= Language & Currency Links Hover Effect ============================= */
+.footer-settings a:hover {
+    color: #1dbf73;
+}
+
+/* ============================= RESPONSIVE DESIGN FOR FOOTER ============================= */
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-info {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footer-left {
+        justify-content: center;
+    }
+
+    .footer-right {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .newsletter-box {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* ============================= Social Icons Section ============================= */
+.social-icons {
+    margin-top: 10px;
+}
+
+/* ============================= Social Media Icons Styling ============================= */
+.social-icons a {
+    font-size: 1.2rem;
+    margin-right: 12px;
+    color: #cfcfcf;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* ============================= Hover Effect on Social Media Icons ============================= */
+.social-icons a:hover {
+    color: #33cc66;
+    transform: scale(1.1);
+}
+
+/* ============================= Copyright Text ============================= */
+.copyright-text {
+    font-size: 0.85rem;
+    color: #cfcfcf;
+    margin-top: 8px;
+}
+
+/* ============================= GENERAL RESPONSIVE RESET ============================= */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem; /* Adjust base font size for small screens */
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px; /* Reduce spacing */
+        align-items: center;
+    }
+
+    .BookStorLogo img {
+        height: 50px; /* Adjust logo size */
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .footer-branding {
+        text-align: center;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+}
+
+
+/* ============================= HERO SECTION - SMALL SCREENS (MOBILE) ============================= */
+@media (max-width: 768px) {
+    .custom-hero-section {
+        height: 70vh; /* Reduce height for smaller screens */
+    }
+
+    .custom-carousel-caption {
+        max-width: 80%; /* Full width captions */
+        bottom: 5%;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .custom-carousel-caption h1 {
+        font-size: 1.8rem; /* Reduce heading size */
+    }
+
+    .custom-carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    .custom-cta-button {
+        font-size: 0.8rem; /* Adjust button size */
+        padding: 8px 15px;
+    }
+
+    .custom-carousel-control {
+        font-size: 1.5rem; /* Adjust arrow size */
+        padding: 5px;
+    }
+
+    .custom-carousel-indicators {
+        gap: 5px; /* Reduce spacing between indicators */
+    }
+
+    .custom-indicator {
+        width: 20px; /* Reduce indicator size */
+    }
+}
+
+/* ============================= HERO SECTION - MEDIUM SCREENS (TABLETS) ============================= */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .custom-hero-section {
+        height: 80vh;
+    }
+
+    .custom-carousel-caption {
+        max-width: 60%; /* Adjust caption size */
+    }
+
+    .custom-carousel-caption h1 {
+        font-size: 2rem;
+    }
+
+    .custom-carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .custom-cta-button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    .custom-carousel-control {
+        font-size: 1.8rem;
+        padding: 8px;
+    }
+
+    .footer-top {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .footer-links {
+        gap: 30px;
+    }
+
+    .footer-branding {
+        text-align: right;
+    }
+}
+
+/* ============================= GENRE SECTION - MOBILE ============================= */
+@media (max-width: 768px) {
+    .genre-section {
+        padding: 30px 15px;
+    }
+
+    .genre-section-top-left h2 {
+        font-size: 1.5rem;
+    }
+
+    .book-carousel {
+        overflow-x: scroll;
+        gap: 10px;
+    }
+
+    .book-cover img {
+        height: 150px; /* Adjust book cover size */
+    }
+
+    .pagination button {
+        padding: 5px 8px; /* Reduce pagination button size */
+    }
+
+    .genre-section-bottom h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ============================= FEATURES SECTION - MOBILE ============================= */
+@media (max-width: 768px) {
+    .features {
+        grid-template-columns: 1fr; /* Single column for small screens */
+    }
+
+    .feature-card {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+/* ============================= UNIQUE CAROUSEL SECTION - MOBILE ============================= */
+@media (max-width: 768px) {
+    .unique-carousel-section {
+        padding: 30px 15px;
+    }
+
+    .unique-carousel-item {
+        height: 250px; /* Reduce card height */
+        min-width: 180px; /* Reduce card width */
+    }
+
+    .unique-pagination-dots .dot {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* ============================= DESIGN PROCESS SECTION - MOBILE ============================= */
+@media (max-width: 768px) {
+    .design-process {
+        padding: 30px 15px;
+    }
+
+    .design-process .steps {
+        grid-template-columns: 1fr; /* Stack steps vertically */
+    }
+
+    .design-process h2 {
+        font-size: 2rem;
+    }
+
+    .design-process p {
+        font-size: 1rem;
+    }
+}
+
+/* ============================= TESTIMONIALS SECTION - MOBILE ============================= */
+@media (max-width: 768px) {
+    .testimonials {
+        flex-direction: column;
+    }
+
+    .testimonial-card {
+        width: 100%; /* Full width for small screens */
+        margin-bottom: 20px;
+    }
+
+    .testimonial-card iframe {
+        height: 150px;
+    }
+
+    .review-card p {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .home-nav ul .dropdown-menu {
+        position: static;
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+}
