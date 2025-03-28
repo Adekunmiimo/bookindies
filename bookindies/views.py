@@ -21,6 +21,9 @@ def services(request):
 def book_cover(request):
     return render(request, "book_cover.html")
 
+def book_formarting(request):
+    return render(request, "book_formarting.html")
+
 
 
 from django.shortcuts import render, redirect

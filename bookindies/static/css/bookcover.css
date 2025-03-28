@@ -497,3 +497,651 @@
         padding: 10px 20px;
     }
 }
+/* 📘 Bookcover - Special Add-Ons Section */
+.bookcover-addons-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.bookcover-addons-section .addons-title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.bookcover-addons-section .addons-title span {
+    color: #33cc66;
+}
+
+.bookcover-addons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+}
+
+/* Card with Flex layout */
+.bookcover-addon-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+    height: 100%;
+}
+
+.bookcover-addon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Inner wrapper to separate layout control */
+.bookcover-addon-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    flex: 1;
+}
+
+.bookcover-addon-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Titles */
+.bookcover-addon-content .addon-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #222;
+    margin: 15px 0 20px;
+    flex-grow: 1;
+}
+
+/* CTA Button */
+.bookcover-order-btn {
+    margin-top: auto;
+    padding: 12px 20px;
+    background-color: #33cc66;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.bookcover-order-btn:hover {
+    background-color: #28a745;
+}
+
+/* Disclaimer */
+.bookcover-addon-note {
+    font-size: 0.85rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    .bookcover-addons-section .addons-title {
+        font-size: 2rem;
+    }
+
+    .bookcover-addon-content .addon-title {
+        font-size: 1rem;
+    }
+
+    .bookcover-order-btn {
+        font-size: 0.95rem;
+        padding: 10px 18px;
+    }
+}
+
+
+/* 📦 Bookcover - Bundles Section */
+.bookcover-bundles-section {
+    padding: 100px 20px;
+    background-color: #f9f9f9;
+}
+
+.bookcover-section-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-align: center;
+    color: #1a1a1a;
+    margin-bottom: 60px;
+}
+
+.bookcover-section-title span {
+    color: #33cc66;
+}
+
+/* Bundle Container */
+.bookcover-bundle-box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.bookcover-bundle-box:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Image Area */
+.bookcover-bundle-image img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Content Area */
+.bookcover-bundle-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Bundle Title & Price */
+.bundle-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.bundle-price {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.bundle-price span {
+    color: #33cc66;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+/* Feature List */
+.bundle-features {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.bundle-features li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.bundle-features li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #33cc66;
+    font-size: 1rem;
+}
+
+/* Notes */
+.bundle-note {
+    font-size: 0.9rem;
+    color: #888;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* CTA Button */
+.bookcover-order-btn {
+    display: inline-block;
+    padding: 14px 35px;
+    background-color: #33cc66;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 6px 14px rgba(51, 204, 102, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.bookcover-order-btn:hover {
+    background-color: #28a745;
+    transform: scale(1.05);
+}
+
+/* 📱 Responsive Styles */
+@media (max-width: 1024px) {
+    .bookcover-bundle-box {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .bookcover-bundle-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .bookcover-bundle-image img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .bookcover-section-title {
+        font-size: 2.2rem;
+    }
+
+    .bundle-title {
+        font-size: 1.5rem;
+    }
+
+    .bundle-price {
+        font-size: 1.1rem;
+    }
+
+    .bundle-price span {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* 🎁 Bookcover - Special Offers Section */
+.bookcover-special-offers {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #f0f7ff, #fffdf5);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.special-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 60px;
+}
+
+.offers-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* 🎉 Offer Cards */
+.offer-card {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 12px;
+    padding: 30px 25px;
+    max-width: 360px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* 💡 Tag Color */
+.offer-tag {
+    font-weight: 700;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.offer-blue .offer-tag {
+    background-color: #dceeff;
+    color: #0072e5;
+}
+
+.offer-yellow .offer-tag {
+    background-color: #fff2d9;
+    color: #e69a00;
+}
+
+/* 📄 Description */
+.offer-description {
+    font-size: 1.05rem;
+    color: #222;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* 🛒 CTA Button */
+.bookcover-offer-btn {
+    padding: 12px 30px;
+    border: 2px solid #33cc66;
+    color: #33cc66;
+    background: transparent;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.bookcover-offer-btn:hover {
+    background-color: #33cc66;
+    color: #fff;
+    transform: scale(1.03);
+    box-shadow: 0 8px 18px rgba(51, 204, 102, 0.2);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    .special-title {
+        font-size: 2rem;
+    }
+
+    .offers-grid {
+        gap: 30px;
+    }
+
+    .offer-description {
+        font-size: 1rem;
+    }
+}
+
+/* 🎯 Bookcover - Promo Section */
+.bookcover-promo-section {
+    padding: 80px 20px;
+    background: #fff;
+}
+
+.bookcover-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.bookcover-section-title {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 50px;
+}
+
+.bookcover-promo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.bookcover-promo-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    padding: 25px;
+}
+
+.bookcover-promo-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.bookcover-promo-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.bookcover-promo-card h3 {
+    font-size: 1.2rem;
+    margin: 18px 0 10px;
+    color: #333;
+    font-weight: 600;
+}
+
+.bookcover-price {
+    font-weight: bold;
+    color: #28a745;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.bookcover-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #33cc66, #28a745);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(51, 204, 102, 0.3);
+    transition: all 0.3s ease;
+}
+
+.bookcover-btn:hover {
+    background: linear-gradient(135deg, #28a745, #1c7c3c);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(40, 167, 69, 0.4);
+}
+
+/* Boxset Section */
+.bookcover-boxset-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.bookcover-boxset-card {
+    flex: 1 1 30%;
+    background: #fafafa;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+}
+
+.bookcover-boxset-card img {
+    width: 100%;
+    max-height: 240px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+
+.bookcover-boxset-card h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.bookcover-boxset-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .bookcover-promo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .bookcover-section-title {
+        font-size: 2rem;
+    }
+
+    .bookcover-promo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bookcover-boxset-grid {
+        flex-direction: column;
+    }
+
+    .bookcover-boxset-card {
+        flex: 1 1 100%;
+    }
+}
+
+
+
+/* 🎯 Bookcover FAQ Section */
+.bookcover-faq-section {
+    padding: 80px 20px;
+    background-color: #f5f8fa;
+  }
+  
+  .bookcover-faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .bookcover-faq-heading {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 40px;
+  }
+  
+  .bookcover-faq-heading span {
+    color: #33cc66;
+  }
+  
+  .bookcover-faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* 📌 FAQ Item */
+  .bookcover-faq-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+  }
+  
+  .bookcover-faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 18px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #333;
+    background-color: #fff;
+    transition: background 0.3s ease;
+  }
+  
+  .bookcover-faq-question:hover {
+    background-color: #eef9f2;
+  }
+  
+  .bookcover-faq-icon {
+    background-color: #e0f7e9;
+    color: #33cc66;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+  }
+  
+  .bookcover-faq-chevron {
+    font-size: 1.3rem;
+    color: #888;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* 🔽 Rotate Chevron on Open */
+  .bookcover-faq-item.open .bookcover-faq-chevron {
+    transform: rotate(180deg);
+  }
+  
+  /* FAQ Answer */
+  .bookcover-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 20px;
+  }
+  
+  .bookcover-faq-item.open .bookcover-faq-answer {
+    padding: 18px 20px;
+    max-height: 500px;
+  }
+  
+  .bookcover-faq-answer p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 600px) {
+    .bookcover-faq-heading {
+      font-size: 2rem;
+    }
+  
+    .bookcover-faq-question {
+      font-size: 0.95rem;
+      padding: 16px;
+    }
+  
+    .bookcover-faq-answer {
+      padding: 0 16px;
+    }
+  
+    .bookcover-faq-item.open .bookcover-faq-answer {
+      padding: 16px;
+    }
+  }
+  
