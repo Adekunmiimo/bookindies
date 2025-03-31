@@ -23,6 +23,8 @@ def book_cover(request):
 
 def book_formarting(request):
     return render(request, "book_formarting.html")
+def marketing(request):
+    return render(request, "marketing.html")
 
 
 

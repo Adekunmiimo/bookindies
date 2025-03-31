@@ -293,7 +293,7 @@
     position: relative;
     overflow: hidden;
     width: 100%; /* Full width within grid */
-    height: 350px; /* 🔥 Increased height */
+    height: 370px; /* 🔥 Increased height */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 0; /* 🔥 No border-radius */

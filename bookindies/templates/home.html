@@ -4,47 +4,19 @@
 
 
 
-<!-- Hero Section -->
+<!-- Hero Section (Static Version) -->
 <section class="home-hero-section">
-    <div id="homeHeroCarousel" class="home-carousel">
-        <div class="home-carousel-track">
-            <!-- Carousel Items -->
-            <div class="home-carousel-item">
-                <img src="{% static 'img/heroImg1.jpg' %}" class="home-slide-image" alt="Books and Knowledge">
-                <div class="home-carousel-caption">
-                    <h1>Explore <span>Endless Stories</span></h1>
-                    <p>Dive into a world of imagination and discovery.</p>
-                    <a href="{% url 'portfolio' %}" class="home-cta-button">Start Reading</a>
-                </div>
-            </div>
-            <div class="home-carousel-item">
-                <img src="{% static 'img/heroImg2.jpg' %}" class="home-slide-image" alt="Adventure Awaits">
-                <div class="home-carousel-caption">
-                    <h1>Find Your Next <span>Adventure</span></h1>
-                    <p>From fantasy to thrillers, there’s something for everyone.</p>
-                    <a href="{% url 'portfolio' %}" class="home-cta-button">Discover Now</a>
-                </div>
-            </div>
-            <div class="home-carousel-item">
-                <img src="{% static 'img/heroImg3.jpg' %}" class="home-slide-image" alt="Knowledge is Power">
-                <div class="home-carousel-caption">
-                    <h1>Expand Your <span>Horizon</span></h1>
-                    <p>Explore books that inspire and educate.</p>
-                    <a href="{% url 'portfolio' %}" class="home-cta-button">Learn More</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Carousel Controls -->
-        <button class="home-carousel-control prev" aria-label="Previous Slide">
-            <span>&larr;</span>
-        </button>
-        <button class="home-carousel-control next" aria-label="Next Slide">
-            <span>&rarr;</span>
-        </button>
+    <div class="home-hero-wrapper">
+      <img src="{% static 'img/bookindies-slider-text.jpg' %}" class="home-slide-image" alt="Books and Knowledge">
+      
+      <div class="home-hero-caption">
+        <h1>Explore <span>Endless Stories</span></h1>
+        <p>Dive into a world of imagination and discovery.</p>
+        <a href="{% url 'portfolio' %}" class="home-cta-button">Start Reading</a>
+      </div>
     </div>
-</section>
-
+  </section>
+  
 
 <!-- Genre Section -->
 <section class="home-genre-section">
@@ -59,12 +31,7 @@
         <!-- Right Side with Pagination -->
         <div class="home-genre-section-top-right">
             <div class="home-book-carousel">
-                <a href="{% url 'portfolio' %}" class="home-book-cover">
-                    <img src="{% static 'img/card1.png' %}" alt="Book Cover 1">
-                </a>
-                <a href="{% url 'portfolio' %}" class="home-book-cover">
-                    <img src="{% static 'img/card2.png' %}" alt="Book Cover 2">
-                </a>
+               
                 <a href="{% url 'portfolio' %}" class="home-book-cover">
                     <img src="{% static 'img/card3.png' %}" alt="Book Cover 3">
                 </a>
@@ -169,62 +136,78 @@
 
 
 
-<!-- Home Genre Section Bottom -->
-<div class="home-genre-section-bottom">
+<section class="home-features-section">
     <div class="home-features-container">
-        <!-- Header -->
-        <div class="home-features-header">
-            <h2>Self-Publishing Authors Love Working <span class="home-highlight">with Us</span></h2>
+      <!-- Header -->
+      <div class="home-features-header">
+        <h2>
+          Self-Publishing Authors Love Working
+          <span class="home-highlight">with Us</span>
+        </h2>
+      </div>
+  
+      <!-- Features Grid -->
+      <div class="home-features-grid">
+  
+        <!-- Feature 1 -->
+        <div class="home-feature-card">
+          <div class="home-icon-container">
+            <i class="bi bi-pencil-square"></i>
+          </div>
+          <div class="home-feature-text">
+            <h4>Unlimited number of revisions</h4>
+            <p>We bring all your ideas to life until you say “Wow, that’s what I was looking for!”</p>
+          </div>
         </div>
-
-        <!-- Features Grid -->
-        <div class="home-features-grid">
-            <!-- First Large Feature (Not Clickable) -->
-            <div class="home-feature-card home-large-card home-non-clickable">
-                <div class="home-icon-container">
-                    <i class="bi bi-pencil-square home-icon"></i>
-                </div>
-                <div class="home-feature-text">
-                    <h4>Unlimited number of revisions</h4>
-                    <p>We bring all your ideas to life until you say, “Wow, that’s what I was looking for!”</p>
-                </div>
-            </div>
-
-            <!-- Professional Book Formatting -->
-            <a href="{% url 'services' %}?type=formatting" class="home-feature-card">
-                <div class="home-icon-container">
-                    <i class="bi bi-file-earmark-text home-icon"></i>
-                </div>
-                <div class="home-feature-text">
-                    <h4>Professional Book Formatting</h4>
-                    <p>Ensure your book is formatted professionally for all publishing platforms.</p>
-                </div>
-            </a>
-
-            <!-- Quick Turnaround -->
-            <a href="{% url 'services' %}?type=quick-turnaround" class="home-feature-card">
-                <div class="home-icon-container">
-                    <i class="bi bi-clock-history home-icon"></i>
-                </div>
-                <div class="home-feature-text">
-                    <h4>Quick turnaround</h4>
-                    <p>Get your first concept within 9 business days.</p>
-                </div>
-            </a>
-
-            <!-- Earn Points from Orders -->
-            <a href="{% url 'services' %}?type=points" class="home-feature-card">
-                <div class="home-icon-container">
-                    <i class="bi bi-star home-icon"></i>
-                </div>
-                <div class="home-feature-text">
-                    <h4>Get points from each order</h4>
-                    <p>Each time you order a cover design, you get points which you can spend on additional services.</p>
-                </div>
-            </a>
+  
+        <!-- Feature 2 -->
+        <div class="home-feature-card">
+          <div class="home-icon-container">
+            <i class="bi bi-wallet2"></i>
+          </div>
+          <div class="home-feature-text">
+            <h4>No prepayment</h4>
+            <p>Pay only when you love the result (for stock photo-manipulated covers)</p>
+          </div>
         </div>
+  
+        <!-- Feature 3 -->
+        <div class="home-feature-card">
+          <div class="home-icon-container">
+            <i class="bi bi-cash-coin"></i>
+          </div>
+          <div class="home-feature-text">
+            <h4>Pay<br>In Installments</h4>
+            <p>Divide your sum for our services into two equal monthly installments.</p>
+          </div>
+        </div>
+  
+        <!-- Feature 4 -->
+        <div class="home-feature-card">
+          <div class="home-icon-container">
+            <i class="bi bi-clock-history"></i>
+          </div>
+          <div class="home-feature-text">
+            <h4>Quick turnaround</h4>
+            <p>Get your first concept within 9 business days.</p>
+          </div>
+        </div>
+  
+        <!-- Feature 5 -->
+        <div class="home-feature-card">
+          <div class="home-icon-container">
+            <i class="bi bi-stars"></i>
+          </div>
+          <div class="home-feature-text">
+            <h4>Get points from each order</h4>
+            <p>Each time you order cover design, you get points which you can spend for our additional services.</p>
+          </div>
+        </div>
+  
+      </div>
     </div>
-</div>
+  </section>
+  
 
 
 
@@ -270,52 +253,71 @@
 
 
 
-<!-- Home Design Process Section -->
-<section class="home-design-process">
-    <div class="home-design-bg-animation"></div> <!-- Moving Background -->
-    <div class="home-container">
-        <h2 class="home-section-title">How We <span class="home-highlight">Design Your Book Cover</span></h2>
-        <p class="home-section-subtitle">Here’s how we bring your book cover to life step by step.</p>
-
-        <div class="home-steps-container">
-            <div class="home-step-card">
-                <div class="home-step-header">
-                    <span class="home-step-number">Step 1</span>
-                    <h4>Dig Deeper Into Your Book Concept</h4>
-                </div>
-                <p>We ask you to fill in a <strong>creative brief</strong> to understand your vision, catch the hook of your <strong>story</strong>, and <strong>reflect</strong> it in the cover design.</p>
-            </div>
-
-            <div class="home-step-card">
-                <div class="home-step-header">
-                    <span class="home-step-number">Step 2</span>
-                    <h4>Analyze Your Genre</h4>
-                </div>
-                <p>We research <strong>typography, layouts, and color themes</strong> common to your genre to ensure the cover design will <strong>fit the market</strong>.</p>
-            </div>
-
-            <div class="home-step-card">
-                <div class="home-step-header">
-                    <span class="home-step-number">Step 3</span>
-                    <h4>First Sketch & Refinements</h4>
-                </div>
-                <p>We deliver the first concept in <strong>9 business days</strong> for a photo-based cover and <strong>14 days</strong> for an illustrated one.</p>
-            </div>
-
-            <div class="home-step-card">
-                <div class="home-step-header">
-                    <span class="home-step-number">Step 4</span>
-                    <h4>Implement Your Revisions</h4>
-                </div>
-                <p>We offer <strong>unlimited revisions</strong> to ensure your book cover is exactly what you envisioned.</p>
-            </div>
+<section class="design-process-section">
+    <div class="design-process-container">
+  
+      <!-- Left Side (Title & Subtitle) -->
+      <div class="design-process-left">
+        <h2>How We Design<br><span>Book Cover</span></h2>
+        <div class="underline"></div>
+        <p>Here are the steps we make<br>to create a design that piques curiosity</p>
+      </div>
+  
+      <!-- Right Side (Steps) -->
+      <div class="design-process-right">
+  
+        <!-- Step 1 -->
+        <div class="step-row">
+          <div class="step-number">
+            <span>01</span>
+            <small>STEP</small>
+          </div>
+          <div class="step-text">
+            <h4>Dig deeper into your book concept</h4>
+            <p>We ask you to fill in the creative brief to grasp your requirements, catch the hook of your <strong>story</strong>, and <strong>reflect</strong> it on the book cover.</p>
+          </div>
         </div>
-
-        <div class="home-order-button-container">
-            <a href="{% url 'services' %}?type=book-cover" class="home-place-order-btn">Place Your Order</a>
+  
+        <!-- Step 2 -->
+        <div class="step-row">
+          <div class="step-number">
+            <span>02</span>
+            <small>STEP</small>
+          </div>
+          <div class="step-text">
+            <h4>Analyze your genre</h4>
+            <p>We research typography, layouts, and color themes common to your genre to make sure that your book cover design will <strong>fit the market</strong>.</p>
+          </div>
         </div>
+  
+        <!-- Step 3 -->
+        <div class="step-row">
+          <div class="step-number">
+            <span>03</span>
+            <small>STEP</small>
+          </div>
+          <div class="step-text">
+            <h4>Provide you with the first sketch</h4>
+            <p>You get the first concept in just <strong>9 business days</strong> for a photo-manipulated cover and 14 business days for an illustrated one.</p>
+          </div>
+        </div>
+  
+        <!-- Step 4 -->
+        <div class="step-row">
+          <div class="step-number">
+            <span>04</span>
+            <small>STEP</small>
+          </div>
+          <div class="step-text">
+            <h4>Implement your revisions</h4>
+            <p>We understand how much time you’ve spent mastering your work and want to do the same for the cover. That’s why we <strong>don’t limit the number of revisions</strong>.</p>
+          </div>
+        </div>
+  
+      </div>
     </div>
-</section>
+  </section>
+  
 
 
 

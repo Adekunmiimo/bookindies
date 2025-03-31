@@ -24,62 +24,77 @@
 </section>
 
 
-<!-- Home Genre Section Bottom -->
-<div class="home-genre-section-bottom">
-    <div class="home-features-container">
-        <!-- Header -->
-        <div class="home-features-header">
-            <h2>Self-Publishing Authors Love Working <span class="home-highlight">with Us</span></h2>
-        </div>
-
-        <!-- Features Grid -->
-        <div class="home-features-grid">
-            <!-- First Large Feature (Not Clickable) -->
-            <div class="home-feature-card home-large-card home-non-clickable">
-                <div class="home-icon-container">
-                    <i class="bi bi-pencil-square home-icon"></i>
-                </div>
-                <div class="home-feature-text">
-                    <h4>Unlimited number of revisions</h4>
-                    <p>We bring all your ideas to life until you say, “Wow, that’s what I was looking for!”</p>
-                </div>
-            </div>
-
-            <!-- Professional Book Formatting -->
-            <a href="{% url 'services' %}?type=formatting" class="home-feature-card">
-                <div class="home-icon-container">
-                    <i class="bi bi-file-earmark-text home-icon"></i>
-                </div>
-                <div class="home-feature-text">
-                    <h4>Professional Book Formatting</h4>
-                    <p>Ensure your book is formatted professionally for all publishing platforms.</p>
-                </div>
-            </a>
-
-            <!-- Quick Turnaround -->
-            <a href="{% url 'services' %}?type=quick-turnaround" class="home-feature-card">
-                <div class="home-icon-container">
-                    <i class="bi bi-clock-history home-icon"></i>
-                </div>
-                <div class="home-feature-text">
-                    <h4>Quick turnaround</h4>
-                    <p>Get your first concept within 9 business days.</p>
-                </div>
-            </a>
-
-            <!-- Earn Points from Orders -->
-            <a href="{% url 'services' %}?type=points" class="home-feature-card">
-                <div class="home-icon-container">
-                    <i class="bi bi-star home-icon"></i>
-                </div>
-                <div class="home-feature-text">
-                    <h4>Get points from each order</h4>
-                    <p>Each time you order a cover design, you get points which you can spend on additional services.</p>
-                </div>
-            </a>
-        </div>
+<section class="home-features-section">
+  <div class="home-features-container">
+    <!-- Header -->
+    <div class="home-features-header">
+      <h2>
+        Self-Publishing Authors Love Working
+        <span class="home-highlight">with Us</span>
+      </h2>
     </div>
-</div>
+
+    <!-- Features Grid -->
+    <div class="home-features-grid">
+
+      <!-- Feature 1 -->
+      <div class="home-feature-card">
+        <div class="home-icon-container">
+          <i class="bi bi-pencil-square"></i>
+        </div>
+        <div class="home-feature-text">
+          <h4>Unlimited number of revisions</h4>
+          <p>We bring all your ideas to life until you say “Wow, that’s what I was looking for!”</p>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="home-feature-card">
+        <div class="home-icon-container">
+          <i class="bi bi-wallet2"></i>
+        </div>
+        <div class="home-feature-text">
+          <h4>No prepayment</h4>
+          <p>Pay only when you love the result (for stock photo-manipulated covers)</p>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="home-feature-card">
+        <div class="home-icon-container">
+          <i class="bi bi-cash-coin"></i>
+        </div>
+        <div class="home-feature-text">
+          <h4>Pay<br>In Installments</h4>
+          <p>Divide your sum for our services into two equal monthly installments.</p>
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="home-feature-card">
+        <div class="home-icon-container">
+          <i class="bi bi-clock-history"></i>
+        </div>
+        <div class="home-feature-text">
+          <h4>Quick turnaround</h4>
+          <p>Get your first concept within 9 business days.</p>
+        </div>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="home-feature-card">
+        <div class="home-icon-container">
+          <i class="bi bi-stars"></i>
+        </div>
+        <div class="home-feature-text">
+          <h4>Get points from each order</h4>
+          <p>Each time you order cover design, you get points which you can spend for our additional services.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- Services Testimonials Section -->
 <section class="services-testimonial-section">

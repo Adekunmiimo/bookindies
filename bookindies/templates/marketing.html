@@ -1,0 +1,310 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %} 
+
+<section class="marketing-section">
+    <div class="marketing-container">
+      <div class="marketing-text">
+        <h2>Marketing materials<br>for indie authors</h2>
+        <p class="marketing-subtext">
+          <span class="marketing-arrow">➤</span>
+          <strong>Build a strong author brand</strong> and nail your <strong>book marketing</strong>
+        </p>
+      </div>
+  
+      <div class="marketing-images">
+        <div class="marketing-grid">
+            <img src="{% static 'img/image-1.webp' %}" alt="Marketing Image 1">
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+  <section class="marketing-branding-section">
+    <div class="marketing-branding-container">
+      
+      <!-- Left: Image -->
+      <div class="marketing-branding-image">
+        <img src="{% static 'img/branding-visual.png' %}" alt="Visual Branding Preview">
+      </div>
+  
+      <!-- Right: Text -->
+      <div class="marketing-branding-text">
+        <h2>Your Book Deserves<br><span class="highlight">a Great Visual Branding!</span></h2>
+        <hr class="underline" />
+        <p class="marketing-branding-intro">The one that:</p>
+        <ul class="marketing-branding-benefits">
+          <li>✔ Makes you stand out from the crowd;</li>
+          <li>✔ Helps to create killer marketing and promotion campaigns;</li>
+          <li>✔ Establishes an emotional connection with your readers</li>
+        </ul>
+      </div>
+  
+    </div>
+  </section>
+  
+
+  <section class="marketing-promo-section">
+    <div class="marketing-promo-container">
+  
+      <!-- Header -->
+      <div class="marketing-promo-header">
+        <h2>Promote Your Book <span>Effectively</span></h2>
+        <div class="underline"></div>
+        <p>With graphics for social media promo</p>
+      </div>
+  
+      <!-- Promo Cards -->
+      <div class="marketing-promo-wrapper">
+  
+        <!-- Top Row -->
+        <div class="marketing-promo-row">
+          <div class="marketing-promo-card">
+            <img src="{% static 'img/cover-reveal.jpg' %}" alt="Cover Reveal Graphic">
+            <div class="card-details">
+              <h3>Cover reveal graphic</h3>
+              <p class="price">$35</p>
+              <p>A custom cover reveal image designed specifically for your genre</p>
+              <a href="#" class="promo-btn">Order Now</a>
+            </div>
+          </div>
+  
+          <div class="marketing-promo-card">
+            <img src="{% static 'img/social-media-cover.jpg' %}" alt="Social Media Cover">
+            <div class="card-details">
+              <h3>Social media cover</h3>
+              <p class="price">$35</p>
+              <p>A custom cover for Facebook or Twitter that helps you attract readers</p>
+              <a href="#" class="promo-btn">Order Now</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Bottom Row -->
+        <div class="marketing-promo-row">
+          <div class="marketing-promo-card">
+            <img src="{% static 'img/release-banner.jpg' %}" alt="Book Release Banner">
+            <div class="card-details">
+              <h3>Book release banner</h3>
+              <p class="price">$35</p>
+              <p>Build a pre-release campaign with a custom book release banner.</p>
+              <a href="#" class="promo-btn">Order Now</a>
+            </div>
+          </div>
+  
+          <div class="marketing-promo-card">
+            <img src="{% static 'img/ad-image.jpg' %}" alt="Social Media Ad">
+            <div class="card-details">
+              <h3>FB, Instagram, Twitter, or BookBub ad image</h3>
+              <p class="price">$35</p>
+              <p>A custom image for any social media ad to get more clicks and increase sales.</p>
+              <a href="#" class="promo-btn">Order Now</a>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+
+  <section class="marketing-package-section">
+    <div class="marketing-package-container">
+  
+      <!-- Left Content -->
+      <div class="marketing-package-text">
+        <h2>Get All You Need In One<br><span>Package</span></h2>
+  
+        <div class="marketing-package-card">
+          <p class="marketing-package-price-label">for just</p>
+          <h3 class="marketing-package-price">$100</h3>
+          <hr class="marketing-divider" />
+          <ul class="marketing-package-benefits">
+            <li>✔ Cover reveal graphic</li>
+            <li>✔ Social media cover (Facebook or Twitter)</li>
+            <li>✔ Book release banner</li>
+            <li>✔ FB, Instagram, Twitter, or BookBub ad image</li>
+          </ul>
+          <a href="#" class="marketing-package-btn">Order Now</a>
+        </div>
+      </div>
+  
+      <!-- Right Image Stack -->
+      <div class="marketing-package-images">
+        <img src="{% static 'img/marketing-stack.png' %}" alt="Marketing Stack">
+      </div>
+  
+    </div>
+  </section>
+  
+ 
+
+  <section class="marketing-branding-section">
+    <div class="marketing-branding-container">
+  
+      <!-- Header -->
+      <div class="marketing-branding-header">
+        <h2>Marketing and <span>Branding</span></h2>
+        <p>Professional designs to boost your author presence</p>
+        <div class="marketing-branding-underline"></div>
+      </div>
+  
+      <!-- Card Grid -->
+      <div class="marketing-branding-grid">
+  
+        <!-- Card 1 -->
+        <div class="marketing-branding-card">
+          <div class="marketing-branding-bg marketing-bg-1">
+            <img src="{% static 'img/animated-book-cover.jpg' %}" alt="Animated Cover">
+          </div>
+          <div class="marketing-branding-info">
+            <h4>Animated book cover design</h4>
+            <span class="marketing-price">$50</span>
+          </div>
+          <a href="#" class="marketing-order-btn">Order Now</a>
+        </div>
+  
+        <!-- Card 2 -->
+        <div class="marketing-branding-card">
+          <div class="marketing-branding-bg marketing-bg-2">
+            <img src="{% static 'img/bookmark.jpg' %}" alt="Bookmark">
+          </div>
+          <div class="marketing-branding-info">
+            <h4>Bookmark</h4>
+            <span class="marketing-price">$35</span>
+          </div>
+          <a href="#" class="marketing-order-btn">Order Now</a>
+        </div>
+  
+        <!-- Card 3 -->
+        <div class="marketing-branding-card">
+          <div class="marketing-branding-bg marketing-bg-3">
+            <img src="{% static 'img/business-card.jpg' %}" alt="Business Card">
+          </div>
+          <div class="marketing-branding-info">
+            <h4>Business card</h4>
+            <span class="marketing-price">$40</span>
+          </div>
+          <a href="#" class="marketing-order-btn">Order Now</a>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+
+  <!-- Reviews Section -->
+<section class="services-reviews-section">
+    <div class="services-reviews-container">
+        <h2>What Do Our <span>Clients Say?</span></h2>
+        <p class="services-rating"><strong>5.0</strong> rating out of 254 reviews</p>
+        <a href="#" class="services-review-btn">Leave A Review</a>
+    </div>
+</section>
+
+
+<!-- Services Testimonials Section -->
+<section class="services-testimonial-section">
+    <div class="services-testimonial-container">
+        
+        <div class="services-testimonial-slider-container">
+            <div class="services-testimonial-slider" id="testimonialSlider">
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user1.jpg' %}" class="services-profile-pic" alt="User 1">
+                    <h4>Eric Bermúdez Cervantes</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>I can’t be more happy to have worked with them. The first cover was flawless...</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> a month ago
+                    </div>
+                </div>
+
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user2.jpg' %}" class="services-profile-pic" alt="User 2">
+                    <h4>Author Marie Howalt</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>I have just received my first cover from them and I am super impressed!</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> a month ago
+                    </div>
+                </div>
+
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user3.jpg' %}" class="services-profile-pic" alt="User 3">
+                    <h4>Aspen & Berrywood Books</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>Working with them to create the cover was an incredible experience!</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> 2 weeks ago
+                    </div>
+                </div>
+
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user4.jpg' %}" class="services-profile-pic" alt="User 4">
+                    <h4>John Smith</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>Absolutely love the design process, and they listened to every detail.</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> 3 weeks ago
+                    </div>
+                </div>
+
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user5.jpg' %}" class="services-profile-pic" alt="User 5">
+                    <h4>Samantha Clark</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>Their work is simply outstanding, I will definitely recommend them.</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> 1 week ago
+                    </div>
+                </div>
+
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user6.jpg' %}" class="services-profile-pic" alt="User 6">
+                    <h4>David Lee</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>The best experience I've had so far, professional and creative!</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> 2 weeks ago
+                    </div>
+                </div>
+
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user7.jpg' %}" class="services-profile-pic" alt="User 7">
+                    <h4>Michael Johnson</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>They delivered exactly what I was looking for in a timely manner.</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> 4 days ago
+                    </div>
+                </div>
+
+                <div class="services-testimonial-card">
+                    <img src="{% static 'img/user8.jpg' %}" class="services-profile-pic" alt="User 8">
+                    <h4>Lisa Adams</h4>
+                    <div class="services-stars">★★★★★</div>
+                    <p>Amazing work, truly exceeded my expectations!</p>
+                    <a href="#" class="services-see-more">See More</a>
+                    <div class="services-social-time">
+                        <i class="bi bi-facebook"></i> 5 days ago
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+  
+  {% endblock %}
+  

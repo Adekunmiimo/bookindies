@@ -660,46 +660,46 @@
 // });
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("JavaScript loaded successfully!");
+// document.addEventListener("DOMContentLoaded", () => {
+//     console.log("JavaScript loaded successfully!");
 
-    /*** HERO SECTION CAROUSEL ***/
-    const track = document.querySelector(".home-carousel-track");
-    const slides = document.querySelectorAll(".home-carousel-item");
-    const prevButton = document.querySelector(".home-carousel-control.prev");
-    const nextButton = document.querySelector(".home-carousel-control.next");
+//     /*** HERO SECTION CAROUSEL ***/
+//     const track = document.querySelector(".home-carousel-track");
+//     const slides = document.querySelectorAll(".home-carousel-item");
+//     const prevButton = document.querySelector(".home-carousel-control.prev");
+//     const nextButton = document.querySelector(".home-carousel-control.next");
 
-    if (!track || slides.length === 0) {
-        console.warn("Carousel elements not found. Check your HTML structure.");
-        return;
-    }
+//     if (!track || slides.length === 0) {
+//         console.warn("Carousel elements not found. Check your HTML structure.");
+//         return;
+//     }
 
-    let currentIndex = 0;
-    const slideDuration = 10000; // 10 seconds
+//     let currentIndex = 0;
+//     const slideDuration = 10000; // 10 seconds
 
-    function updateCarousel() {
-        track.style.transition = "none"; // Instant switch
-        track.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
+//     function updateCarousel() {
+//         track.style.transition = "none"; // Instant switch
+//         track.style.transform = `translateX(-${currentIndex * 100}%)`;
+//     }
 
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        updateCarousel();
-    }
+//     function nextSlide() {
+//         currentIndex = (currentIndex + 1) % slides.length;
+//         updateCarousel();
+//     }
 
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        updateCarousel();
-    }
+//     function prevSlide() {
+//         currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+//         updateCarousel();
+//     }
 
-    // Auto-slide every 10 seconds
-    let autoSlide = setInterval(nextSlide, slideDuration);
+//     // Auto-slide every 10 seconds
+//     let autoSlide = setInterval(nextSlide, slideDuration);
 
-    // Pause auto-slide on hover
-    track.addEventListener("mouseenter", () => clearInterval(autoSlide));
-    track.addEventListener("mouseleave", () => autoSlide = setInterval(nextSlide, slideDuration));
+//     // Pause auto-slide on hover
+//     track.addEventListener("mouseenter", () => clearInterval(autoSlide));
+//     track.addEventListener("mouseleave", () => autoSlide = setInterval(nextSlide, slideDuration));
 
-    // Next & Prev button event listeners (Check if buttons exist)
-    if (prevButton) prevButton.addEventListener("click", prevSlide);
-    if (nextButton) nextButton.addEventListener("click", nextSlide);
-});
+//     // Next & Prev button event listeners (Check if buttons exist)
+//     if (prevButton) prevButton.addEventListener("click", prevSlide);
+//     if (nextButton) nextButton.addEventListener("click", nextSlide);
+// });
