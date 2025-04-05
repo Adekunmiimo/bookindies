@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %} 
+<section class="book_cover_genres-hero">
+    <div class="book_cover_genres-hero-bg-shapes">
+      <span class="shape shape-1"></span>
+      <span class="shape shape-2"></span>
+      <span class="shape shape-3"></span>
+      <span class="shape shape-4"></span>
+    </div>
+  
+    <div class="book_cover_genres-hero-content">
+      <h1>Explore Beautiful Book Covers</h1>
+      <p>Browse by genre and discover the perfect visual for your next great story.</p>
+    </div>
+  </section>
+  
+  <section class="book_cover_genres">
+    <h2>
+      {% if selected_genre %}
+        {{ selected_genre|title }} Book Covers
+      {% else %}
+        All Book Covers
+      {% endif %}
+    </h2>
+  
+    {% if covers %}
+      <div class="book_cover_genres-grid" id="bookCoverContainer">
+        {% for cover in covers %}
+          <div class="book_cover_genres-item">
+            <a href="{{ cover.image.url }}" target="_blank">
+              <img src="{{ cover.image.url }}" alt="{{ cover.title }}">
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="empty-text">No covers found for this genre.</p>
+    {% endif %}
+  
+    <!-- 🔁 Load More Button (always visible) -->
+    <div class="book_cover_genres-load-more-wrapper">
+      <button id="book_cover_genres-loadMoreBtn" class="book_cover_genres-load-more-btn" data-page="2" {% if not has_next %}disabled{% endif %}>
+        {% if has_next %}Load More{% else %}No More Covers{% endif %}
+      </button>
+    </div>
+  </section>
+  
+  {% endblock %}

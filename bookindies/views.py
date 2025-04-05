@@ -12,8 +12,35 @@ def blog(request):
 def contact(request):
     return render(request, "contact.html")
 
+from django.core.paginator import Paginator
+from django.http import JsonResponse
+from django.template.loader import render_to_string
+from django.shortcuts import render
+from .models import PortfolioImage
+
+
 def portfolio(request):
-    return render(request, "portfolio.html")
+    images = PortfolioImage.objects.all().order_by('-id')
+    page = int(request.GET.get("page", 1))
+    paginator = Paginator(images, 12)
+    page_obj = paginator.get_page(page)
+
+    if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+        # Use the same block of HTML you use for rendering the grid items
+        html = ""
+        for img in page_obj:
+            html += f'''
+            <div class="portfolio-gallery-item">
+              <img src="{img.image.url}" alt="{img.title}">
+            </div>
+            '''
+        return JsonResponse({'html': html, 'has_next': page_obj.has_next()})
+
+    return render(request, "portfolio.html", {
+        'images': page_obj,
+        'has_next': page_obj.has_next(),
+    })
+
 
 def services(request):
     return render(request, "services.html")
@@ -23,31 +50,40 @@ def book_cover(request):
 
 def book_formarting(request):
     return render(request, "book_formarting.html")
+
 def marketing(request):
     return render(request, "marketing.html")
 
+def author(request):
+    return render(request, "author.html")
 
 
-from django.shortcuts import render, redirect
-from django.core.mail import send_mail
-from django.contrib import messages
+from django.core.paginator import Paginator
+from django.http import JsonResponse
+from django.template.loader import render_to_string
+from django.shortcuts import render
+from .models import BookGenresImage
 
-# def subscribe_newsletter(request):
-#     if request.method == "POST":
-#         name = request.POST.get("name")
-#         email = request.POST.get("email")
+def book_cover_genres(request):
+    genre = request.GET.get("category")
+    page = int(request.GET.get("page", 1))
 
-#         # You can store this in the database or an email marketing service
-#         # Example: Sending an email confirmation
-#         send_mail(
-#             "Newsletter Subscription",
-#             f"Hello {name},\n\nThank you for subscribing to our newsletter!",
-#             "admin@yourwebsite.com",
-#             [email],
-#             fail_silently=False,
-#         )
+    covers = BookGenresImage.objects.all()
 
-#         messages.success(request, "You have successfully subscribed!")
-#         return redirect("home")
+    if genre:
+        covers = covers.filter(genre=genre)
 
-#     return render(request, "blog-section.html")
+    paginator = Paginator(covers, 12)
+    page_obj = paginator.get_page(page)
+
+    context = {
+        "covers": page_obj,
+        "selected_genre": genre,
+        "has_next": page_obj.has_next()
+    }
+
+    if request.headers.get("x-requested-with") == "XMLHttpRequest":
+        html = render_to_string("book_cover_genres.html", {**context, "ajax": True})
+        return JsonResponse({"html": html, "has_next": page_obj.has_next()})
+
+    return render(request, "book_cover_genres.html", context)

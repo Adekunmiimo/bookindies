@@ -1,59 +1,65 @@
 {% load static %}
-<header class="home-header d-flex justify-content-between align-items-center p-3 border-bottom fixed-top bg-white shadow-sm">
-    <div class="d-flex align-items-center">
-        <!-- Book Store Logo (Now Clickable) -->
-        <div class="home-BookStorLogo">
-            <a href="{% url 'home' %}">
-                <img src="{% static 'img/logo.png' %}" alt="BookStore Logo - Your Trusted Bookstore">
-            </a>
-        </div>
+<header class="home-header">
+    <div class="home-header-inner">
+      <!-- Logo -->
+      <div class="home-logo">
+        <a href="{% url 'home' %}">
+          <img src="{% static 'img/logo.png' %}" alt="BookStore Logo">
+        </a>
+      </div>
+  
+      <!-- Hamburger Menu -->
 
-        <!-- Navigation -->
-        <nav>
-            <ul class="home-nav list-unstyled d-flex mb-0">
-                <!-- Main Dropdown for Services -->
-                <li class="home-dropdown me-4 position-relative">
-                    <a href="{% url 'services'%}" class="text-decoration-none text-dark home-dropdown-toggle" id="home-servicesDropdown">
-                        Services
-                    </a>
-                    <ul class="home-dropdown-menu" id="home-servicesMenu">
-                        <!-- Nested Dropdown for Book Cover Design -->
-                        <li class="home-nested-dropdown position-relative">
-                            <a class="home-dropdown-item d-flex justify-content-between align-items-center" href="{% url 'book_cover' %}" id="home-bookCoverDropdown">
-                                Book Cover Design <i class="fa fa-arrow-right"></i>
-                            </a>
-                            <ul class="home-nested-dropdown-menu position-absolute" id="home-bookCoverMenu">
-                                <li><a class="home-dropdown-item" href="{% url 'book_cover' %}?category=fiction">Fiction</a></li>
-                                <li><a class="home-dropdown-item" href="{% url 'book_cover' %}?category=non-fiction">Non-Fiction</a></li>
-                                <li><a class="home-dropdown-item" href="{% url 'book_cover' %}?category=christian">Christian</a></li>
-                                <li><a class="home-dropdown-item" href="{% url 'book_cover' %}?category=romance">Romance</a></li>
-                                <li><a class="home-dropdown-item" href="{% url 'book_cover' %}?category=how-to">How To</a></li>
-                                <li><a class="home-dropdown-item" href="{% url 'book_cover' %}?category=illustration">Illustration</a></li>
-                                <li><a class="home-dropdown-item" href="{% url 'book_cover' %}?category=mystery">Mystery</a></li>
-                                <li><a class="home-dropdown-item" href="{% url 'book_cover' %}?category=sci-fi">Sci-Fi</a></li>
-                                <li><a class="home-dropdown-item" href="{% url 'book_cover' %}?category=thriller">Thriller</a></li>
-                                <li><a class="home-dropdown-item" href="{% url 'book_cover' %}?category=fantasy">Fantasy</a></li>
-                                <li><a class="home-dropdown-item" href="{% url 'book_cover' %}?category=history">History</a></li>
-                                <li><a class="home-dropdown-item" href="{% url 'book_cover' %}?category=biography">Biography</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="home-dropdown-item" href="{% url 'book_formarting' %}?type=editing">Book Editing and Formatting</a></li>
-                        <li><a class="home-dropdown-item" href="{% url 'marketing' %}?type=marketing">Book Marketing and Promotion</a></li>
-                        <li><a class="home-dropdown-item" href="{% url 'services' %}?type=branding">Author Branding Service</a></li>
-                    </ul>
-                </li>
-                <li class="me-4"><a href="{% url 'portfolio' %}" class="text-decoration-none text-dark">Portfolio</a></li>
-                <li class="me-4"><a href="{% url 'blog' %}" class="text-decoration-none text-dark">Blog</a></li>
-                <li class="me-4"><a href="{% url 'about' %}" class="text-decoration-none text-dark">About Us</a></li>
-                <li><a href="{% url 'contact' %}" class="text-decoration-none text-dark">Contact</a></li>
+      <button id="menuToggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
+  
+      <!-- Navigation -->
+      <nav class="home-nav" id="mainNav">
+        <ul class="home-nav-list">
+          <li class="home-dropdown">
+            <a href="{% url 'services'%}">Services</a>
+            <ul class="home-dropdown-menu">
+              <li class="home-nested-dropdown">
+                <a href="{% url 'book_cover' %}">Book Cover Design</a>
+                <ul class="home-nested-dropdown-menu">
+                  <li><a href="{% url 'book_cover_genres' %}?category=fiction">Fiction</a></li>
+                  <li><a href="{% url 'book_cover_genres' %}?category=non-fiction">Non-Fiction</a></li>
+                  <li><a href="{% url 'book_cover_genres' %}?category=christian">Christian</a></li>
+                  <li><a href="{% url 'book_cover_genres' %}?category=romance">Romance</a></li>
+                  <li><a href="{% url 'book_cover_genres' %}?category=how-to">How To</a></li>
+                  <li><a href="{% url 'book_cover_genres' %}?category=illustration">Illustration</a></li>
+                  <li><a href="{% url 'book_cover_genres' %}?category=mystery">Mystery</a></li>
+                  <li><a href="{% url 'book_cover_genres' %}?category=sci-fi">Sci-Fi</a></li>
+                  <li><a href="{% url 'book_cover_genres' %}?category=thriller">Thriller</a></li>
+                  <li><a href="{% url 'book_cover_genres' %}?category=fantasy">Fantasy</a></li>
+                  <li><a href="{% url 'book_cover_genres' %}?category=history">History</a></li>
+                  <li><a href="{% url 'book_cover_genres' %}?category=biography">Biography</a></li>
+                </ul>
+              </li>
+              <li><a href="{% url 'book_formarting' %}?type=editing">Book Editing and Formatting</a></li>
+              <li><a href="{% url 'marketing' %}?type=marketing">Book Marketing and Promotion</a></li>
+              <li><a href="{% url 'author' %}?type=branding">Author Branding Service</a></li>
             </ul>
-        </nav>
+          </li>
+          <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+          <li><a href="{% url 'blog' %}">Blog</a></li>
+          <li><a href="{% url 'about' %}">About Us</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+  
+        <!-- Icons (Mobile Only) -->
+        <div class="home-icons mobile-only">
+          <a href="#" title="Wishlist"><i class="bi bi-heart"></i></a>
+          <a href="#" title="Profile"><i class="bi bi-person"></i></a>
+        </div>
+      </nav>
+  
+      <!-- Icons (Desktop Only) -->
+      <div class="home-icons desktop-only">
+        <a href="#" title="Wishlist"><i class="bi bi-heart"></i></a>
+        <a href="#" title="Profile"><i class="bi bi-person"></i></a>
+      </div>
     </div>
-
-    <!-- Wishlist & Profile -->
-    <div class="d-flex align-items-center">
-        <a href="#" class="text-dark me-3" title="Wishlist"><i class="bi bi-heart fs-4"></i></a>
-        <a href="#" class="text-dark" title="Profile"><i class="bi bi-person fs-4"></i></a>
-    </div>
-</header>
-
+  </header>
+  

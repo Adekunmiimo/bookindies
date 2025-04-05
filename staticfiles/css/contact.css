@@ -1,0 +1,290 @@
+/* =================== Contact Us - Hero Section =================== */
+.contactus-container p a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.contactus-hero {
+    position: relative;
+    width: 100%;
+    height: auto; /* Allow content expansion */
+    min-height: 80vh; /* Ensure enough space */
+    display: flex;
+    flex-direction: column; /* Ensure content stacks */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background: linear-gradient(135deg, #33cc6618, #1e7e341c);
+    border-radius: 0;
+    padding: 50px 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Ensure container is above background elements */
+.contactus-container {
+    position: relative;
+    z-index: 10; /* Ensure text is visible */
+    max-width: 800px;
+}
+
+/* Animated Background */
+.contactus-animated-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #33cc66, #1e7e34, #28a745);
+    background-size: 300% 300%;
+    animation: moveGradient 10s infinite alternate ease-in-out;
+    z-index: -2;
+}
+
+/* Floating Shapes */
+.contactus-floating-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.contactus-shape-one {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.15);
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    animation: moveLeftRight 8s infinite alternate ease-in-out;
+}
+
+.contactus-shape-two {
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    animation: rotateAndFloat 6s infinite alternate ease-in-out;
+}
+
+.contactus-shape-three {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90px;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.25);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    animation: floatUpDown 4s infinite alternate ease-in-out;
+}
+
+.contactus-shape-four {
+    position: absolute;
+    bottom: 10%;
+    right: 15%;
+    width: 110px;
+    height: 110px;
+    background: rgba(255, 255, 255, 0.2);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: spinAndFloat 7s infinite alternate ease-in-out;
+}
+
+.contactus-shape-five {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 90px;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    animation: bounceUpDown 5s infinite alternate ease-in-out;
+}
+
+/* Heading */
+.contactus-hero h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    z-index: 2;
+    animation: fadeUp 1.5s ease-in-out forwards;
+}
+
+.contactus-hero .contactus-highlight {
+    color: #ffcc00;
+}
+
+/* Description */
+.contactus-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 15px auto;
+    line-height: 1.6;
+    opacity: 1 !important; /* Ensure visibility */
+    transform: translateY(0) !important;
+    display: block; /* Prevent accidental hiding */
+}
+
+/* Contact Button */
+.contactus-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 35px;
+    background: linear-gradient(45deg, #ffcc00, #ff9900);
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
+}
+
+.contactus-button:hover {
+    background: linear-gradient(45deg, #ff9900, #ff6600);
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes moveGradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@keyframes floatUpDown {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-30px); }
+}
+
+@keyframes moveLeftRight {
+    0% { transform: translateX(-20px) rotate(0deg); opacity: 0.7; }
+    100% { transform: translateX(50px) rotate(180deg); opacity: 1; }
+}
+
+@keyframes rotateAndFloat {
+    0% { transform: rotate(0deg) translateY(0); opacity: 0.6; }
+    100% { transform: rotate(45deg) translateY(-20px); opacity: 1; }
+}
+
+@keyframes spinAndFloat {
+    0% { transform: rotate(0deg) translateY(0); }
+    100% { transform: rotate(360deg) translateY(-15px); }
+}
+
+@keyframes bounceUpDown {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contactus-hero h2 { font-size: 2.2rem; }
+    .contactus-hero p { font-size: 1rem; }
+    .contactus-button { font-size: 0.9rem; padding: 10px 25px; }
+}
+
+
+
+
+/* =================== Contact Us - Form Section =================== */
+.contactus-form {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: left;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contactus-form label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+.contactus-form input,
+.contactus-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.contactus-form textarea {
+    height: 120px;
+}
+
+/* Form Group (First & Last Name Side-by-Side) */
+.contactus-form-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.contactus-form-group input {
+    flex: 1;
+}
+
+/* Checkbox & Privacy Policy */
+.contactus-checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.contactus-checkbox-group a {
+    color: #16a34a;
+    text-decoration: none;
+}
+
+.contactus-checkbox-group a:hover {
+    text-decoration: underline;
+}
+
+/* Submit Button */
+.contactus-form button {
+    background-color: #16a34a;
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.contactus-form button:hover {
+    background-color: #15803d;
+}
+
+/* Recaptcha */
+.contactus-recaptcha-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contactus-form-group {
+        flex-direction: column;
+    }
+
+    .contactus-form button {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}

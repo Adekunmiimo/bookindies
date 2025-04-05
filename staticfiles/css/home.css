@@ -1,5 +1,11 @@
 /* =================== General Reset =================== */
 
+  
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+
 *{
     margin: 0;
     padding: 0;
@@ -9,195 +15,258 @@
     
 
 }
-/* 
-body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-} */
 
-/* =================== Home Header Styling =================== */
-.home-header {
+
+  /* Header Container */
+  .home-header {
     background-color: #ffffff;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    padding: 12px 25px;
-    transition: all 0.3s ease-in-out;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-}
-
-/* Logo */
-.home-BookStorLogo img {
-    height: 35px;
-    width: auto;
-    margin-left: 100px;
-    margin-right: 80px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.home-BookStorLogo img:hover {
-    transform: scale(1.08);
-}
-
-/* Navigation */
-.home-nav {
+    padding: 15px 20px;
+  }
+  
+  .home-header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    gap: 20px;
     align-items: center;
-}
-
-.home-nav li {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  /* Logo */
+  .home-logo img {
+    height: 35px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .home-logo img:hover {
+    transform: scale(1.08);
+  }
+  
+  /* Hamburger */
+  .menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    margin-left: auto;
+  }
+  
+  /* Navigation */
+  .home-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .home-nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .home-nav-list > li {
     position: relative;
-    padding: 0;
-}
-
-/* Navbar Text Style */
-.home-nav li a {
-    color: #222;
+  }
+  
+  .home-nav-list a {
     text-decoration: none;
+    color: #222;
     font-size: 1rem;
     font-weight: 500;
-    padding: 6px 0;
+    padding: 6px 8px;
     transition: color 0.3s ease-in-out;
-}
-
-/* Hover Effect */
-.home-nav li a:hover {
+  }
+  
+  .home-nav-list a:hover {
     color: #28a745;
+  }
+  
+/* =================== Dropdown =================== */
+.home-dropdown-menu,
+.home-nested-dropdown-menu {
+  list-style: none;
+  padding: 10px 15px;
+  margin: 0;
+  background: #ffffff;
+  border-radius: 10px; /* ✅ Rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* ✅ Soft shadow */
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* Apply effects only to the first <ul> in the nav */
-.home-nav > li {
-    position: relative;
-    padding: 0 10px;
+/* Dropdown container */
+.home-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  z-index: 100;
+  gap: 10px;
+  min-width: 220px;
 }
 
-/* Navigation Icons */
-.text-dark {
+/* Show dropdown on hover */
+.home-dropdown:hover .home-dropdown-menu {
+  display: flex;
+}
+
+/* Dropdown item spacing */
+.home-dropdown-menu li {
+  padding: 0;
+}
+
+/* Dropdown item links */
+.home-dropdown-menu a {
+  display: block;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  color: #333;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.home-dropdown-menu a:hover {
+  background-color: #f2f2f2;
+  color: #28a745;
+}
+
+/* =================== Nested Dropdown =================== */
+.home-nested-dropdown {
+  position: relative;
+}
+
+.home-nested-dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #ffffff;
+  display: none;
+  grid-template-columns: repeat(4, 1fr); /* ✅ 4 per row */
+  gap: 10px 15px;
+  padding: 15px;
+  z-index: 101;
+  width: max-content;
+  min-width: 500px;
+  border-radius: 10px; /* ✅ Rounded corners */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* ✅ Soft drop shadow */
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Show nested menu */
+.home-nested-dropdown:hover .home-nested-dropdown-menu {
+  display: grid;
+}
+
+/* Nested dropdown links */
+.home-nested-dropdown-menu a {
+  font-size: 0.9rem;
+  padding: 8px 10px;
+  border-radius: 6px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.home-nested-dropdown-menu a:hover {
+  background-color: #f2f2f2;
+  color: #28a745;
+}
+
+
+  /* Icons */
+  .home-icons a {
     font-size: 1.2rem;
     color: #333;
-    margin-right: 15px;
-    transition: all 0.3s ease-in-out;
-}
-
-.text-dark:hover {
-    color: #28a745;
-    transform: scale(1.1);
-}
-
-/* =================== Home Dropdown Menu =================== */
-.home-dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #ffffff;
-    border-radius: 8px;
-    padding: 10px;
-    min-width: 220px;
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.08);
-}
-
-/* Show Dropdown on Hover */
-.home-dropdown:hover .home-dropdown-menu {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Dropdown Items */
-.home-dropdown-menu li {
-    list-style: none;
-    padding: 3px 0;
-}
-
-.home-dropdown-menu li a {
-    display: block;
-    text-decoration: none;
-    color: #222;
-    font-size: 0.95rem;
-    padding: 8px 16px;
-    border-radius: 6px;
+    margin-left: 15px;
     transition: color 0.3s ease-in-out;
-}
-
-/* Hover Effect */
-.home-dropdown-menu li a:hover {
+  }
+  
+  .home-icons a:hover {
     color: #28a745;
-}
-
-/* =================== Home Nested Dropdown Menu =================== */
-.home-nested-dropdown-menu {
+  }
+  
+  .mobile-only {
     display: none;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    background: #ffffff;
-    border-radius: 8px;
-    padding: 10px;
-    min-width: 500px;
-    white-space: nowrap;
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.08);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out;
-    
-    /* Grid Layout */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    align-items: center;
-}
-
-/* Show Nested Dropdown on Hover */
-.home-nested-dropdown:hover .home-nested-dropdown-menu {
-    display: grid;
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Nested Dropdown Items */
-.home-nested-dropdown-menu li {
-    list-style: none;
-}
-
-.home-nested-dropdown-menu li a {
-    display: block;
-    text-decoration: none;
-    color: #222;
-    font-size: 0.9rem;
-    padding: 6px 12px;
-    border-radius: 6px;
-    transition: color 0.3s ease-in-out;
-}
-
-/* Hover Effect */
-.home-nested-dropdown-menu li a:hover {
-    color: #28a745;
-}
-
-/* =================== Responsive Adjustments =================== */
-@media (max-width: 768px) {
-    .home-nested-dropdown-menu {
-        grid-template-columns: repeat(2, 1fr);
-        min-width: 350px;
+  }
+  
+  .desktop-only {
+    display: flex;
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .menu-toggle {
+      display: block;
     }
-}
-
-@media (max-width: 480px) {
-    .home-nested-dropdown-menu {
-        grid-template-columns: repeat(1, 1fr);
-        min-width: 250px;
+  
+    .home-nav {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      margin-top: 15px;
     }
-}
-
-
+  
+    .home-nav.active {
+      display: flex;
+    }
+  
+    .home-nav-list {
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+    }
+  
+    .home-nav-list li {
+      width: 100%;
+    }
+  
+    .home-nav-list a {
+      width: 100%;
+      display: block;
+      padding: 12px;
+      font-size: 1rem;
+    }
+  
+    .home-dropdown-menu,
+    .home-nested-dropdown-menu {
+      position: static;
+      box-shadow: none;
+      background: transparent;
+      padding: 0;
+    }
+  
+    .home-dropdown:hover .home-dropdown-menu,
+    .home-nested-dropdown:hover .home-nested-dropdown-menu {
+      display: none;
+    }
+  
+    .home-dropdown-menu a,
+    .home-nested-dropdown-menu a {
+      padding-left: 20px;
+      font-size: 0.95rem;
+    }
+  
+    .mobile-only {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+  
+    .desktop-only {
+      display: none;
+    }
+  }
+  
 /* =================== Hero Section =================== */
 .home-hero-section {
     height: 90vh;
@@ -206,123 +275,181 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.home-carousel {
-    height: 100%;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .home-hero-wrapper {
+    position: relative;
     width: 100%;
-    position: relative;
-    overflow: hidden;
-    z-index: 1; /* Ensure proper stacking */
-}
-
-.home-carousel-track {
-    display: flex;
-    transition: transform 1s ease-in-out;
-    height: 100%; /* Ensures slides take full height */
-}
-
-.home-carousel-item {
-    flex: 0 0 100%;
     height: 100%;
-    position: relative;
-}
-
-/* =================== Slide Images =================== */
-.home-slide-image {
+  }
+  
+  .home-slide-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-}
-
-/* =================== Caption Styling =================== */
-.home-carousel-caption {
+    margin-top: 40px;
+    margin-right: 30px;
+  }
+  
+  /* =================== Caption Styling =================== */
+  .home-hero-caption {
     position: absolute;
     bottom: 20%;
-    left: 10%;
+    left: 2%;
     color: white;
-    padding: 30px;
+    padding: 0 10px;
     border-radius: 8px;
-    max-width: 50%; /* Adjusted for better readability */
-    z-index: 10; /* Ensure it's above images */
-    animation: home-fadeInUp 1s ease-in-out;
+    max-width: 50%;
+    z-index: 10;
     text-align: left;
-}
-
-.home-carousel-caption h1 {
+  }
+  
+  .home-hero-caption h1 {
     font-size: 3rem;
     margin-bottom: 10px;
     font-weight: bold;
     line-height: 1.2;
-}
-
-.home-carousel-caption h1 span {
+  }
+  
+  .home-hero-caption h1 span {
     color: #33cc66;
-}
-
-.home-carousel-caption p {
+  }
+  
+  .home-hero-caption p {
     font-size: 1.5rem;
     margin-bottom: 15px;
     line-height: 1.5;
-}
-
-.home-cta-button {
+  }
+  
+  .home-cta-button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 26px;
     background-color: #33cc66;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 1rem;
+    font-weight: 600;
     transition: background-color 0.3s ease;
-}
-
-.home-cta-button:hover {
+  }
+  
+  .home-cta-button:hover {
     background-color: #28a745;
-}
+  }
+  /* ========== RESPONSIVE HERO SECTION ========== */
 
-/* =================== Controls Styling =================== */
-.home-carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.3); /* Semi-transparent for better visibility */
-    border: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    z-index: 10;
-    padding: 10px;
-    border-radius: 50%;
-    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
+/* Medium devices (tablets, ≤ 992px) */
+@media (max-width: 992px) {
+    .home-slide-image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
 
-.home-carousel-control:hover {
-    background: rgba(0, 0, 0, 0.5);
-    transform: scale(1.1);
-}
-
-.home-carousel-control.prev {
-    left: 20px;
-}
-
-.home-carousel-control.next {
-    right: 20px;
-}
-
-/* =================== Keyframes Animation =================== */
-@keyframes home-fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+    .home-hero-caption {
+      max-width: 85%;
+      left: 5%;
+      bottom: 18%;
+      text-align: center;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+  
+    .home-hero-caption h1 {
+      font-size: 2.5rem;
     }
-}
+  
+    .home-hero-caption p {
+      font-size: 1.25rem;
+    }
+  
+    .home-cta-button {
+      font-size: 1rem;
+      padding: 10px 22px;
+    }
+  }
+  
+  /* Small devices (phones, ≤ 768px) */
+  @media (max-width: 768px) {
 
+    .home-slide-image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+
+    .home-hero-section {
+      height: 80vh;
+      padding: 0 15px;
+    }
+  
+    .home-hero-caption {
+      max-width: 95%;
+      left: 2.5%;
+      bottom: 12%;
+      text-align: center;
+    }
+  
+    .home-hero-caption h1 {
+      font-size: 2rem;
+    }
+  
+    .home-hero-caption p {
+      font-size: 1.1rem;
+    }
+  
+    .home-cta-button {
+      font-size: 0.95rem;
+      padding: 10px 18px;
+    }
+  }
+  
+  /* Extra small devices (≤ 480px) */
+  @media (max-width: 480px) {
+
+    .home-slide-image {
+        height: 280px;
+        width: 100%;
+        object-fit: cover;
+        object-position: top center;
+      }
+
+    .home-hero-section {
+      height: auto;
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+  
+    .home-slide-image {
+      height: 300px;
+      object-fit: cover;
+    }
+  
+    .home-hero-caption {
+      position: static;
+      padding: 0;
+      margin-top: 20px;
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .home-hero-caption h1 {
+      font-size: 1.6rem;
+    }
+  
+    .home-hero-caption p {
+      font-size: 1rem;
+    }
+  
+    .home-cta-button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  
+  
 /* =================== Indicators Styling =================== */
 .home-custom-carousel-indicators {
     position: absolute;
@@ -359,86 +486,133 @@ body {
         transform: translateY(0);
     }
 }
-
-/* =================== Responsive Adjustments =================== */
-@media (max-width: 1024px) {
-    .home-custom-carousel-caption {
-        max-width: 70%;
-        bottom: 10%;
-        padding: 20px;
+/* ======== Default (Desktop ≥ 1200px) ======== */
+.home-genre-section-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  
+  .home-genre-section-top-left {
+    width: 40%;
+  }
+  
+  .home-genre-section-top-right {
+    width: 60%;
+  }
+  
+  .home-book-carousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .home-book-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+  }
+  
+  
+  /* ======== Large Tablets (992px – 1199px) ======== */
+  @media (max-width: 1199px) {
+    .home-genre-section-top {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 30px;
     }
-
-    .home-custom-carousel-caption h1 {
-        font-size: 2.5rem;
+  
+    .home-genre-section-top-left,
+    .home-genre-section-top-right {
+      width: 100%;
+      margin-top: 100px;
     }
-
-    .home-custom-carousel-caption p {
-        font-size: 1.3rem;
+  
+    .home-genre-section-top-left {
+      text-align: left;
+      margin-bottom: 20px;
     }
-
-    .home-custom-carousel-caption a {
-        padding: 10px 20px;
-        font-size: 0.9rem;
+  
+    .home-book-carousel {
+      grid-template-columns: repeat(3, 1fr);
     }
-
-    .home-custom-carousel-control {
-        font-size: 1.8rem;
-        padding: 8px;
+  }
+  
+  
+  /* ======== Tablets (768px – 991px) ======== */
+  @media (max-width: 991px) {
+    .home-genre-section-top {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
-}
-
-@media (max-width: 768px) {
-    .home-custom-carousel-caption {
-        max-width: 90%;
-        bottom: 5%;
-        padding: 15px;
+  
+    .home-genre-section-top-left {
+      width: 100%;
+      margin-bottom: 20px;
     }
-
-    .home-custom-carousel-caption h1 {
-        font-size: 2rem;
+  
+    .home-genre-section-top-right {
+      width: 100%;
+      margin-top: 100px;
     }
-
-    .home-custom-carousel-caption p {
-        font-size: 1rem;
+  
+    .home-book-carousel {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
     }
-
-    .home-custom-carousel-caption a {
-        padding: 10px 20px;
-        font-size: 0.9rem;
+  }
+  
+  
+  /* ======== Mobile (≤ 767px) ======== */
+  @media (max-width: 767px) {
+    .home-genre-section-top {
+      flex-direction: column;
+      gap: 20px;
     }
-
-    .home-custom-carousel-control {
-        font-size: 1.5rem;
-        padding: 5px;
+  
+    .home-genre-section-top-left {
+      width: 100%;
+      text-align: center;
     }
-}
-
-@media (max-width: 480px) {
-    .home-custom-carousel-caption {
-        max-width: 95%;
-        text-align: center;
-        bottom: 3%;
+  
+    .home-genre-section-top-right {
+      width: 100%;
+      margin-top: 100px;
     }
-
-    .home-custom-carousel-caption h1 {
-        font-size: 1.8rem;
+  
+    .home-book-carousel {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
     }
-
-    .home-custom-carousel-caption p {
-        font-size: 0.9rem;
+  
+    .home-genre-section-top-left h2 {
+      font-size: 1.7rem;
     }
-
-    .home-custom-carousel-caption a {
-        padding: 8px 15px;
-        font-size: 0.85rem;
+  
+    .home-cta-button {
+      font-size: 0.95rem;
+      padding: 10px 20px;
     }
-
-    .home-custom-carousel-control {
-        font-size: 1.2rem;
-        padding: 4px;
+  }
+  
+  
+  /* ======== Extra Small Devices (≤ 480px) ======== */
+  @media (max-width: 480px) {
+    .home-book-carousel {
+      grid-template-columns: 1fr;
     }
-}
-
+  
+    .home-cta-button {
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+    }
+  }
+  
 
 /***** Genre Section *****/
 .home-genre-section {
@@ -448,6 +622,9 @@ body {
 
 .home-genre-section-top {
     margin-bottom: 30px;
+}
+.home-genre-section-top-left{
+    padding-left: 30px;
 }
 
 .home-genre-section-top-left h2 {
@@ -603,135 +780,223 @@ body {
     color: white;
     transform: scale(1.05);
 }
-
-/* =================== Responsive Design =================== */
-@media (max-width: 768px) {
+/* ========== Large Screens (≥ 1200px) ========== */
+@media (min-width: 1200px) {
     .home-services-grid {
-        grid-template-columns: repeat(1, minmax(250px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
     }
-
+  
     .home-service-card {
-        height: 280px;
+      height: 260px;
     }
-}
+  
+    .home-card-back img {
+      object-fit: cover;
+      height: 100%;
+      border-radius: 10px;
+    }
+  }
+  
+  /* ========== Medium Screens (992px – 1199px) ========== */
+  @media (max-width: 1199px) {
+    .home-services-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .home-service-card {
+      height: 240px;
+    }
+  
+    .home-card-back img {
+      height: 90%;
+      width: 90%;
+      object-fit: contain;
+    }
+  }
+  
+  /* ========== Tablets (768px – 991px) ========== */
+  @media (max-width: 991px) {
+    .home-services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .home-service-card {
+      height: 220px;
+    }
+  
+    .home-card-back img {
+      height: 85%;
+      width: 85%;
+      object-fit: contain;
+    }
+  
+    .home-card-front i {
+      font-size: 2rem;
+    }
+  
+    .home-card-front h3 {
+      font-size: 1.2rem;
+    }
+  
+    .home-card-front p {
+      font-size: 0.9rem;
+    }
+  
+    .home-learn-more {
+      padding: 8px 18px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* ========== Mobile Devices (481px – 767px) ========== */
+  @media (max-width: 767px) {
+    .home-services-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .home-service-card {
+      height: 200px;
+    }
+  
+    .home-card-back img {
+      height: 80%;
+      width: 80%;
+    }
+  
+    .home-card-front h3 {
+      font-size: 1.1rem;
+    }
+  
+    .home-card-front p {
+      font-size: 0.85rem;
+    }
+  
+    .home-learn-more {
+      padding: 6px 16px;
+      font-size: 0.85rem;
+    }
+  }
+  
+  /* ========== Extra Small Devices (≤ 480px) ========== */
+  @media (max-width: 480px) {
+    .home-service-card {
+      height: 180px;
+    }
+  
+    .home-card-back img {
+      height: 75%;
+      width: 75%;
+    }
+  
+    .home-card-front p {
+      font-size: 0.8rem;
+    }
+  
+    .home-learn-more {
+      font-size: 0.8rem;
+      padding: 6px 14px;
+    }
+  }
+  
 
 
-
-/* =================== Bottom Section =================== */
-.home-genre-section-bottom {
-    text-align: center;
-    margin-top: 50px;
-}
-
-/* =================== Features Container =================== */
-.home-features-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 1100px;
-    margin: 50px auto;
-    padding: 20px;
-}
-
-/* =================== Header Styling =================== */
-.home-features-header {
-    text-align: left;
-    margin-bottom: 25px;
-}
-
-.home-features-header h2 {
-    font-size: 2rem;
-    font-weight: bold;
+.home-features-section {
+    background-color: #fff;
+    padding: 60px 20px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .home-features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .home-features-header h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
     color: #222;
-}
-
-.home-highlight {
-    color: #33cc66;
-}
-
-/* =================== Features Grid =================== */
-.home-features-grid {
+    margin-bottom: 40px;
+    line-height: 1.3;
+  }
+  
+  .home-highlight {
+    color: #28c76f;
+  }
+  
+  /* Features Grid */
+  .home-features-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    align-items: stretch;
-}
-
-/* =================== Feature Cards =================== */
-.home-feature-card {
-    display: flex;
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+  }
+  
+  /* Feature Cards */
+  .home-feature-card {
     background: #fff;
-    padding: 18px;
-    border: 2px solid transparent;
+    padding: 25px;
     border-radius: 10px;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    cursor: pointer;
-}
-
-/* First Large Card (Not Clickable) */
-.home-large-card {
-    grid-column: span 3;
-    border: 2px solid #33cc66;
+    border: 2px solid #e8e8e8;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
     cursor: default;
-}
-
-/* Non-clickable card */
-.home-non-clickable {
-    pointer-events: none;
-}
-
-/* =================== Icon Styling =================== */
-.home-icon-container {
-    background: rgba(51, 204, 102, 0.1);
+  }
+  
+  .home-feature-card:hover {
+    transform: translateY(-4px);
+    border-color: #28c76f;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  }
+  
+  /* Bootstrap Icon Container */
+  .home-icon-container {
+    background: rgba(40, 199, 111, 0.1);
     border-radius: 50%;
-    padding: 12px;
+    padding: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 15px;
-}
-
-.home-feature-card .home-icon {
-    font-size: 1.8rem;
-    color: #33cc66;
-}
-
-/* =================== Text Styling =================== */
-.home-feature-text h4 {
+  }
+  
+  .home-icon-container i {
+    font-size: 2rem;
+    color: #28c76f;
+  }
+  
+  /* Text */
+  .home-feature-text h4 {
     font-size: 1.1rem;
-    font-weight: bold;
+    font-weight: 700;
     color: #222;
-    margin-bottom: 5px;
-}
-
-.home-feature-text p {
-    font-size: 0.9rem;
-    color: #666;
-}
-
-/* =================== Hover Effects =================== */
-.home-feature-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
-    border-color: #33cc66;
-}
-
-/* Disable hover effect for non-clickable */
-.home-non-clickable:hover {
-    transform: none;
-    box-shadow: none;
-    border-color: #33cc66;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .home-features-grid {
-        grid-template-columns: 1fr;
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+  
+  .home-feature-text p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .home-features-header h2 {
+      font-size: 1.8rem;
+      text-align: center;
     }
-}
-
+  
+    .home-feature-card {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .home-icon-container i {
+      font-size: 1.8rem;
+    }
+  }
+  
 
 
 
@@ -822,19 +1087,17 @@ body {
     animation: home-infiniteScroll 20s linear infinite;
 }
 
-
-
 /***** Pause Animation on Hover *****/
 .home-unique-carousel-track:hover {
     animation-play-state: paused;
 }
 
-/***** Book Covers *****/
+/***** Book Covers - Border Radius Removed *****/
 .home-unique-carousel-item {
     width: 200px;
-    height: 300px;
+    height: 350px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 0; /* Removed border-radius */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
 }
@@ -933,174 +1196,140 @@ body {
 .home-see-full-portfolio-btn:hover {
     background-color: #28a745;
 }
-/* =================== Home Design Process Section =================== */
-.home-design-process {
-    position: relative;
+
+/* ======== Main Section ======== */
+.design-process-section {
     padding: 80px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-    overflow: hidden;
-}
-
-/* Background Animation */
-.home-design-bg-animation {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #e6f7ee, #ffffff, #e6f7ee);
-    background-size: 300% 300%;
-    animation: home-backgroundMove 12s infinite alternate;
-    z-index: 0;
-}
-
-@keyframes home-backgroundMove {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 100% 100%; }
-}
-
-/* Ensure Content is Above Animation */
-.home-design-process .home-container {
-    position: relative;
-    z-index: 1;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-/* =================== Titles =================== */
-.home-section-title {
-    font-size: 2.8rem;
-    font-weight: bold;
-    color: #222;
-    margin-bottom: 15px;
-}
-
-.home-highlight {
-    color: #33cc66;
-}
-
-.home-section-subtitle {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 40px;
-}
-
-/* =================== Steps Grid (Ensures Even Cards) =================== */
-.home-steps-container {
+    background: #fff;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* ======== Grid Container ======== */
+  .design-process-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    justify-content: center;
-    align-items: start;
-    max-width: 900px;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    max-width: 1200px;
     margin: 0 auto;
-}
-
-/* =================== Step Cards =================== */
-.home-step-card {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     align-items: flex-start;
-    min-height: 200px;
-    height: 100%;
-}
-
-/* Step Hover Effect */
-.home-step-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Step Header */
-.home-step-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 10px;
-}
-
-/* Step Number */
-.home-step-number {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #ffcc00;
-    background: rgba(255, 204, 0, 0.15);
-    padding: 6px 12px;
-    border-radius: 5px;
-}
-
-/* Step Title */
-.home-step-card h4 {
-    font-size: 1.4rem;
-    font-weight: bold;
+  }
+  
+  /* ======== Left Side (Title & Sub) ======== */
+  .design-process-left h2 {
+    font-size: 2.4rem;
+    font-weight: 800;
     color: #222;
-    margin: 0;
-}
-
-/* Step Description */
-.home-step-card p {
+    line-height: 1.3;
+  }
+  
+  .design-process-left h2 span {
+    color: #28c76f;
+  }
+  
+  .design-process-left .underline {
+    width: 80px;
+    height: 3px;
+    background: #28c76f;
+    margin: 18px 0;
+  }
+  
+  .design-process-left p {
     font-size: 1rem;
     color: #555;
     line-height: 1.6;
-}
-
-/* Highlighted Text */
-.home-step-card strong {
-    color: #33cc66;
-    font-weight: bold;
-}
-
-/* =================== Order Button =================== */
-.home-order-button-container {
+  }
+  
+  /* ======== Steps Container ======== */
+  .design-process-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  /* ======== Step Row ======== */
+  .step-row {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+  }
+  
+  /* Step Number */
+  .step-number {
     text-align: center;
-    margin-top: 40px;
-}
-
-.home-place-order-btn {
-    display: inline-block;
-    padding: 14px 30px;
-    background-color: #33cc66;
-    color: white;
-    text-decoration: none;
+    min-width: 60px;
+  }
+  
+  .step-number span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffc107;
+  }
+  
+  .step-number small {
+    font-size: 0.75rem;
+    color: #bbb;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  
+  /* Step Text */
+  .step-text h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    position: relative;
+    padding-bottom: 4px;
+  }
+  
+  .step-text h4::after {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background: #ffc107;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .step-text p {
     font-size: 1rem;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.home-place-order-btn:hover {
-    background-color: #28a745;
-}
-
-/* =================== Responsive Adjustments =================== */
-@media (max-width: 768px) {
-    .home-steps-container {
-        grid-template-columns: 1fr;
-        max-width: 90%;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .step-text p strong {
+    font-weight: 700;
+    color: #222;
+  }
+  
+  /* ======== Responsive ======== */
+  @media (max-width: 992px) {
+    .design-process-container {
+      grid-template-columns: 1fr;
+      text-align: center;
     }
-
-    .home-step-card {
-        width: 100%;
-        padding: 20px;
+  
+    .design-process-left {
+      margin-bottom: 40px;
     }
-
-    .home-section-title {
-        font-size: 2.4rem;
+  
+    .step-row {
+      flex-direction: column;
+      align-items: center;
     }
-
-    .home-section-subtitle {
-        font-size: 1.1rem;
+  
+    .step-text h4::after {
+      left: 50%;
+      transform: translateX(-50%);
     }
-}
-
+  
+    .step-number {
+      margin-bottom: 10px;
+    }
+  }
+  
 /* =================== Customer Testimonials Section =================== */
 .home-customer-testimonials {
     background-color: #e1fcf3;
@@ -1786,7 +2015,7 @@ body {
 
 /* ============================= FOOTER SECTION ============================= */
 .home-footer-section {
-    background: linear-gradient(135deg, #1c3e30, #295f47, #3ba776); /* Blended green shades */
+    background: linear-gradient(135deg, #07ac67, #1c704a, #063f25); /* Blended green shades */
     color: #ffffff; /* White text for contrast */
     font-family: 'Arial', sans-serif;
     padding-top: 40px;

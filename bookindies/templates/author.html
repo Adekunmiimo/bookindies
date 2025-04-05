@@ -1,0 +1,234 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %} 
+
+<!-- Author Swag Intro Section -->
+<section class="author-swag-section">
+    <div class="author-swag-container">
+      <!-- Left Text -->
+      <div class="author-swag-text">
+        <h2>Illustrated Author Swag<br><span>Design</span></h2>
+        <p>
+          <i class="bi bi-chevron-double-right"></i>
+          Build connection with your readers<br>
+          and remind them of your work
+        </p>
+      </div>
+  
+      <!-- Right Image -->
+      <div class="author-swag-image">
+        <img src="{% static 'img/autimg1.png' %}" alt="Author Swag Items">
+      </div>
+    </div>
+  </section>
+  
+
+  
+<!-- Author Product Gallery -->
+<section class="author-products-section">
+    <div class="author-products-container">
+      <h2 class="author-products-title">
+        Here’s What We Can Design For You. <br>
+        And <span class="highlight-green">Even More!</span>
+      </h2>
+  
+      <div class="author-products-grid">
+        <!-- Individual Items -->
+        <div class="author-product-item">
+          <img src="{% static 'img/autimg2.png' %}" alt="Bookmarks">
+          <p>Bookmarks</p>
+        </div>
+        <div class="author-product-item">
+          <img src="{% static 'img/autimg3.png' %}" alt="T-shirts">
+          <p>T-shirts</p>
+        </div>
+        <div class="author-product-item">
+          <img src="{% static 'img/autimg4.png' %}" alt="Cups">
+          <p>Cups</p>
+        </div>
+        <div class="author-product-item">
+          <img src="{% static 'img/autimg5.png' %}" alt="Notebooks">
+          <p>Notebooks</p>
+        </div>
+        <div class="author-product-item">
+          <img src="{% static 'img/autimg6.png' %}" alt="Posters">
+          <p>Posters</p>
+        </div>
+        <div class="author-product-item">
+          <img src="{% static 'img/autimg7.png' %}" alt="Stickers">
+          <p>Stickers</p>
+        </div>
+        <div class="author-product-item">
+          <img src="{% static 'img/autimg8.png' %}" alt="Bags">
+          <p>Bags</p>
+        </div>
+        <div class="author-product-item">
+          <img src="{% static 'img/autimg9.png' %}" alt="Pens">
+          <p>Pens</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="author-order-section">
+    <div class="author-order-container">
+      <!-- Section Title -->
+      <h2 class="author-order-title">Order Custom Author <span class="highlight-green">Swag Design</span></h2>
+      <p class="author-order-subtitle">And become closer to your audience</p>
+  
+      <!-- Product Cards -->
+      <div class="author-order-grid">
+        <!-- Card 1 -->
+        <div class="author-order-card">
+          <img src="{% static 'img/autimg10.png' %}" alt="Typography-based design" />
+          <h4>Typography-based design</h4>
+          <p class="author-price">$40</p>
+          <hr />
+          <a href="#" class="order-now-btn">Order Now</a>
+        </div>
+  
+        <!-- Card 2 -->
+        <div class="author-order-card">
+          <img src="{% static 'img/autimg11.png' %}" alt="Image based design" />
+          <h4>Image based design</h4>
+          <p class="author-price">$75</p>
+          <hr />
+          <a href="#" class="order-now-btn">Order Now</a>
+        </div>
+  
+        <!-- Card 3 -->
+        <div class="author-order-card">
+          <img src="{% static 'img/autimg12.png' %}" alt="Typography+image based design" />
+          <h4>Typography+image based design</h4>
+          <p class="author-price">$100</p>
+          <hr />
+          <a href="#" class="order-now-btn">Order Now</a>
+        </div>
+      </div>
+  
+      <!-- Note -->
+      <p class="author-disclaimer">
+        *Note, that this is a price for illustrated author swag design (not based on stock photos). Also, if your design is complex and requires additional work, our managers will set a custom price.
+      </p>
+    </div>
+  </section>
+  
+
+  <section class="custom-inquiry-section">
+    <div class="custom-inquiry-container">
+      <h2 class="custom-inquiry-heading">Have A Custom Inquiry Or Questions?</h2>
+      <div class="custom-inquiry-underline"></div>
+      <p class="custom-inquiry-subtext">Contact us to get more details</p>
+      <a href="{% url 'contact' %}" class="custom-inquiry-btn">Contact Us</a>
+    </div>
+  </section>
+
+  
+  <section class="author-swag-usage-section">
+    <div class="author-swag-usage-container">
+      
+      <!-- Left: Swag Display -->
+      <div class="author-swag-usage-left">
+        <div class="author-image-wrapper">
+          <div class="author-image-indicators">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <img src="{% static 'img/autimg13.png' %}" alt="Author Swag Display" />
+        </div>
+      </div>
+  
+      <!-- Right: Usage Text -->
+      <div class="author-swag-usage-right">
+        <h2>How Can You Use <br><span class="highlight-green">Your Author Swag?</span></h2>
+        <ul class="author-swag-usage-list">
+          <li><i class="bi bi-check-circle-fill"></i> Use it to build book launch buzz</li>
+          <li><i class="bi bi-check-circle-fill"></i> Hand it on offline events</li>
+          <li><i class="bi bi-check-circle-fill"></i> Send it to your readers</li>
+          <li><i class="bi bi-check-circle-fill"></i> Put it in author boxes</li>
+        </ul>
+      </div>
+  
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="faq-container">
+      <h2 class="faq-title">Swag Design <span class="highlight-green">FAQ</span></h2>
+  
+      <div class="faq-list">
+  
+        <!-- FAQ Item -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <div class="faq-icon">
+              <i class="bi bi-question-circle"></i>
+            </div>
+            <p>What is included in author swag design?</p>
+            <span class="faq-toggle"><i class="bi bi-chevron-down"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Author swag includes branded items like mugs, tote bags, shirts, and more depending on your chosen package.</p>
+          </div>
+        </div>
+  
+        <!-- FAQ Item -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <div class="faq-icon">
+              <i class="bi bi-question-circle"></i>
+            </div>
+            <p>Do I need to purchase an additional license?</p>
+            <span class="faq-toggle"><i class="bi bi-chevron-down"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>No, all necessary usage rights are included unless you're requesting third-party illustrations or fonts.</p>
+          </div>
+        </div>
+  
+        <!-- FAQ Item -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <div class="faq-icon">
+              <i class="bi bi-question-circle"></i>
+            </div>
+            <p>How many revisions do I get?</p>
+            <span class="faq-toggle"><i class="bi bi-chevron-down"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>You get unlimited revisions until you're completely satisfied with the final design.</p>
+          </div>
+        </div>
+  
+        <!-- FAQ Item -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <div class="faq-icon">
+              <i class="bi bi-question-circle"></i>
+            </div>
+            <p>How long does it take to get my author swag design ready?</p>
+            <span class="faq-toggle"><i class="bi bi-chevron-down"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Delivery time is usually 7–10 business days for the initial concept, depending on your complexity.</p>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+{% endblock %}

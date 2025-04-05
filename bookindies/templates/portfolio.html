@@ -53,22 +53,20 @@
 </section>
 
 <section class="portfolio-gallery-section">
-    <div class="portfolio-gallery-container">
-        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery1.jpg' %}" alt="Gallery Image 1"></a>
-        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery2.jpg' %}" alt="Gallery Image 2"></a>
-        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery3.jpg' %}" alt="Gallery Image 3"></a>
-        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery4.jpg' %}" alt="Gallery Image 4"></a>
-        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery5.jpg' %}" alt="Gallery Image 5"></a>
-        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery6.jpg' %}" alt="Gallery Image 6"></a>
-        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery7.jpg' %}" alt="Gallery Image 7"></a>
-        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery8.jpg' %}" alt="Gallery Image 8"></a>
-        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery9.jpg' %}" alt="Gallery Image 9"></a>
-        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery10.jpg' %}" alt="Gallery Image 10"></a>
-        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery11.jpg' %}" alt="Gallery Image 11"></a>
-        <a href="#" class="portfolio-gallery-item"><img src="{% static 'img/gallery12.jpg' %}" alt="Gallery Image 12"></a>
+    <div class="portfolio-gallery-container" id="portfolioContainer">
+      {% for img in images %}
+      <div class="portfolio-gallery-item">
+        <img src="{{ img.image.url }}" alt="{{ img.title }}">
+      </div>
+      {% endfor %}
     </div>
-    <button class="portfolio-more-button">More</button>
-</section>
+  
+    <!-- Always render the button -->
+    <button id="loadMoreBtn" class="portfolio-more-button">Load More</button>
+  </section>
+  
+  
+
 
 
 

@@ -1,0 +1,645 @@
+.marketing-section {
+    padding: 100px 50px;
+    background: linear-gradient(to right, #fdfdfd, #f7f7f7);
+    font-family: 'Inter', sans-serif;
+    margin-left: 50px;
+  }
+  
+  .marketing-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap; 
+
+  }
+  
+  .marketing-text {
+    flex: 1 1 40%;
+    padding-left: 10px;
+  }
+  
+  .marketing-text h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.3;
+    margin-bottom: 25px;
+  }
+  
+  .marketing-subtext {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #444;
+    line-height: 1.6;
+    max-width: 400px;
+  }
+  
+  .marketing-subtext strong {
+    font-weight: 700;
+    color: #000;
+  }
+  
+  .marketing-arrow {
+    color: #33cc66;
+    font-size: 1.2rem;
+    margin-right: 6px;
+  }
+  
+  .marketing-images {
+    flex: 1 1 55%;
+  }
+  
+  .marketing-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    grid-auto-rows: minmax(110px, auto);
+  }
+  
+  .marketing-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    /* box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08); */
+    transition: transform 0.3s ease;
+  }
+  
+  .marketing-grid img:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .marketing-container {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+  
+    .marketing-text, .marketing-images {
+      flex: 1 1 100%;
+      padding: 0;
+    }
+  
+    .marketing-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .marketing-text h2 {
+      font-size: 2.1rem;
+    }
+  
+    .marketing-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .marketing-branding-section {
+    padding: 100px 30px;
+    background-color: #fdfdfd;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .marketing-branding-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1250px;
+    margin: 0 auto;
+    gap: 50px;
+    flex-wrap: nowrap;
+  }
+  
+  .marketing-branding-image {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .marketing-branding-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  }
+  
+  .marketing-branding-text {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .marketing-branding-text h2 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+  
+  .marketing-highlight {
+    color: #28c76f;
+  }
+  
+  .marketing-underline {
+    width: 60px;
+    height: 3px;
+    background-color: #28c76f;
+    border: none;
+    margin: 20px 0;
+    border-radius: 2px;
+  }
+  
+  .marketing-branding-intro {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 20px;
+  }
+  
+  .marketing-branding-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .marketing-branding-benefits li {
+    font-size: 1rem;
+    color: #222;
+    margin-bottom: 15px;
+    padding-left: 28px;
+    position: relative;
+  }
+  
+  .marketing-branding-benefits li::before {
+    content: "✔";
+    color: #28c76f;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 992px) {
+    .marketing-branding-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 40px;
+    }
+  
+    .marketing-branding-text,
+    .marketing-branding-image {
+      flex: 1 1 100%;
+    }
+  
+    .marketing-branding-text h2 {
+      font-size: 2rem;
+    }
+  
+    .marketing-branding-benefits {
+      text-align: left;
+      padding-left: 15px;
+    }
+  }
+  
+  .marketing-promo-section {
+    padding: 80px 40px;
+    background-color: #fff;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .marketing-promo-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px; /* Add this */
+  }
+  
+  
+  /* Header Styling */
+  .marketing-promo-header {
+    text-align: left;
+    margin-bottom: 50px;
+  }
+  
+  .marketing-promo-header h2 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #111;
+  }
+  
+  .marketing-promo-header h2 span {
+    color: #28c76f;
+  }
+  
+  .marketing-promo-header .underline {
+    width: 60px;
+    height: 3px;
+    background: #28c76f;
+    margin: 15px 0;
+    border-radius: 1px;
+  }
+  
+  .marketing-promo-header p {
+    color: #666;
+    font-size: 1rem;
+  }
+  
+  /* Layout Wrapper */
+  .marketing-promo-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  /* Row - two columns per row */
+  .marketing-promo-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+  }
+  
+  /* Card Styling */
+  .marketing-promo-card {
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 550px; /* Previously 600px */
+  }
+  
+  .marketing-promo-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .card-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .card-details h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 8px;
+  }
+  
+  .card-details .price {
+    color: #28c76f;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-details p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  /* Button */
+  .promo-btn {
+    margin-top: auto;
+    display: inline-block;
+    background: #28c76f;
+    color: white;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(51, 204, 102, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .promo-btn:hover {
+    background-color: #20b364;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .marketing-promo-header h2 {
+      font-size: 2rem;
+    }
+  
+    .marketing-promo-row {
+      flex-direction: column;
+    }
+  
+    .promo-btn {
+      width: 100%;
+    }
+  }
+  
+
+  .marketing-package-section {
+    padding: 80px 100px;
+    background: #ffffff;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .marketing-package-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  
+  /* Left Content */
+  .marketing-package-text {
+    flex: 1 1 45%;
+  }
+  
+  .marketing-package-text h2 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.4;
+  }
+  
+  .marketing-package-text h2 span {
+    color: #28c76f;
+  }
+  
+  /* Card */
+  .marketing-package-card {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+  }
+  
+  .marketing-package-price-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #444;
+    text-align: center;
+  }
+  
+  .marketing-package-price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #28c76f;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .marketing-divider {
+    border: none;
+    height: 1px;
+    background: #eee;
+    margin: 20px 0;
+  }
+  
+  .marketing-package-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .marketing-package-benefits li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 26px;
+  }
+  
+  .marketing-package-benefits li::before {
+    content: "✔";
+    color: #28c76f;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+  
+  /* CTA Button */
+  .marketing-package-btn {
+    display: block;
+    width: 100%;
+    background-color: #28c76f;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    padding: 14px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .marketing-package-btn:hover {
+    background-color: #20b364;
+  }
+  
+  /* Right Image */
+  .marketing-package-images {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .marketing-package-images img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .marketing-package-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .marketing-package-images img {
+      max-width: 100%;
+    }
+  
+    .marketing-package-text h2 {
+      font-size: 2rem;
+    }
+  }
+
+  
+  .marketing-branding-section {
+    padding: 100px 30px;
+    background: linear-gradient(to right, #f9f9f9, #ffffff);
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+  }
+  
+  .marketing-branding-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .marketing-branding-header h2 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 12px;
+  }
+  
+  .marketing-branding-header span {
+    color: #28c76f;
+  }
+  
+  .marketing-branding-header p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .marketing-branding-underline {
+    width: 60px;
+    height: 3px;
+    background: #28c76f;
+    margin: 0 auto 60px;
+    border-radius: 2px;
+  }
+  
+  .marketing-branding-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  /* Card */
+  .marketing-branding-card {
+    background: #fff;
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: 420px;
+    min-width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  .marketing-branding-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Image container */
+  .marketing-branding-bg {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .marketing-branding-bg img {
+    width: 130px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Background tones */
+  .marketing-bg-1 { background-color: #e7f5ec; }
+  .marketing-bg-2 { background-color: #fce9e5; }
+  .marketing-bg-3 { background-color: #e6f1fc; }
+  
+  .marketing-branding-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 20px 24px 12px;
+  }
+  
+  .marketing-branding-info h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #222;
+    text-align: left;
+    flex: 1;
+  }
+  
+  .marketing-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #28c76f;
+  }
+  
+  /* CTA Button */
+  .marketing-order-btn {
+    display: inline-block;
+    background: #28c76f;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 16px auto 24px;
+    transition: background 0.3s ease;
+  }
+  
+  .marketing-order-btn:hover {
+    background: #1ea85a;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .marketing-branding-header h2 {
+      font-size: 2.1rem;
+    }
+  
+    .marketing-branding-info {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .marketing-order-btn {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .marketing-branding-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .marketing-branding-card {
+      max-width: 90%;
+    }
+  }
+  

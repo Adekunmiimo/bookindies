@@ -1,0 +1,220 @@
+.book_cover_genres-hero {
+    position: relative;
+    height: 90vh;
+    background: linear-gradient(to right, #e1f5ec, #f4fdf9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .book_cover_genres-hero-content {
+    max-width: 800px;
+    z-index: 2;
+    padding: 0 20px;
+  }
+  
+  .book_cover_genres-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #1e5631;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .book_cover_genres-hero p {
+    font-size: 1.25rem;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  /* Floating shapes container */
+  .book_cover_genres-hero-bg-shapes {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  /* Shared shape styles */
+  .shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.2;
+    animation: float 10s infinite ease-in-out;
+  }
+  
+  /* Different shapes */
+  .shape-1 {
+    width: 120px;
+    height: 120px;
+    background: #66bb6a;
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+  }
+  
+  .shape-2 {
+    width: 80px;
+    height: 80px;
+    background: #ffcc80;
+    bottom: 15%;
+    right: 8%;
+    animation-delay: 2s;
+  }
+  
+  .shape-3 {
+    width: 100px;
+    height: 100px;
+    background: #64b5f6;
+    top: 40%;
+    left: 80%;
+    animation-delay: 4s;
+  }
+  
+  .shape-4 {
+    width: 60px;
+    height: 60px;
+    background: #f06292;
+    bottom: 10%;
+    left: 30%;
+    animation-delay: 6s;
+  }
+  
+  /* Float animation */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(15deg);
+    }
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .book_cover_genres-hero h1 {
+      font-size: 2.2rem;
+    }
+  
+    .book_cover_genres-hero p {
+      font-size: 1rem;
+    }
+  }
+  
+
+/* 🌿 Section Styling */
+
+.book_cover_genres {
+    padding: 60px 20px;
+    background-color: #f4fbf9;
+    text-align: center;
+  }
+  
+  .book_cover_genres h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1e5631;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+  
+  /* 🎯 Grid: 4 Columns */
+  .book_cover_genres-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  
+  /* 🖼️ Item Styling */
+  .book_cover_genres-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 2 / 3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .book_cover_genres-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  /* 🖱️ Hover Effects */
+  .book_cover_genres-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .book_cover_genres-item:hover img {
+    transform: scale(1.05);
+    opacity: 0.95;
+  }
+  
+  /* 📱 Responsive Layouts */
+  @media (max-width: 992px) {
+    .book_cover_genres-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .book_cover_genres-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .book_cover_genres-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .book_cover_genres h2 {
+      font-size: 1.6rem;
+    }
+  }
+  
+  /* 🚫 Empty Message */
+  .empty-text {
+    font-size: 1.2rem;
+    color: #888;
+    margin-top: 30px;
+  }
+
+  .book_cover_genres-load-more-wrapper {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .book_cover_genres-load-more-btn {
+    background-color: #1e5631;
+    color: #fff;
+    padding: 12px 28px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .book_cover_genres-load-more-btn:hover:not(:disabled) {
+    background-color: #174a27;
+  }
+  
+  .book_cover_genres-load-more-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  

@@ -1,0 +1,681 @@
+.bookformatting-hero-section {
+    padding: 100px 20px;
+    background: linear-gradient(to right, #f9fdfb, #f5fef8);
+  }
+  
+  .bookformatting-hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .bookformatting-hero-text {
+    flex: 1 1 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* align to left (you can use center if you want) */
+    text-align: left;
+    padding-left: 80px;
+  }
+  
+  .bookformatting-badge {
+    display: inline-block;
+    background-color: #d8f8e1;
+    color: #1a7f41;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
+  .bookformatting-title {
+    font-size: 2.8rem;
+    color: #0d1a26;
+    font-weight: 800;
+    line-height: 1.4;
+  }
+  
+  .bookformatting-hero-image {
+    flex: 1 1 500px;
+    text-align: center;
+  }
+  
+  .bookformatting-hero-image img {
+    max-width: 340px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 768px) {
+    .bookformatting-hero-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .bookformatting-hero-text {
+      align-items: center;
+      text-align: center;
+    }
+  
+    .bookformatting-title {
+      font-size: 2rem;
+    }
+  
+    .bookformatting-hero-image img {
+      max-width: 280px;
+    }
+  }
+
+  .bookformatting-platforms-section {
+    background: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .bookformatting-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+  
+  .bookformatting-platforms-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 40px;
+  }
+  
+  .bookformatting-platforms-title span {
+    color: #33cc66;
+  }
+  
+  .bookformatting-platforms-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  .bookformatting-platforms-logos img {
+    max-width: 100%;
+    max-height: 80px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.05));
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 768px) {
+    .bookformatting-platforms-title {
+      font-size: 1.5rem;
+    }
+  
+    .bookformatting-platforms-logos {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
+
+  
+
+  .bookformatting-examples-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+  }
+  
+  .bookformatting-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .bookformatting-section-title {
+    font-size: 2.2rem;
+    color: #111;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  
+  .bookformatting-section-title span {
+    color: #33cc66;
+  }
+  
+  .bookformatting-subtitle {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  
+  .bookformatting-subtitle::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #33cc66;
+    margin: 15px auto 0;
+  }
+  
+  .bookformatting-examples-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .bookformatting-example-card {
+    flex: 1 1 300px;
+    max-width: 350px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fdfdfd;
+    transition: transform 0.3s ease;
+  }
+  
+  .bookformatting-example-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .bookformatting-example-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  
+  .bookformatting-discount-section {
+    background: #eaf4f1;
+    padding: 100px 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .bookformatting-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .bookformatting-content {
+    flex: 1 1 45%;
+  }
+  
+  .bookformatting-heading {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #222;
+    line-height: 1.3;
+  }
+  
+  .bookformatting-heading span {
+    color: #28a745;
+  }
+  
+  .bookformatting-subtext {
+    margin-top: 25px;
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .bookformatting-covers {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+  }
+  
+  .bookformatting-covers img {
+    width: 140px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .bookformatting-covers img:hover {
+    transform: translateY(-8px);
+  }
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .bookformatting-wrapper {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .bookformatting-content,
+    .bookformatting-covers {
+      flex: 1 1 100%;
+    }
+  
+    .bookformatting-heading {
+      font-size: 2rem;
+    }
+  
+    .bookformatting-covers {
+      justify-content: center;
+    }
+  }
+
+  
+  .bookformatting-prices-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .bookformatting-container {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  
+  .bookformatting-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111;
+  }
+  
+  .bookformatting-heading span {
+    color: #33cc66;
+  }
+  
+  .bookformatting-subtitle {
+    font-size: 1rem;
+    color: #444;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .bookformatting-subtitle::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #33cc66;
+    margin: 12px auto 0;
+    border-radius: 10px;
+  }
+  
+  .bookformatting-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .bookformatting-price-card {
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    padding: 30px 25px;
+    text-align: left;
+    transition: 0.3s ease;
+  }
+  
+  .bookformatting-price-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+  
+  .bookformatting-price-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #111;
+  }
+  
+  .bookformatting-price-card .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 20px;
+  }
+  
+  .bookformatting-price-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+  
+  .bookformatting-price-card ul li {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  .bookformatting-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #33cc66;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 15px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .bookformatting-btn:hover {
+    background-color: #28a745;
+    box-shadow: 0 4px 12px rgba(51, 204, 102, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .bookformatting-price-card .note {
+    font-size: 0.85rem;
+    color: #777;
+    text-align: center;
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 768px) {
+    .bookformatting-heading {
+      font-size: 2rem;
+    }
+  
+    .bookformatting-subtitle {
+      font-size: 0.95rem;
+    }
+  
+    .bookformatting-price-card {
+      text-align: center;
+    }
+  
+    .bookformatting-price-card ul {
+      text-align: left;
+    }
+  }
+  .bookformatting-process-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .bookformatting-process-section .bookformatting-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    align-items: flex-start;
+  }
+  
+  /* Left Side */
+  .bookformatting-process-section .bookformatting-process-intro {
+    flex: 1 1 30%;
+    text-align: left;
+  }
+  
+  .bookformatting-process-section .bookformatting-process-intro h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  
+  .bookformatting-process-section .bookformatting-process-intro h2 span {
+    color: #33cc66;
+  }
+  
+  .bookformatting-process-section .bookformatting-process-intro .underline {
+    height: 2px;
+    width: 60px;
+    background: #33cc66;
+    margin: 10px 0 20px;
+    border-radius: 1px;
+  }
+  
+  .bookformatting-process-section .bookformatting-process-intro p {
+    font-size: 1rem;
+    color: #555;
+    max-width: 90%;
+    line-height: 1.6;
+  }
+  
+  /* Right Steps Side */
+  .bookformatting-process-section .bookformatting-process-steps {
+    flex: 1 1 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .bookformatting-process-section .bookformatting-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .bookformatting-process-section .step-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #f5b600;
+    min-width: 60px;
+    text-align: center;
+    line-height: 1;
+  }
+  
+  .bookformatting-process-section .step-number span {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #bbb;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .bookformatting-process-section .step-content {
+    flex: 1;
+  }
+  
+  .bookformatting-process-section .step-content h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 6px;
+    position: relative;
+    padding-bottom: 6px;
+  }
+  
+  .bookformatting-process-section .step-content h4::after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: #f5b600;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 1px;
+  }
+  
+  .bookformatting-process-section .step-content p {
+    font-size: 0.96rem;
+    color: #444;
+    line-height: 1.6;
+    margin-top: 10px;
+    max-width: 100%;
+  }
+  
+  /* 📱 Responsive Styling */
+  @media (max-width: 992px) {
+    .bookformatting-process-section .bookformatting-container {
+      flex-direction: column;
+      gap: 40px;
+    }
+  
+    .bookformatting-process-section .bookformatting-process-intro,
+    .bookformatting-process-section .bookformatting-process-steps {
+      flex: 1 1 100%;
+    }
+  
+    .bookformatting-process-section .step-number {
+      font-size: 1.5rem;
+    }
+  
+    .bookformatting-process-section .step-content h4 {
+      font-size: 1.1rem;
+    }
+  
+    .bookformatting-process-section .step-content p {
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .bookformatting-process-section .bookformatting-step {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .bookformatting-process-section .step-number {
+      min-width: auto;
+      font-size: 1.4rem;
+    }
+  
+    .bookformatting-process-section .step-number span {
+      font-size: 0.7rem;
+    }
+  
+    .bookformatting-process-section .step-content p {
+      font-size: 0.9rem;
+    }
+  }
+
+  
+  .bookformatting-faqs-section {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .bookformatting-faqs-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .bookformatting-faqs-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 50px;
+  }
+  
+  .bookformatting-faqs-heading span {
+    color: #33cc66;
+  }
+  
+  /* FAQ Item */
+  .bookformatting-faq-item {
+    border-top: 1px solid #eee;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bookformatting-faq-item:last-child {
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* FAQ Question */
+  .bookformatting-faq-question {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111;
+    position: relative;
+  }
+  
+  /* Icon on the left */
+  .bookformatting-faq-icon {
+    background-color: #33cc66;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    font-size: 0.95rem;
+    margin-right: 16px;
+    flex-shrink: 0;
+  }
+  
+  /* Arrow on the right */
+  .bookformatting-faq-toggle {
+    margin-left: auto;
+    color: #33cc66;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .bookformatting-faq-question.open .bookformatting-faq-toggle {
+    transform: rotate(180deg);
+  }
+  
+  /* Answer */
+  .bookformatting-faq-answer {
+    display: none;
+    margin-left: 45px;
+    margin-top: 12px;
+  }
+  
+  .bookformatting-faq-answer p {
+    font-size: 0.98rem;
+    color: #444;
+    line-height: 1.6;
+    max-width: 90%;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .bookformatting-faqs-heading {
+      font-size: 1.7rem;
+    }
+  
+    .bookformatting-faq-question {
+      font-size: 1rem;
+      flex-wrap: wrap;
+    }
+  
+    .bookformatting-faq-toggle {
+      position: absolute;
+      right: 0;
+    }
+  
+    .bookformatting-faq-answer {
+      margin-left: 44px;
+    }
+  }
+  
